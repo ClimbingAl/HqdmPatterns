@@ -1,7 +1,22 @@
 # Top Level Type
 
 ## **Thing**
-The root entity type is [thing](https://github.com/hqdmTop/hqdmFramework/wiki/thing).  All HQDM data objects, however they are represented, are instances of this *type*.  To use HQDM as an implementation model directly a number of properties are recommended for each record (data object):
+The root entity type is [thing](https://github.com/hqdmTop/hqdmFramework/wiki/thing).  All HQDM data objects, however they are represented, are instances of this *type*.  
+
+``` mermaid
+graph TD
+  id1[Thing];
+  style id1 stroke-width:4px;
+  id2[spatio_temporal <br\> _extent] & id3[abstract_object];
+  id1-->|supertype_of|id2;
+  id1-->|supertype_of|id3;
+  id4[class];
+  id3-->|supertype_of|id4;
+  id1-...->|member__of|id4;
+```
+
+## Implementation
+To use HQDM as an implementation model directly a number of properties are recommended for each record (data object):
 
 | Property | Required | Description |
 | ----------- | ----------- | ----------- |
