@@ -1,0 +1,54 @@
+site_name: Model Implementation Patterns
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  palette:
+    primary: deep purple
+    accent: deep purple
+  features:
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: ["docs/extras/example-files"]
+  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - 'index.md'
+  - 'type_instance_patterns.md'
+  - 'Introducing HQDM':
+    - introducing_hqdm\basic _intro_to_hqdm.md
+    - introducing_hqdm\top_level_type.md
+  - 'Fundamental Relations':
+    - fundamental_elements\relations.md
+    - fundamental_elements\parts.md
+    - fundamental_elements\sets.md
+    - fundamental_elements\order.md
+  - 'Activity and Association':
+    - activity\activity.md
+    - association\association.md
+  - 'Sign and Pattern':
+    - signs_and_patterns\patterns.md
+    - signs_and_patterns\signs.md
+  - 'System and System Component':
+    - system\system.md
+    - system\system_component.md
+  - 'Properties and Qualities':
+    - properties\properties.md
+  - 'Levels of Reality':
+    - levels_of_reality\multiple_inheritance.md
+    - levels_of_reality\types_of_states.md
+
