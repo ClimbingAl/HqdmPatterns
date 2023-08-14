@@ -47,6 +47,8 @@ nav:
     - fundamental_elements\parts.md
     - fundamental_elements\sets.md
     - fundamental_elements\order.md
+  - 'Individual':
+    - individual/individual.md
   - 'Activity and Association':
     - activity\activity.md
     - association\association.md

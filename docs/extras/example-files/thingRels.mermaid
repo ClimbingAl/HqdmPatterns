@@ -1,0 +1,11 @@
+``` mermaid
+graph TD
+  id1[thing];
+  style id1 stroke-width:4px;
+  id2[abstract_object] & id3[spatio_temporal <br> _extent];
+  id1-->|supertype_of|id2;
+  id1-->|supertype_of|id3;
+  id4[class];
+  id2-->|supertype_of|id4;
+  id1-...->|member__of|id4;
+```
