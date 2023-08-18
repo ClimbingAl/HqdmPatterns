@@ -25,15 +25,8 @@ Each model pattern will include the following:
 4. Validation and Query options
 5. Mapping options
 
-## Other items
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## The scenario used in the examples
 
-## Project layout
+It is generally a good rule to model real things while exploring data models.  The role of data models and that data based on them is to support real-world decisions.  Those decisions will be about real activities and the material participants involved in, and associated with, them.  Developing models without reference to real, representative examples is a recipe for not capturing what's required.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+For this documentation, to enable you to relate to data modelling decisions, how to construct the models and implement them, we will use a familiar activity - the [Apollo-11 mission to the moon](https://www.nasa.gov/mission_pages/apollo/missions/apollo11.html).  As it was the first successful crewed lunar landing and return to Earth it provides plenty opportunity to illustrate key HQDM model patterns that are easy to relate to.  

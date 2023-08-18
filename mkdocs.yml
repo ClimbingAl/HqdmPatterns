@@ -3,6 +3,9 @@ site_name: Model Implementation Patterns
 extra_css:
   - stylesheets/extra.css
 
+plugins:
+   - glightbox
+
 theme:
   name: material
   palette:
