@@ -10,7 +10,9 @@ extra_css:
   - stylesheets/extra.css
 
 plugins:
-   - glightbox
+  - glightbox
+  - search
+  - table-reader
 
 theme:
   name: material
@@ -81,8 +83,12 @@ nav:
     - individual/individual_LM5.md
     - individual/individual_queries.md
   - 'Activity and Association':
-    - activity\activity.md
-    - association\association.md
+    - 'Activity' :
+      - activity\activity.md
+      - activity\activityEagle.md
+    - 'Association' :
+      - association\association.md
+      - association\associationEagleCrew.md
   - 'Sign and Pattern':
     - signs_and_patterns\patterns.md
     - signs_and_patterns\signs.md

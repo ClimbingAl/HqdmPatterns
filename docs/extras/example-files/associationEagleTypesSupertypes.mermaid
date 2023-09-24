@@ -1,0 +1,42 @@
+``` mermaid
+graph TD
+  abstract_object(abstract_object)-->|supertype_of|Class(Class);
+  Class(Class)-->|supertype_of|class_of_spatio_temporal_extent(class_of_spatio <br> _temporal_extent);
+  thing(thing)-->|supertype_of|spatio_temporal_extent(spatio_temporal <br> _extent);
+  state_of_physical_object(state_of_physical <br> _object)-->|supertype_of|state_of_ordinary_physical_object(state_of_ordinary <br> _physical_object);
+  state_of_physical_object(state_of_physical <br> _object)-->|supertype_of|state_of_biological_object(state_of_biological <br> _object);
+  class_of_spatio_temporal_extent(class_of_spatio <br> _temporal_extent)-->|supertype_of|class_of_state(class_of_state);
+  spatio_temporal_extent(spatio_temporal <br> _extent)-->|supertype_of|state(state);
+  state_of_ordinary_physical_object(state_of_ordinary <br> _physical_object)-->|supertype_of|state_of_ordinary_biological_object(state_of_ordinary <br> _biological_object);
+  state_of_biological_object(state_of_biological <br> _object)-->|supertype_of|state_of_ordinary_biological_object(state_of_ordinary <br> _biological_object);
+  state_of_ordinary_physical_object(state_of_ordinary <br> _physical_object)-->|supertype_of|state_of_system(state_of_system);
+  class_of_state(class_of_state)-->|supertype_of|class_of_state_of_association(class_of_state_of <br> _association);
+  class_of_state(class_of_state)-->|supertype_of|class_of_individual(class_of_individual);
+  class_of_state(class_of_state)-->|supertype_of|class_of_state_of_physical_object(class_of_state_of <br> _physical_object);
+  state(state)-->|supertype_of|state_of_association(state_of_association);
+  state(state)-->|supertype_of|individual(individual);
+  state(state)-->|supertype_of|state_of_physical_object(state_of_physical <br> _object);
+  state_of_ordinary_biological_object(state_of_ordinary <br> _biological_object)-->|supertype_of|state_of_biological_system(state_of_biological <br> _system);
+  state_of_system(state_of_system)-->|supertype_of|state_of_biological_system(state_of_biological <br> _system);
+  state_of_system(state_of_system)-->|supertype_of|state_of_party(state_of_party);
+  state(state)-->|supertype_of|state_of_intentionally_constructed_object(state_of_intentionally <br> _constructed_object);
+  class_of_state_of_association(class_of_state_of <br> _association)-->|supertype_of|class_of_association(class_of_association);
+  class_of_individual(class_of_individual)-->|supertype_of|class_of_association(class_of_association);
+  class_of_state_of_physical_object(class_of_state_of <br> _physical_object)-->|supertype_of|class_of_participant(class_of_participant);
+  state_of_association(state_of_association)-->|supertype_of|association(association);
+  individual(individual)-->|supertype_of|association(association);
+  state_of_physical_object(state_of_physical <br> _object)-->|supertype_of|participant(participant);
+  state_of_biological_system(state_of_biological <br> _system)-->|supertype_of|state_of_person(state_of_person);
+  state_of_party(state_of_party)-->|supertype_of|state_of_person(state_of_person);
+  state_of_physical_object(state_of_physical <br> _object)-->|supertype_of|state_of_functional_object(state_of_functional <br> _object);
+  state_of_intentionally_constructed_object(state_of_intentionally <br> _constructed_object)-->|supertype_of|state_of_functional_object(state_of_functional <br> _object);
+  class_of_association(class_of_association)-->|supertype_of|kind_of_association(kind_of_association);
+  class_of_participant(class_of_participant)-->|supertype_of|role(role);
+  style association stroke-width:4px;
+  style participant stroke-width:4px;
+  style state_of_person stroke-width:4px;
+  style state_of_functional_object stroke-width:4px;
+  style kind_of_association stroke-width:4px;
+  style role stroke-width:4px;
+  thing-->|supertype_of|abstract_object;
+```

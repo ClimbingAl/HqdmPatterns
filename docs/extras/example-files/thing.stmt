@@ -1,4 +1,4 @@
-(patterns:901238e6-c380-40d3-82f2-fa52f4c0026f rdf:type hqdm:thing)
-(patterns:901238e6-c380-40d3-82f2-fa52f4c0026f hqdm:data_EntityName 'Example_Thing_As_Instance_Of_TopLevelHQDM_EntityType_THING')
-(patterns:901238e6-c380-40d3-82f2-fa52f4c0026f patterns-rdl:record_creator 'HqdmPatternProject_User1')
-(patterns:901238e6-c380-40d3-82f2-fa52f4c0026f patterns-rdl:record_created '2023-09-10T08:07:24.527094Z')
+(patterns:b382340a-5ace-4dd9-89a9-f80e31ba6c91 rdf:type hqdm:thing)
+(patterns:b382340a-5ace-4dd9-89a9-f80e31ba6c91 hqdm:data_EntityName 'Example_Thing_As_Instance_Of_TopLevelHQDM_EntityType_THING')
+(patterns:b382340a-5ace-4dd9-89a9-f80e31ba6c91 patterns-rdl:record_creator 'HqdmPatternProject_User1')
+(patterns:b382340a-5ace-4dd9-89a9-f80e31ba6c91 patterns-rdl:record_created '2023-09-24T19:56:26.447184300Z')

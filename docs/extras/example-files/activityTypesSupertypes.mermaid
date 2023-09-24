@@ -1,0 +1,27 @@
+``` mermaid
+graph TD
+  abstract_object(abstract_object)-->|supertype_of|Class(Class);
+  Class(Class)-->|supertype_of|class_of_spatio_temporal_extent(class_of_spatio <br> _temporal_extent);
+  thing(thing)-->|supertype_of|spatio_temporal_extent(spatio_temporal <br> _extent);
+  class_of_spatio_temporal_extent(class_of_spatio <br> _temporal_extent)-->|supertype_of|class_of_state(class_of_state);
+  spatio_temporal_extent(spatio_temporal <br> _extent)-->|supertype_of|state(state);
+  class_of_state(class_of_state)-->|supertype_of|class_of_state_of_activity(class_of_state_of <br> _activity);
+  class_of_state(class_of_state)-->|supertype_of|class_of_individual(class_of_individual);
+  class_of_state(class_of_state)-->|supertype_of|class_of_state_of_physical_object(class_of_state_of <br> _physical_object);
+  state(state)-->|supertype_of|individual(individual);
+  state(state)-->|supertype_of|state_of_activity(state_of_activity);
+  state(state)-->|supertype_of|state_of_physical_object(state_of_physical <br> _object);
+  class_of_state_of_activity(class_of_state_of <br> _activity)-->|supertype_of|class_of_activity(class_of_activity);
+  class_of_individual(class_of_individual)-->|supertype_of|class_of_activity(class_of_activity);
+  class_of_state_of_physical_object(class_of_state_of <br> _physical_object)-->|supertype_of|class_of_participant(class_of_participant);
+  individual(individual)-->|supertype_of|activity(activity);
+  state_of_activity(state_of_activity)-->|supertype_of|activity(activity);
+  state_of_physical_object(state_of_physical <br> _object)-->|supertype_of|participant(participant);
+  class_of_activity(class_of_activity)-->|supertype_of|kind_of_activity(kind_of_activity);
+  class_of_participant(class_of_participant)-->|supertype_of|role(role);
+  style activity stroke-width:4px;
+  style participant stroke-width:4px;
+  style kind_of_activity stroke-width:4px;
+  style role stroke-width:4px;
+  thing-->|supertype_of|abstract_object;
+```

@@ -14,13 +14,15 @@ From this record we have no temporal information, which is unsatisfactory (from 
 2.  When, or even if, the ascent stage of LM-5 ceased to exist is open to speculation.  See [here](https://www.discovermagazine.com/technology/new-evidence-suggests-apollo-11s-lunar-ascent-module-could-still-be-orbiting){:target="_blank"} for an example of such claims.
 
 ??? note "Basic composition of LM-5"
-    The design of the LM-5 lander vehicle was in two parts, the ascent stage that housed the astronauts throughout and had the ascent engine and the descent stage that had the landing gear, decent engine and related parts.  ![LM Vehicle](../extras/source-images/LM5-stages.png)
+    The design of the LM-5 lander vehicle was in two parts, the Ascent Stage that housed the astronauts throughout and had the ascent engine and the Descent Stage that had the landing gear, decent engine and related parts.  ![LM Vehicle](../extras/source-images/LM5-stages.png)
 
+    The overlap between the Ascent and Descent Stage boxes is due to the diagram perspective, they are separate stages that together comprise the lunar lander vehicle.
+    
     The Ascent Stage returned the crew to the Command Module orbiting the moon while the Decent Stage remained on the lunar surface.
 
 An illustration of these states of the LM-5 Lander is shown below:
 
-![States of LM-5](../extras/activity-editor/state_of_LM5_on_lunar_surface.svg)
+![States of LM-5](../extras/source-images/individualEagle.svg)
 
 The data object for the `individual` representing Lunar Lander LM-5 is shown below.  There is no beginning event comitted to it but there is a definite ending event (as discussed wbove).
 
@@ -41,10 +43,10 @@ While it is unusual to create instances of the `thing` entity-type, this is the 
 
 ## References
 
-HQDM book references: 6.3.7, 7.2.1 & 7.3
+HQDM book references: 6.3.7, 7.2.1 & 7.3 **???**
 
-MagmaCore (Java) reference: [HQDM Object](https://github.com/gchq/MagmaCore/blob/879e8f119f8defef457ba0caa366ee4aa3335bab/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/pojo/HqdmObject.java#L28C1-L28C1), [Thing](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/Thing.java)
+MagmaCore (Java) reference: [`functional_object`](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/FunctionalObject.java), [`state_of_functional_object`](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/StateOfFunctionalObject.java)
 
-Other implementation issues:
+Other implementation issues: ???
 
 

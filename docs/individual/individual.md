@@ -12,16 +12,11 @@ One of the first HQDM patterns that is key to many of the more involved patterns
 
 ![Individual X and State Of X](../extras/source-images/individualX.svg)
 
-### Relations
-
---8<-- "individualAndPhyscialObjectRels.mermaid"
-
 ## Implementation
 
 --8<-- "individualAndKindNodeEdgeGraph.mermaid"
 
 --8<-- "individualExampleNodeEdgeGraph.mermaid"
-
 
 
 ??? info "TURTLE"
@@ -44,5 +39,6 @@ One of the first HQDM patterns that is key to many of the more involved patterns
 
 ??? tip "Strategies for implementation of the `individual` pattern"
     GGG
+    Mention `part__of_by_class`
 
 Other properties may be chosen, or added, for additional data management purposes (e.g. logical deletion or data record copying).  They are described in the HQDM References below and are provided in the [`PatternsUtils.java`](https://github.com/ClimbingAl/code-for-hqdm-patterns/blob/cb73d64e61fda53b48af49f2793d6761ba79cd2a/thing/thing/src/main/java/patterns/hqdm/PatternsUtils.java#L31).
