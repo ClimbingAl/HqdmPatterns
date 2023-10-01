@@ -29,7 +29,7 @@ This `activity` pattern is a very common one where two or more `individual` obje
 ## Spacetime Diagram
 The following diagram illustrates the activity of two states, each state being a `temporal_part_of` an `individual` X and Z respectively.  The constituent states in this `activity` all share the same temporal bounds.  This examples will be implemented below to illustrate the general entity-relationship and data patterns resulting from it.
 
-![An activity between a state of X and a state of Z](../extras/source-images/activityXY.svg)
+![An activity between a state of X and a state of Z](../extras/source-images/activityXZ.svg)
 
 ## Data Object Block Diagrams
 The block diagram below illustrates the data objects comprising the generic activity shown on the space-time diagram above.
@@ -47,14 +47,15 @@ The data objects shown in the diagram above have been implemented using MagmaCor
 
 --8<-- "genericActivityAndParticipantsNodeEdgeGraph.mermaid"
 
-An extended node-edge graph showing some of the additional dependencies is shown next.
+??? info "Extended node-edge graph"
+    An extended node-edge graph showing some of the additional dependencies is shown next.
 
---8<-- "genericActivityAndParticipantsFullNodeEdgeGraph.mermaid"
+    --8<-- "genericActivityAndParticipantsFullNodeEdgeGraph.mermaid"
 
 These examples of `activity` also build on the [individual examples](../individual/individual.md) data object examples, showing how data can be added to existing data that has been consistently generated using HQDM (with MagmaCore, in this case).  The TURTLE dataset showing the data used to generate these node-edge graphs is shown in the tab below.
 
 ??? info "TURTLE"
-    ``` title="Aaociation objects example in TURTLE"
+    ``` title="Activity objects example in TURTLE"
     --8<-- "activityGenericPattern.ttl"
     ```
 

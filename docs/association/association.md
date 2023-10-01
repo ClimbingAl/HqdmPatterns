@@ -47,14 +47,15 @@ The data objects shown in the diagram above have been implemented using MagmaCor
 
 --8<-- "genericAssociationAndParticipantsNodeEdgeGraph.mermaid"
 
-An extended node-edge graph showing some of the additional dependencies is shown next.
+??? info "Extended node-edge graph"
+    An extended node-edge graph showing some of the additional dependencies is shown next.
 
---8<-- "genericAssociationAndParticipantsFullNodeEdgeGraph.mermaid"
+    --8<-- "genericAssociationAndParticipantsFullNodeEdgeGraph.mermaid"
 
 These examples of `association` also build on the [individual examples](../individual/individual.md) data object examples, showing how data can be added to existing data that has been consistently generated using HQDM (with MagmaCore, in this case).  The TURTLE dataset showing the data used to generate these node-edge graphs is shown in the tab below.
 
 ??? info "TURTLE"
-    ``` title="Aaociation objects example in TURTLE"
+    ``` title="Association objects example in TURTLE"
     --8<-- "associationGenericPattern.ttl"
     ```
 

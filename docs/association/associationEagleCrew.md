@@ -34,7 +34,7 @@ This `association` pattern involves one `functional_object` (in this example, th
 ## Spacetime Diagram
 The following diagram illustrates the association of two states, each state being a `temporal_part_of` an `individual` X and Y respectively.  The constituent states in this `association` all share the same temporal bounds.  This examples will be implemented below to illustrate the general entity-relationship and data patterns resulting from it.
 
-![An association between *Eagle* and its crew deuring descent](../extras/source-images/associationBuzzInEagle.svg)
+![An association between *Eagle* and its crew during descent](../extras/source-images/associationBuzzInEagle.svg)
 
 ## Data Object Block Diagrams
 The block diagram below illustrates the data objects comprising the generic association shown on the space-time diagram above.

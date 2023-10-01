@@ -83,15 +83,16 @@ nav:
     - individual/individual_LM5.md
     - individual/individual_queries.md
   - 'Activity and Association':
-    - 'Activity' :
-      - activity\activity.md
-      - activity\activityEagle.md
     - 'Association' :
       - association\association.md
       - association\associationEagleCrew.md
+    - 'Activity' :
+      - activity\activity.md
+      - activity\activityEagle.md
   - 'Sign and Pattern':
     - signs_and_patterns\patterns.md
     - signs_and_patterns\signs.md
+    - signs_and_patterns\sign_and_pattern.md
   - 'System and System Component':
     - system\system.md
     - system\system_component.md
@@ -100,4 +101,7 @@ nav:
   - 'Levels of Reality':
     - levels_of_reality\multiple_inheritance.md
     - levels_of_reality\types_of_states.md
+  - 'Implementation Guidance':
+    - implementation_guidance\managing_immutable_data.md
+    - implementation_guidance\model_mapping_pro,cess.md
 

@@ -4,185 +4,155 @@
 
 <https://apollo-protocol.github.io/ns/2023/diagram-editor> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0".
 <https://apollo-protocol.github.io/ns/2023/diagram-editor#hqdm-representation> <http://www.w3.org/2002/07/owl#versionInfo> "1".
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#00b1fe27-7cc9-4b33-ac4a-d82923fb48e7> a hqdm:identification;
-    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#090f65fd-4d36-49e1-8b95-979a56545306>;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:identification;
-    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fa69efb-c9a8-49f4-a9ee-c479bf52c756>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#00e88efc-b7bc-4485-b2bb-1d999e062b98> a hqdm:event;
-    hqdm:data_EntityName "-Infinity";
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#003b00f0-03b2-4b0a-82a8-17670bc85d73> a hqdm:event;
+    hqdm:data_EntityName "360720000";
     hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
     hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0139abe7-cccc-4344-a9aa-c90fbfe0db92> a hqdm:sign;
-    hqdm:member_of_ diag:c8791967-d2c3-4578-b5e3-8afce3135592;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#040c87dc-fea2-4a94-9a07-4a06b717ac90> a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#21ccdf14-3e09-48ea-8e58-dae01689c4e4>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:identification;
+    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#058495ba-5d88-4460-ac4b-cc3b7932f90d> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7b20bd8f-9529-4d00-ac21-8e42ba52d518>;
+    hqdm:ending diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:member_of_kind diag:b4eebfca-cd08-40b4-a6f9-bfe5f793c93c, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:b27a8e15-d59d-4381-b9f7-a00af257dd6d;
+    hqdm:temporal_part_of diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#068ee1b6-78f2-4947-b750-05125af3d9c4> a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7297aea1-5341-4517-b04f-0b60fdab50ea>;
     hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2eb62eae-20bf-4704-9ad1-090c168604c1>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#03d259ba-0d46-41a5-bdf6-d5036b4b91f6> a hqdm:pattern;
-    hqdm:data_EntityName "Buzz Aldrin";
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9caada5c-8e2f-411a-a043-3a7e0e92a628>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72> a hqdm:activity;
+    hqdm:beginning diag:cac9c78a-ca48-44f6-80e6-35cab8d1affe;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#75cff61c-12ac-4120-a639-574b915b178e>;
+    hqdm:member_of_kind diag:de6ee557-ed85-4b19-aa94-cb35d066aefc, hqdm:activity;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#074a5a55-0e95-46ba-bdbe-8ae779b7177a> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:ea68e87c-32a7-4d0a-b303-0d5c5b8867c5;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5bf0c4fe-fced-4d50-85fd-4c1062e620f8>;
+    hqdm:member_of_kind diag:e6240184-40d0-4808-acba-6dd6dc7ab952, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:b3360736-7206-42b2-bce0-a75396c2c4ed;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0ab1b6b8-508c-4de5-8402-87323855817c> a hqdm:pattern;
+    hqdm:data_EntityName "Launch to lunar orbit";
     hqdm:member_of_kind hqdm:pattern.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#065dc7fa-357b-4207-b94e-f0fedd5153a9> a hqdm:event;
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0bf274f9-ad5f-4105-a8cb-277c12c50e5f> a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3b1906ae-7df5-4718-8fd3-391a2b0292f5>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:identification;
+    hqdm:represented diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1355c273-1166-4b41-8e78-b9ef4faaac85> a hqdm:event;
+    hqdm:data_EntityName "369938999";
+    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
+    hqdm:member_of_kind hqdm:event;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#158e354d-ffbb-481c-981f-b8d609860a69> a hqdm:event;
     hqdm:data_EntityName "460980000";
     hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
     hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72> a hqdm:activity;
-    hqdm:beginning diag:e527f365-ab1b-4bbe-8885-b92912bdec75;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#71528d6f-0ac1-48eb-bcea-90830a389226>;
-    hqdm:member_of_kind diag:de6ee557-ed85-4b19-aa94-cb35d066aefc, hqdm:activity;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0799021d-4fd7-4c35-8675-f26e389e36e4> a hqdm:event;
-    hqdm:data_EntityName "447720000";
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#15cb4544-6bc6-43c1-bbae-cd5f33529604> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5a70ad88-b245-4da5-9cf4-aae0288480b6>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7b20bd8f-9529-4d00-ac21-8e42ba52d518>;
+    hqdm:member_of_kind diag:e6240184-40d0-4808-acba-6dd6dc7ab952, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8d6d92fb-c1ff-4f4a-a255-6ebba8e0d3ce>;
+    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1672fa8e-06c4-4204-aa7b-c7cfd7e4b12e> a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5a8e9328-3d0f-4cb5-acec-044590ce5b71>;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:b2e6fbf2-3e9d-4912-a79d-feb522e2d519.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#18f4662f-17cc-4694-825b-7bf328005d07> a hqdm:event;
+    hqdm:data_EntityName "Infinity";
     hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
     hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#090f65fd-4d36-49e1-8b95-979a56545306> a hqdm:pattern;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a6a009f-999b-48d8-9506-08eada85ba3a> a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3b1906ae-7df5-4718-8fd3-391a2b0292f5>;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6edda353-a209-4bd3-a303-eb9a9ee32b05>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a720f43-d7aa-47d8-9f80-2975fa977839> a hqdm:activity;
+    hqdm:beginning diag:f8ccc6df-9249-4a47-8b0c-94ef6d93b150;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1355c273-1166-4b41-8e78-b9ef4faaac85>;
+    hqdm:member_of_kind diag:cbd74da0-05bb-4ee5-826d-4b9ad826cc19, hqdm:activity;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1ae0add9-818f-4303-9dce-d58f14f17e77> a hqdm:sign;
+    hqdm:member_of_ diag:bd360708-ebda-4afd-8d44-4d13960377ae;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1e4c9544-4f13-4063-b5cb-fc1c1524869b>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1c41d372-ce71-47da-916d-b1774456c080> a hqdm:pattern;
+    hqdm:data_EntityName "CDR and LMP in LM-5 for Descent to Lunar Surface";
+    hqdm:member_of_kind hqdm:pattern.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1d21fda0-cd20-45cf-90c4-b8d4176fd0f9> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7b20bd8f-9529-4d00-ac21-8e42ba52d518>;
+    hqdm:ending diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:b27a8e15-d59d-4381-b9f7-a00af257dd6d;
+    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1e4c9544-4f13-4063-b5cb-fc1c1524869b> a hqdm:representation_by_sign;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5a70ad88-b245-4da5-9cf4-aae0288480b6>;
+    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1ae0add9-818f-4303-9dce-d58f14f17e77>;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7b20bd8f-9529-4d00-ac21-8e42ba52d518>;
+    hqdm:member_of_ diag:b5103c81-f6fd-4a73-839d-2905a085a8e9;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8d6d92fb-c1ff-4f4a-a255-6ebba8e0d3ce>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1f1448c0-a0af-4a68-9fa4-18cee5d1e6f3> a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1c41d372-ce71-47da-916d-b1774456c080>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:identification;
+    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a720f43-d7aa-47d8-9f80-2975fa977839>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#21ccdf14-3e09-48ea-8e58-dae01689c4e4> a hqdm:pattern;
+    hqdm:data_EntityName "CM and LM-5 transit to and establish lunar orbit";
+    hqdm:member_of_kind hqdm:pattern.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#221d28e2-36fb-46c8-82d2-bc2c6932dc43> a hqdm:pattern;
     hqdm:data_EntityName "Apollo-11 Rocket Asembly";
     hqdm:member_of_kind hqdm:pattern.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#094d31d1-b0a0-4920-bd51-3cd63413eafd> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:a7003327-bb1b-42ec-baf1-0b576da82c70;
-    hqdm:ending diag:d1701cbb-3464-4c6f-9886-7127f97f0952;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#82b0f93c-76a5-492a-b2f7-b5d054ff72bf>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fa69efb-c9a8-49f4-a9ee-c479bf52c756>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0d4a1ab5-13e5-4096-9285-4b77fdccb91e> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:e527f365-ab1b-4bbe-8885-b92912bdec75;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#71528d6f-0ac1-48eb-bcea-90830a389226>;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72>;
-    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0f11b5f1-00b8-4c85-a3ef-05f7a6ea1e43> a hqdm:pattern;
-    hqdm:data_EntityName "Command Module";
-    hqdm:member_of_kind hqdm:pattern.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1081e21e-d689-4947-80ff-1ef6205b1643> a hqdm:representation_by_sign;
-    hqdm:beginning diag:e527f365-ab1b-4bbe-8885-b92912bdec75;
-    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8da2f4c1-9b7b-4020-a28e-f54937f7c76e>;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#71528d6f-0ac1-48eb-bcea-90830a389226>;
-    hqdm:member_of_ diag:f553acb9-5024-4e78-b3e4-15e30b18d653;
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#24d7f535-e0ff-4cf6-8dfd-3b1d9029bc75> a hqdm:representation_by_sign;
+    hqdm:beginning diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#36f4eb9e-179d-49b5-a32a-02604780673a>;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#18f4662f-17cc-4694-825b-7bf328005d07>;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#621e70d0-6103-42cc-8bcd-ea0535279aee>;
     hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#108d42fc-7517-494e-b737-7e379cdbf72b> a hqdm:pattern;
-    hqdm:data_EntityName "LM-5 Ascent Module";
-    hqdm:member_of_kind hqdm:pattern.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1147b715-894d-4035-8991-1473d5d4982d> a hqdm:sign;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#99a97714-291d-46c9-bfd9-cd072323b1d1>;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3463ed44-43ae-4e74-8c88-d70c6e420c9f>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#12122060-689f-4f2a-a217-84b5bcb11b0c> a hqdm:pattern;
-    hqdm:data_EntityName "Neil Armstrong";
-    hqdm:member_of_kind hqdm:pattern.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#150df38a-0acf-4322-a856-98e0471f21f4> a hqdm:identification;
-    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#199c8426-7804-4718-8a39-b92d18c6ddd0>;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:identification;
-    hqdm:represented diag:b27a8e15-d59d-4381-b9f7-a00af257dd6d.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#199c8426-7804-4718-8a39-b92d18c6ddd0> a hqdm:pattern;
-    hqdm:data_EntityName "Preparations for Lunar Liftoff";
-    hqdm:member_of_kind hqdm:pattern.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#19d55788-9ade-42ca-b161-c9b8e344c483> a hqdm:representation_by_sign;
-    hqdm:beginning diag:ac211a6a-634f-40d2-aa2e-735d90ab1f9f;
-    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#872fcae8-6aa9-4aa2-a785-4d1fe700c0eb>;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#065dc7fa-357b-4207-b94e-f0fedd5153a9>;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#638683e1-970d-4aa8-99ae-f9c0a8381724>;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#40ae87d9-8a1b-417c-86a8-a00bd70fe239>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a720f43-d7aa-47d8-9f80-2975fa977839> a hqdm:activity;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8925994a-8b8e-46ad-aecf-9c1a49dad6f3>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9ff8708f-bbbb-4b74-bb87-a1e22692637c>;
-    hqdm:member_of_kind diag:cbd74da0-05bb-4ee5-826d-4b9ad826cc19, hqdm:activity;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1e0fa8b1-301f-44ea-8120-6917e8ea6ceb> a hqdm:event;
-    hqdm:data_EntityName "394797000";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#22226c61-ea7e-4967-8727-4a75f2eb35bb> a hqdm:identification;
-    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#12122060-689f-4f2a-a217-84b5bcb11b0c>;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:identification;
-    hqdm:represented diag:a589d9e5-919f-476d-aa54-8c6dac941061.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#28d4ec21-3821-4b40-804e-d00c00905240> a hqdm:event;
-    hqdm:data_EntityName "11722999";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4974518d-53c0-4f56-8017-3a989bf36065>.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0> a hqdm:activity;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4b68028a-8557-476f-8573-bf0fd61f6db4>;
-    hqdm:ending diag:ccdfb28a-f4a2-4705-87d2-36001b29a0e0;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5b9e5c78-ce26-4bf7-b5fe-2e446f304742>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#003b00f0-03b2-4b0a-82a8-17670bc85d73>;
     hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#416e339b-a1ca-4e5d-bdc4-ad9556348480>, hqdm:activity;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2b14d3ea-02d6-4ddf-bda1-4de8f21e6b1a> a hqdm:representation_by_sign;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1e0fa8b1-301f-44ea-8120-6917e8ea6ceb>;
-    hqdm:consists_of diag:b207b1ca-0089-41e8-ae2b-070c969146ab;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5878324d-0ef5-4445-8fb7-779a476cfac4>;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6790ddeb-1699-4a8e-a0e6-53dc32c3099d>;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents diag:b3360736-7206-42b2-bce0-a75396c2c4ed.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2eb62eae-20bf-4704-9ad1-090c168604c1> a hqdm:representation_by_sign;
-    hqdm:beginning diag:dddb864e-e9b6-4cfe-aa61-17d531df3ecd;
-    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0139abe7-cccc-4344-a9aa-c90fbfe0db92>;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#28d4ec21-3821-4b40-804e-d00c00905240>;
-    hqdm:member_of_ diag:b1ea1c7e-71ad-4230-9cc1-26544eb5b185;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fa69efb-c9a8-49f4-a9ee-c479bf52c756>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2fcd4b4e-8129-4032-8620-012859776033> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:a7003327-bb1b-42ec-baf1-0b576da82c70;
-    hqdm:ending diag:d1701cbb-3464-4c6f-9886-7127f97f0952;
-    hqdm:member_of_kind diag:b4eebfca-cd08-40b4-a6f9-bfe5f793c93c, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d;
-    hqdm:temporal_part_of diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3108b3cd-4a85-46ed-bac2-a237ad492e24> a hqdm:role;
     hqdm:data_EntityName "Command_module_role";
     hqdm:member_of_kind hqdm:role;
     hqdm:part_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#39370411-581c-48a3-9a07-23c70c7c988a>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#416e339b-a1ca-4e5d-bdc4-ad9556348480>, diag:cca1d414-bdc4-4e1b-aa3e-46fb297ac4c9, diag:de6ee557-ed85-4b19-aa94-cb35d066aefc.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#312b53d2-b7bd-48cc-9a84-b840dda4322c> a hqdm:representation_by_sign;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#00e88efc-b7bc-4485-b2bb-1d999e062b98>;
-    hqdm:consists_of diag:b4361a8f-a86b-41b7-854f-dd5824515571;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending diag:e42ba57b-f6aa-4b2c-93fc-5dea920ccdb5;
-    hqdm:member_of_ diag:d9fdb621-76ec-48de-83a5-00b44a0039a3;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#31ed6900-7687-48bc-bc90-2e56609bb307> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8accb393-6ab9-49a9-b635-a9143cdba2d8>;
-    hqdm:ending diag:a9b005c9-01ed-48bc-9df2-ac78de623143;
-    hqdm:member_of_kind diag:b4eebfca-cd08-40b4-a6f9-bfe5f793c93c, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:b27a8e15-d59d-4381-b9f7-a00af257dd6d;
-    hqdm:temporal_part_of diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3463ed44-43ae-4e74-8c88-d70c6e420c9f> a hqdm:representation_by_sign;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4b68028a-8557-476f-8573-bf0fd61f6db4>;
-    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1147b715-894d-4035-8991-1473d5d4982d>;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending diag:ccdfb28a-f4a2-4705-87d2-36001b29a0e0;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6efce64e-b02c-43d7-bcc6-eac121c898e1>;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0>.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74> a hqdm:ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4791c096-a3ff-4ccf-9c00-b8fdf447f4d2>;
-    hqdm:ending diag:f806dc55-68b1-4a10-b831-2c03ab476c8e;
+    hqdm:beginning diag:aa492e6f-b971-459f-aa02-299f42618c03;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#18f4662f-17cc-4694-825b-7bf328005d07>;
     hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#64539a67-d8aa-4a9d-a8a0-88fb3ce236e3>, hqdm:ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#38106d6d-b553-4156-b30d-60749ce92403> a hqdm:sign;
-    hqdm:member_of_ diag:b2783c4f-5776-4e90-92f2-f28a52a79bdb;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#35c73654-4396-4f6b-adea-10cd903288a5> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:e45ee6a6-e01b-4dc1-9072-538164417c5a;
+    hqdm:ending diag:bccc99ae-2ca2-4a88-9fb2-79c7a207b67b;
+    hqdm:member_of_kind diag:b4eebfca-cd08-40b4-a6f9-bfe5f793c93c, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d;
+    hqdm:temporal_part_of diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#36f4eb9e-179d-49b5-a32a-02604780673a> a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9cbc4661-da39-44ce-bd5d-4ec3caa8ce9b>;
     hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:bbb6938d-67d7-4fc5-b468-1395868f1a55.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#24d7f535-e0ff-4cf6-8dfd-3b1d9029bc75>.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#39370411-581c-48a3-9a07-23c70c7c988a> a hqdm:kind_of_activity;
     hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3108b3cd-4a85-46ed-bac2-a237ad492e24>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, diag:becf0e5b-f094-43eb-be03-a36de244a05d;
     hqdm:data_EntityName "Return_from_moon_to_earth's_surface_kin d_of_activity";
@@ -191,558 +161,542 @@
     hqdm:data_EntityName "Astronaut_role";
     hqdm:member_of_kind hqdm:role;
     hqdm:part_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#416e339b-a1ca-4e5d-bdc4-ad9556348480>, diag:cca1d414-bdc4-4e1b-aa3e-46fb297ac4c9.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3c4e4a52-ce16-4de6-bb24-eb47f77bcab2> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:e527f365-ab1b-4bbe-8885-b92912bdec75;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#71528d6f-0ac1-48eb-bcea-90830a389226>;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#47639691-4458-4dec-84ea-541480fcf363>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72>;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4974518d-53c0-4f56-8017-3a989bf36065>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3e1cc1e6-08b4-4358-9b92-621404d1ec19> a hqdm:sign;
-    hqdm:member_of_ diag:ca5e10be-ffb0-4ba4-be0a-5069ba40a657;
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3aede1bd-6f31-42f3-a20c-c100a1c46d54> a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#58575fb9-6d61-4b01-a89b-21ad6121d471>;
     hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:c9d2ad27-bef7-4c60-9996-273f4d5a27fc.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7a3ac01d-a628-4760-bf94-93050489a75c>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3b1906ae-7df5-4718-8fd3-391a2b0292f5> a hqdm:pattern;
+    hqdm:data_EntityName "LM-5 Lunar Module Assembly";
+    hqdm:member_of_kind hqdm:pattern.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3ef81692-beb4-4d5d-a44e-15ab783e27c2> a hqdm:activity;
-    hqdm:beginning diag:a7d905ff-3fdf-4969-9fe1-e12261768195;
-    hqdm:ending diag:ee73ddcd-e15a-4894-8e40-1de951491b05;
+    hqdm:beginning diag:d5fdfbb6-dc66-4481-8dde-1cb654bada14;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8ffc0351-3964-4323-a464-7c684f2004b5>;
     hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#39370411-581c-48a3-9a07-23c70c7c988a>, hqdm:activity;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3fcfac8d-7812-4827-bec8-84228bc28d45> a hqdm:representation_by_sign;
-    hqdm:beginning diag:a7d905ff-3fdf-4969-9fe1-e12261768195;
-    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#66614c3e-65e2-4915-a595-78daa073207b>;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending diag:ee73ddcd-e15a-4894-8e40-1de951491b05;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#998e0dd4-4012-46b6-ae8a-d1e76e0c6a8b>;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3ef81692-beb4-4d5d-a44e-15ab783e27c2>.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3fde1f16-b10d-40de-b69c-2a50dea835a3> a hqdm:description;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6a55c9e6-0fb7-468a-ae94-86a81391ebbc>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:description;
+    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#40ae87d9-8a1b-417c-86a8-a00bd70fe239> a hqdm:activity;
-    hqdm:beginning diag:ac211a6a-634f-40d2-aa2e-735d90ab1f9f;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#065dc7fa-357b-4207-b94e-f0fedd5153a9>;
+    hqdm:beginning diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#158e354d-ffbb-481c-981f-b8d609860a69>;
     hqdm:member_of_kind diag:b41158ca-2619-4097-9cf5-890979343127, hqdm:activity;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#416e339b-a1ca-4e5d-bdc4-ad9556348480> a hqdm:kind_of_activity;
     hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3108b3cd-4a85-46ed-bac2-a237ad492e24>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3aba62a5-68bb-4494-9f01-8fded382f472>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, diag:b4eebfca-cd08-40b4-a6f9-bfe5f793c93c;
     hqdm:data_EntityName "Spacecraft_and_crew_transit_in_space_kind_of_activity";
     hqdm:member_of_kind hqdm:kind_of_activity.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#424b7c55-110f-4932-8c70-fc7e0dc1efba> a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6a55c9e6-0fb7-468a-ae94-86a81391ebbc>;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9eb703d7-93e3-4ebf-b645-e36bc26e8ee7>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#42853070-e507-411d-be20-0277b0f37530> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:d5fdfbb6-dc66-4481-8dde-1cb654bada14;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8ffc0351-3964-4323-a464-7c684f2004b5>;
+    hqdm:member_of_kind diag:becf0e5b-f094-43eb-be03-a36de244a05d, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3ef81692-beb4-4d5d-a44e-15ab783e27c2>;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#46463512-97cb-4eb4-93b2-6de8c24beadc> a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9d38e601-3071-48ed-8b3c-34a2a9201064>;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:afb97f1a-181b-4dcb-b6a8-8b8c4ec85417.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#47639691-4458-4dec-84ea-541480fcf363> a hqdm:role;
     hqdm:data_EntityName "Ascent_module_role";
     hqdm:member_of_kind hqdm:role;
     hqdm:part_of_by_class diag:b41158ca-2619-4097-9cf5-890979343127, diag:de6ee557-ed85-4b19-aa94-cb35d066aefc.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4791c096-a3ff-4ccf-9c00-b8fdf447f4d2> a hqdm:event;
-    hqdm:data_EntityName "-Infinity";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#486efc43-62a7-4637-9960-15675d0041cd> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4b68028a-8557-476f-8573-bf0fd61f6db4>;
-    hqdm:ending diag:ccdfb28a-f4a2-4705-87d2-36001b29a0e0;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3aba62a5-68bb-4494-9f01-8fded382f472>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0>;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4974518d-53c0-4f56-8017-3a989bf36065> a hqdm:ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0799021d-4fd7-4c35-8675-f26e389e36e4>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7c7bcd53-d0a6-4717-ad2e-9c148fa199ec>;
-    hqdm:member_of_kind hqdm:ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4b0c7194-c16c-476e-b5b5-7bf9dd8da311> a hqdm:identification;
-    hqdm:consists_of_by_class diag:ca5e10be-ffb0-4ba4-be0a-5069ba40a657;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364> a hqdm:recognizing_language_community;
+    hqdm:data_EntityName "AMRC Community";
+    hqdm:member_of_kind hqdm:recognizing_language_community;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1e4c9544-4f13-4063-b5cb-fc1c1524869b>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#24d7f535-e0ff-4cf6-8dfd-3b1d9029bc75>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4dc5e9e6-e274-4fc0-a6aa-013ed2c9a5c2>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5b3788e0-7619-40b0-b0ce-4fa05b80cc32>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6edda353-a209-4bd3-a303-eb9a9ee32b05>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7a3ac01d-a628-4760-bf94-93050489a75c>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#880665d0-5d11-4d13-b098-b05bef4a1de0>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8eb85588-cca2-4dc7-b5cc-242866992fa2>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9caada5c-8e2f-411a-a043-3a7e0e92a628>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9eb703d7-93e3-4ebf-b645-e36bc26e8ee7>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9ecdc727-c045-473b-a6be-e47d67b7277f>, diag:afb97f1a-181b-4dcb-b6a8-8b8c4ec85417, diag:b03bcc5b-472e-46f7-a888-84ead09494bf, diag:b2e6fbf2-3e9d-4912-a79d-feb522e2d519, diag:b7957810-366b-4247-b873-71b23337db78, diag:ba7b121b-8ba0-42fb-aa16-a0b2b306f944, diag:d0f0b4ee-1797-41c7-9a63-b5c32b359d5c.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4890b429-86e7-48c2-82f1-63f8efd1c085> a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7297aea1-5341-4517-b04f-0b60fdab50ea>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
     hqdm:member_of_kind hqdm:identification;
-    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a720f43-d7aa-47d8-9f80-2975fa977839>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4b68028a-8557-476f-8573-bf0fd61f6db4> a hqdm:event;
-    hqdm:data_EntityName "11723000";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4fbd3e72-0b74-404b-8ee4-a29be5bc9dd7> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:e527f365-ab1b-4bbe-8885-b92912bdec75;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#71528d6f-0ac1-48eb-bcea-90830a389226>;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3108b3cd-4a85-46ed-bac2-a237ad492e24>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72>;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#51360a92-7afb-4c28-91b2-38aea51bb6cc> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:a7d905ff-3fdf-4969-9fe1-e12261768195;
-    hqdm:ending diag:ee73ddcd-e15a-4894-8e40-1de951491b05;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3ef81692-beb4-4d5d-a44e-15ab783e27c2>;
-    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#52508a64-5db9-4f43-b860-2d43fa1f3a8f> a hqdm:pattern;
-    hqdm:data_EntityName "CDR on Lunar Surface";
+    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4974518d-53c0-4f56-8017-3a989bf36065> a hqdm:ordinary_physical_object;
+    hqdm:beginning diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#18f4662f-17cc-4694-825b-7bf328005d07>;
+    hqdm:member_of_kind hqdm:ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4dc5e9e6-e274-4fc0-a6aa-013ed2c9a5c2> a hqdm:representation_by_sign;
+    hqdm:beginning diag:aa492e6f-b971-459f-aa02-299f42618c03;
+    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6b9cd3a2-bd80-43d3-a6be-cd91162583f0>;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#18f4662f-17cc-4694-825b-7bf328005d07>;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8037b6cd-7be0-45bc-9f75-88aeffbf12ac>;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents diag:a589d9e5-919f-476d-aa54-8c6dac941061.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4ebd5e07-eddd-4f05-8a2b-d5c2614a6507> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:e45ee6a6-e01b-4dc1-9072-538164417c5a;
+    hqdm:ending diag:bccc99ae-2ca2-4a88-9fb2-79c7a207b67b;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3aba62a5-68bb-4494-9f01-8fded382f472>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4eef358f-06cf-42a7-a6c7-57e56cc95bb1> a hqdm:pattern;
+    hqdm:data_EntityName "Command Module";
     hqdm:member_of_kind hqdm:pattern.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#51513b4d-7afa-4a86-8823-ccaa2ba3326c> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:d5fdfbb6-dc66-4481-8dde-1cb654bada14;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8ffc0351-3964-4323-a464-7c684f2004b5>;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3108b3cd-4a85-46ed-bac2-a237ad492e24>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3ef81692-beb4-4d5d-a44e-15ab783e27c2>;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#526f04e3-d1e5-45e4-afb3-eee4eddf5ffb> a hqdm:pattern;
+    hqdm:data_EntityName "Neil Armstrong";
+    hqdm:member_of_kind hqdm:pattern.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#52947f2f-981e-4f09-90a8-ce214f4e0ec4> a hqdm:sign;
+    hqdm:member_of_ diag:f2af6c7d-6934-45fb-b6fb-0de9a24aa5e1;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:b03bcc5b-472e-46f7-a888-84ead09494bf.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#53e84bec-f7d3-4ed4-b55b-0e0275b001a0> a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0ab1b6b8-508c-4de5-8402-87323855817c>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:identification;
+    hqdm:represented diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#541d7242-079e-4646-a815-1929bdb2a488> a hqdm:kind_of_ordinary_physical_object;
     hqdm:data_EntityName "Earth_to_lunar_rocket_assembly_kind_of_functional_object";
     hqdm:member_of_kind hqdm:kind_of_ordinary_physical_object.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216> a hqdm:recognizing_language_community;
-    hqdm:data_EntityName "AMRC Community";
-    hqdm:member_of_kind hqdm:recognizing_language_community;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1081e21e-d689-4947-80ff-1ef6205b1643>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#19d55788-9ade-42ca-b161-c9b8e344c483>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2b14d3ea-02d6-4ddf-bda1-4de8f21e6b1a>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2eb62eae-20bf-4704-9ad1-090c168604c1>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#312b53d2-b7bd-48cc-9a84-b840dda4322c>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3463ed44-43ae-4e74-8c88-d70c6e420c9f>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3fcfac8d-7812-4827-bec8-84228bc28d45>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#62a16c9a-fb5a-4301-a5da-3b00692dc0fd>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#70de83b3-0797-44d6-9cec-7215f421d220>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#964fb0f1-d411-4b1b-adb0-85d33bf1cc36>, diag:b556d60a-95d1-4d91-b825-f04c8185612b, diag:b5baa414-a7d2-4744-aa6c-3c2b21e884da, diag:bbb6938d-67d7-4fc5-b468-1395868f1a55, diag:c970c403-a3b6-4176-b3a9-6b7e03802146, diag:c9d2ad27-bef7-4c60-9996-273f4d5a27fc, diag:ce6b02b6-712b-4d90-a51a-93c450d6853e, diag:e0ee6cb9-58b6-4882-a66d-573011e1a038.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#55ee2c2b-cedb-479f-8cd5-e2ff05925018> a hqdm:identification;
-    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#642ea0d3-cbcd-4027-b8c1-e25ef78e0062>;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:identification;
-    hqdm:represented diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5878324d-0ef5-4445-8fb7-779a476cfac4> a hqdm:event;
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5843e918-1216-452b-a6e7-47bb400fbfa0> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:f8ccc6df-9249-4a47-8b0c-94ef6d93b150;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1355c273-1166-4b41-8e78-b9ef4faaac85>;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a720f43-d7aa-47d8-9f80-2975fa977839>;
+    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#58575fb9-6d61-4b01-a89b-21ad6121d471> a hqdm:pattern;
+    hqdm:data_EntityName "Preparations for Lunar Liftoff";
+    hqdm:member_of_kind hqdm:pattern.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5a70ad88-b245-4da5-9cf4-aae0288480b6> a hqdm:event;
+    hqdm:data_EntityName "393556000";
+    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
+    hqdm:member_of_kind hqdm:event;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5a8e9328-3d0f-4cb5-acec-044590ce5b71> a hqdm:pattern;
+    hqdm:data_EntityName "CM return to Earth";
+    hqdm:member_of_kind hqdm:pattern.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5b3788e0-7619-40b0-b0ce-4fa05b80cc32> a hqdm:representation_by_sign;
+    hqdm:beginning diag:aa492e6f-b971-459f-aa02-299f42618c03;
+    hqdm:consists_of diag:e8d42cff-875f-4d65-a197-aecf16dcfc37;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#18f4662f-17cc-4694-825b-7bf328005d07>;
+    hqdm:member_of_ diag:fad6ed66-3275-4ea6-87e0-1ec53be83d65;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5b9e5c78-ce26-4bf7-b5fe-2e446f304742> a hqdm:event;
+    hqdm:data_EntityName "11723000";
+    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
+    hqdm:member_of_kind hqdm:event;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5bf0c4fe-fced-4d50-85fd-4c1062e620f8> a hqdm:event;
     hqdm:data_EntityName "401379000";
     hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
     hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5a3164f3-32dc-45ce-b519-047d3a63ece7> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:ac211a6a-634f-40d2-aa2e-735d90ab1f9f;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#065dc7fa-357b-4207-b94e-f0fedd5153a9>;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5cd486ce-9ca2-4456-9cc7-630ff4cb8f36> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:cac9c78a-ca48-44f6-80e6-35cab8d1affe;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#75cff61c-12ac-4120-a639-574b915b178e>;
     hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#40ae87d9-8a1b-417c-86a8-a00bd70fe239>;
-    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5aa98e3a-76cf-4cc0-a2de-5039c21cb6ae> a hqdm:sign;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7536fae0-62e1-42b5-b22b-116c86f91114>;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:b5baa414-a7d2-4744-aa6c-3c2b21e884da.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5e206f8a-d1ed-4392-b4a2-a3cf7fb30319> a hqdm:event;
-    hqdm:data_EntityName "401852000";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5e4dabb8-f154-470d-8549-84081a27aa76> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1e0fa8b1-301f-44ea-8120-6917e8ea6ceb>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5878324d-0ef5-4445-8fb7-779a476cfac4>;
-    hqdm:member_of_kind diag:e6240184-40d0-4808-acba-6dd6dc7ab952, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:b3360736-7206-42b2-bce0-a75396c2c4ed;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#60695dba-af86-4d1b-aea2-b2160c39fbc1> a hqdm:pattern;
-    hqdm:data_EntityName "Return from Lunar Surface to CSM";
-    hqdm:member_of_kind hqdm:pattern.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#629c3063-e92c-41ba-a6c5-0dd034b6d715> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:e527f365-ab1b-4bbe-8885-b92912bdec75;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#71528d6f-0ac1-48eb-bcea-90830a389226>;
-    hqdm:member_of_kind diag:becf0e5b-f094-43eb-be03-a36de244a05d, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
     hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72>;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#62a16c9a-fb5a-4301-a5da-3b00692dc0fd> a hqdm:representation_by_sign;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#81fa3c6b-6211-4a9f-9115-727352f29470>;
-    hqdm:consists_of diag:bcc83e77-c5e3-4667-ad25-953b45d3bfb7;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending diag:d2a5e812-0d70-48bd-89e7-6a73d76549d9;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#22226c61-ea7e-4967-8727-4a75f2eb35bb>;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents diag:a589d9e5-919f-476d-aa54-8c6dac941061.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#638683e1-970d-4aa8-99ae-f9c0a8381724> a hqdm:identification;
-    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#60695dba-af86-4d1b-aea2-b2160c39fbc1>;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
+    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5d92026d-e88d-446e-815c-5bf0c8f0f78b> a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9d38e601-3071-48ed-8b3c-34a2a9201064>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
     hqdm:member_of_kind hqdm:identification;
-    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#40ae87d9-8a1b-417c-86a8-a00bd70fe239>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#642ea0d3-cbcd-4027-b8c1-e25ef78e0062> a hqdm:pattern;
-    hqdm:data_EntityName "LM-5 Lunar Module Assembly";
-    hqdm:member_of_kind hqdm:pattern.
+    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#621e70d0-6103-42cc-8bcd-ea0535279aee> a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9cbc4661-da39-44ce-bd5d-4ec3caa8ce9b>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:identification;
+    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4974518d-53c0-4f56-8017-3a989bf36065>.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#64539a67-d8aa-4a9d-a8a0-88fb3ce236e3> a hqdm:kind_of_ordinary_physical_object;
     hqdm:data_EntityName "Command_Module_kind_of_functional_object";
     hqdm:member_of_kind hqdm:kind_of_ordinary_physical_object.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#64b3c4cd-21b3-4ce2-a949-e0d56c8865b5> a hqdm:sign;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0f11b5f1-00b8-4c85-a3ef-05f7a6ea1e43>;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:ce6b02b6-712b-4d90-a51a-93c450d6853e.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#66614c3e-65e2-4915-a595-78daa073207b> a hqdm:sign;
-    hqdm:member_of_ diag:f8b90705-acd5-4096-b38f-d5ce277d748f;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3fcfac8d-7812-4827-bec8-84228bc28d45>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#66e7876c-a67d-4f71-ba9b-68fc4e61270a> a hqdm:event;
-    hqdm:data_EntityName "447720000";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6790ddeb-1699-4a8e-a0e6-53dc32c3099d> a hqdm:identification;
-    hqdm:consists_of_by_class diag:b40b055d-696d-4272-83dd-93bfc9d43930;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#645af630-ccab-4af9-a9fb-ed1d969b9c4e> a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#94eb786c-b31a-493d-9940-7433715df91e>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
     hqdm:member_of_kind hqdm:identification;
     hqdm:represented diag:b3360736-7206-42b2-bce0-a75396c2c4ed.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6bfb7471-58ef-4e03-8918-8258b7472052> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4b68028a-8557-476f-8573-bf0fd61f6db4>;
-    hqdm:ending diag:ccdfb28a-f4a2-4705-87d2-36001b29a0e0;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3108b3cd-4a85-46ed-bac2-a237ad492e24>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0>;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6efce64e-b02c-43d7-bcc6-eac121c898e1> a hqdm:identification;
-    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#99a97714-291d-46c9-bfd9-cd072323b1d1>;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:identification;
-    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#70de83b3-0797-44d6-9cec-7215f421d220> a hqdm:representation_by_sign;
-    hqdm:beginning diag:dddb864e-e9b6-4cfe-aa61-17d531df3ecd;
-    hqdm:consists_of diag:b3f58cf1-6baa-4db7-a8c7-7690b8d71076;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#28d4ec21-3821-4b40-804e-d00c00905240>;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#00b1fe27-7cc9-4b33-ac4a-d82923fb48e7>;
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#67caa498-ca43-4844-bdf7-82220ca88385> a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1c41d372-ce71-47da-916d-b1774456c080>;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8eb85588-cca2-4dc7-b5cc-242866992fa2>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6a55c9e6-0fb7-468a-ae94-86a81391ebbc> a hqdm:pattern;
+    hqdm:data_EntityName "Command Module used to transport the three astronauts to and from the Moon";
+    hqdm:member_of_kind hqdm:pattern.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6b50a479-07ca-4cac-a65d-f3813259b8d9> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#158e354d-ffbb-481c-981f-b8d609860a69>;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#40ae87d9-8a1b-417c-86a8-a00bd70fe239>;
+    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6b9cd3a2-bd80-43d3-a6be-cd91162583f0> a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#526f04e3-d1e5-45e4-afb3-eee4eddf5ffb>;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4dc5e9e6-e274-4fc0-a6aa-013ed2c9a5c2>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6edda353-a209-4bd3-a303-eb9a9ee32b05> a hqdm:representation_by_sign;
+    hqdm:beginning diag:aa492e6f-b971-459f-aa02-299f42618c03;
+    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a6a009f-999b-48d8-9506-08eada85ba3a>;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0bf274f9-ad5f-4105-a8cb-277c12c50e5f>;
     hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fa69efb-c9a8-49f4-a9ee-c479bf52c756>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#711a73cf-8841-472b-bb56-5a355aed0d1b> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:a7d905ff-3fdf-4969-9fe1-e12261768195;
-    hqdm:ending diag:ee73ddcd-e15a-4894-8e40-1de951491b05;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#6f60b3cc-b162-4261-931c-de085e55b99a> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:e45ee6a6-e01b-4dc1-9072-538164417c5a;
+    hqdm:ending diag:bccc99ae-2ca2-4a88-9fb2-79c7a207b67b;
     hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3108b3cd-4a85-46ed-bac2-a237ad492e24>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3ef81692-beb4-4d5d-a44e-15ab783e27c2>;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d;
     hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#71528d6f-0ac1-48eb-bcea-90830a389226> a hqdm:event;
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7297aea1-5341-4517-b04f-0b60fdab50ea> a hqdm:pattern;
+    hqdm:data_EntityName "Buzz Aldrin";
+    hqdm:member_of_kind hqdm:pattern.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#74d91091-6ec5-4eea-ac73-90333600bae7> a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#221d28e2-36fb-46c8-82d2-bc2c6932dc43>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:identification;
+    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fa69efb-c9a8-49f4-a9ee-c479bf52c756>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#75cff61c-12ac-4120-a639-574b915b178e> a hqdm:event;
     hqdm:data_EntityName "467100000";
     hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
     hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#738fd8ef-c928-4f1b-9a86-8f66e52fbf3d> a hqdm:event;
-    hqdm:data_EntityName "-Infinity";
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#76c8b441-0103-4aaf-ba08-035951f3ac37> a hqdm:identification;
+    hqdm:consists_of_by_class diag:f2af6c7d-6934-45fb-b6fb-0de9a24aa5e1;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:identification;
+    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#40ae87d9-8a1b-417c-86a8-a00bd70fe239>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7a3ac01d-a628-4760-bf94-93050489a75c> a hqdm:representation_by_sign;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7b20bd8f-9529-4d00-ac21-8e42ba52d518>;
+    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3aede1bd-6f31-42f3-a20c-c100a1c46d54>;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:member_of_ diag:bc29e81b-65e2-4929-8d76-78722d9260c3;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents diag:b27a8e15-d59d-4381-b9f7-a00af257dd6d.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7b20bd8f-9529-4d00-ac21-8e42ba52d518> a hqdm:event;
+    hqdm:data_EntityName "401852000";
     hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
     hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7536fae0-62e1-42b5-b22b-116c86f91114> a hqdm:pattern;
-    hqdm:data_EntityName "Command Module used to transport the three astronauts to and from the Moon";
-    hqdm:member_of_kind hqdm:pattern.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#79f81aee-afaa-4157-99d7-a9e9a03d331c> a hqdm:sign;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#642ea0d3-cbcd-4027-b8c1-e25ef78e0062>;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:c970c403-a3b6-4176-b3a9-6b7e03802146.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7b5c7f1a-126a-4ca3-be5a-fcb7ad41130d> a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5a8e9328-3d0f-4cb5-acec-044590ce5b71>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:identification;
+    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3ef81692-beb4-4d5d-a44e-15ab783e27c2>.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76> a hqdm:person;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#00e88efc-b7bc-4485-b2bb-1d999e062b98>;
-    hqdm:ending diag:e42ba57b-f6aa-4b2c-93fc-5dea920ccdb5;
+    hqdm:beginning diag:aa492e6f-b971-459f-aa02-299f42618c03;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#18f4662f-17cc-4694-825b-7bf328005d07>;
     hqdm:member_of_kind hqdm:person;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7c7bcd53-d0a6-4717-ad2e-9c148fa199ec> a hqdm:event;
-    hqdm:data_EntityName "Infinity";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#81fa3c6b-6211-4a9f-9115-727352f29470> a hqdm:event;
-    hqdm:data_EntityName "-Infinity";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8037b6cd-7be0-45bc-9f75-88aeffbf12ac> a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#526f04e3-d1e5-45e4-afb3-eee4eddf5ffb>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:identification;
+    hqdm:represented diag:a589d9e5-919f-476d-aa54-8c6dac941061.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#80d89a87-0800-4d93-b43f-93c3b3288f1f> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7b20bd8f-9529-4d00-ac21-8e42ba52d518>;
+    hqdm:ending diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:member_of_kind diag:becf0e5b-f094-43eb-be03-a36de244a05d, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:b27a8e15-d59d-4381-b9f7-a00af257dd6d;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#82b0f93c-76a5-492a-b2f7-b5d054ff72bf> a hqdm:role;
     hqdm:data_EntityName "Rocket_assembly_role";
     hqdm:member_of_kind hqdm:role;
     hqdm:part_of_by_class diag:cca1d414-bdc4-4e1b-aa3e-46fb297ac4c9.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#86261210-16b6-4ae4-b268-419146320894> a hqdm:event;
-    hqdm:data_EntityName "0";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#872fcae8-6aa9-4aa2-a785-4d1fe700c0eb> a hqdm:sign;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#60695dba-af86-4d1b-aea2-b2160c39fbc1>;
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#83cb8bbf-2b78-45db-95d8-d4e4951b9f25> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:e45ee6a6-e01b-4dc1-9072-538164417c5a;
+    hqdm:ending diag:bccc99ae-2ca2-4a88-9fb2-79c7a207b67b;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3aba62a5-68bb-4494-9f01-8fded382f472>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d;
+    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#85bf59ad-93bb-45d5-9df3-fca1439d6209> a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#21ccdf14-3e09-48ea-8e58-dae01689c4e4>;
     hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#19d55788-9ade-42ca-b161-c9b8e344c483>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8838782e-d98d-4abc-8e3f-6737f75fea2f> a hqdm:sign;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#199c8426-7804-4718-8a39-b92d18c6ddd0>;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#964fb0f1-d411-4b1b-adb0-85d33bf1cc36>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8925994a-8b8e-46ad-aecf-9c1a49dad6f3> a hqdm:event;
-    hqdm:data_EntityName "343200000";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#89ba034a-3fc3-40de-9ecb-24d2c9fb9aeb> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:ac211a6a-634f-40d2-aa2e-735d90ab1f9f;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#065dc7fa-357b-4207-b94e-f0fedd5153a9>;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#47639691-4458-4dec-84ea-541480fcf363>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#40ae87d9-8a1b-417c-86a8-a00bd70fe239>;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4974518d-53c0-4f56-8017-3a989bf36065>.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:b7957810-366b-4247-b873-71b23337db78.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#880665d0-5d11-4d13-b098-b05bef4a1de0> a hqdm:representation_by_sign;
+    hqdm:beginning diag:e45ee6a6-e01b-4dc1-9072-538164417c5a;
+    hqdm:consists_of diag:c8a4dfd5-32c6-470a-94c1-f92b2bbfceb1;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending diag:bccc99ae-2ca2-4a88-9fb2-79c7a207b67b;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#53e84bec-f7d3-4ed4-b55b-0e0275b001a0>;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8823c36a-1dda-43ee-bd84-cf61f5dd918a> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:cac9c78a-ca48-44f6-80e6-35cab8d1affe;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#75cff61c-12ac-4120-a639-574b915b178e>;
+    hqdm:member_of_kind diag:becf0e5b-f094-43eb-be03-a36de244a05d, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72>;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8a67b92a-4df6-4477-aa17-f4442f7f890c> a hqdm:kind_of_activity;
     hqdm:consists_of_by_class diag:e6240184-40d0-4808-acba-6dd6dc7ab952;
     hqdm:data_EntityName "Lunar_surface_walk_in_spacesuit_kind_of_activity";
     hqdm:member_of_kind hqdm:kind_of_activity.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8accb393-6ab9-49a9-b635-a9143cdba2d8> a hqdm:event;
-    hqdm:data_EntityName "401852000";
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8c1d20c7-da42-4f6f-b3d9-8a029ea09fb5> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:d5fdfbb6-dc66-4481-8dde-1cb654bada14;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8ffc0351-3964-4323-a464-7c684f2004b5>;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3ef81692-beb4-4d5d-a44e-15ab783e27c2>;
+    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8d6d92fb-c1ff-4f4a-a255-6ebba8e0d3ce> a hqdm:activity;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5a70ad88-b245-4da5-9cf4-aae0288480b6>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7b20bd8f-9529-4d00-ac21-8e42ba52d518>;
+    hqdm:member_of_kind hqdm:activity;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8eb85588-cca2-4dc7-b5cc-242866992fa2> a hqdm:representation_by_sign;
+    hqdm:beginning diag:f8ccc6df-9249-4a47-8b0c-94ef6d93b150;
+    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#67caa498-ca43-4844-bdf7-82220ca88385>;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1355c273-1166-4b41-8e78-b9ef4faaac85>;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1f1448c0-a0af-4a68-9fa4-18cee5d1e6f3>;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a720f43-d7aa-47d8-9f80-2975fa977839>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fa69efb-c9a8-49f4-a9ee-c479bf52c756> a hqdm:ordinary_physical_object;
+    hqdm:beginning diag:aa492e6f-b971-459f-aa02-299f42618c03;
+    hqdm:ending diag:bccc99ae-2ca2-4a88-9fb2-79c7a207b67b;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#541d7242-079e-4646-a815-1929bdb2a488>, hqdm:ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fb588a3-eb45-4196-80ca-13ac4da09ae1> a hqdm:description;
+    hqdm:consists_of_by_class diag:c26a78b1-cfe5-4975-9a41-2500068725c8;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:description;
+    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fa69efb-c9a8-49f4-a9ee-c479bf52c756>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8ffc0351-3964-4323-a464-7c684f2004b5> a hqdm:event;
+    hqdm:data_EntityName "703114999";
     hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
     hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8d6d92fb-c1ff-4f4a-a255-6ebba8e0d3ce> a hqdm:activity;
-    hqdm:beginning diag:c15efd61-547b-4f5c-853c-a4601f2da172;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5e206f8a-d1ed-4392-b4a2-a3cf7fb30319>;
-    hqdm:member_of_kind hqdm:activity;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8da2f4c1-9b7b-4020-a28e-f54937f7c76e> a hqdm:sign;
-    hqdm:member_of_ diag:d72c6bd0-fff6-49c2-b0f0-febb67fec748;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1081e21e-d689-4947-80ff-1ef6205b1643>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fa69efb-c9a8-49f4-a9ee-c479bf52c756> a hqdm:ordinary_physical_object;
-    hqdm:beginning diag:dddb864e-e9b6-4cfe-aa61-17d531df3ecd;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#28d4ec21-3821-4b40-804e-d00c00905240>;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#541d7242-079e-4646-a815-1929bdb2a488>, hqdm:ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9572b74c-dc01-42dc-9768-66ffb80dae3d> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:a7003327-bb1b-42ec-baf1-0b576da82c70;
-    hqdm:ending diag:d1701cbb-3464-4c6f-9886-7127f97f0952;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3108b3cd-4a85-46ed-bac2-a237ad492e24>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#964fb0f1-d411-4b1b-adb0-85d33bf1cc36> a hqdm:representation_by_sign;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8accb393-6ab9-49a9-b635-a9143cdba2d8>;
-    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8838782e-d98d-4abc-8e3f-6737f75fea2f>;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending diag:a9b005c9-01ed-48bc-9df2-ac78de623143;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#150df38a-0acf-4322-a856-98e0471f21f4>;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents diag:b27a8e15-d59d-4381-b9f7-a00af257dd6d.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#97b5402b-eb39-41f4-bd0a-fa1821f2a7dc> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8accb393-6ab9-49a9-b635-a9143cdba2d8>;
-    hqdm:ending diag:a9b005c9-01ed-48bc-9df2-ac78de623143;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:b27a8e15-d59d-4381-b9f7-a00af257dd6d;
-    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#998e0dd4-4012-46b6-ae8a-d1e76e0c6a8b> a hqdm:identification;
-    hqdm:consists_of_by_class diag:f8b90705-acd5-4096-b38f-d5ce277d748f;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:identification;
-    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3ef81692-beb4-4d5d-a44e-15ab783e27c2>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#99a97714-291d-46c9-bfd9-cd072323b1d1> a hqdm:pattern;
-    hqdm:data_EntityName "CM and LM-5 transit to and establish lunar orbit";
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#94eb786c-b31a-493d-9940-7433715df91e> a hqdm:pattern;
+    hqdm:data_EntityName "LMP on Lunar Surface";
     hqdm:member_of_kind hqdm:pattern.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9d7d6957-3f1e-46e6-9a07-a5bae6be4f76> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:a7003327-bb1b-42ec-baf1-0b576da82c70;
-    hqdm:ending diag:d1701cbb-3464-4c6f-9886-7127f97f0952;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3aba62a5-68bb-4494-9f01-8fded382f472>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f3b52f6-306a-4725-a53a-8c756e7f151c> a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8925994a-8b8e-46ad-aecf-9c1a49dad6f3>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9ff8708f-bbbb-4b74-bb87-a1e22692637c>;
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#954e294e-6c8a-41ec-a190-1a5189f82ff3> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:cac9c78a-ca48-44f6-80e6-35cab8d1affe;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#75cff61c-12ac-4120-a639-574b915b178e>;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#47639691-4458-4dec-84ea-541480fcf363>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72>;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4974518d-53c0-4f56-8017-3a989bf36065>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9caada5c-8e2f-411a-a043-3a7e0e92a628> a hqdm:representation_by_sign;
+    hqdm:beginning diag:aa492e6f-b971-459f-aa02-299f42618c03;
+    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#068ee1b6-78f2-4947-b750-05125af3d9c4>;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#18f4662f-17cc-4694-825b-7bf328005d07>;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4890b429-86e7-48c2-82f1-63f8efd1c085>;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9cbc4661-da39-44ce-bd5d-4ec3caa8ce9b> a hqdm:pattern;
+    hqdm:data_EntityName "LM-5 Ascent Module";
+    hqdm:member_of_kind hqdm:pattern.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9d38e601-3071-48ed-8b3c-34a2a9201064> a hqdm:pattern;
+    hqdm:data_EntityName "Crew re-enter CM";
+    hqdm:member_of_kind hqdm:pattern.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9d7e3124-c722-4a19-bab6-38c28c47b912> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5b9e5c78-ce26-4bf7-b5fe-2e446f304742>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#003b00f0-03b2-4b0a-82a8-17670bc85d73>;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3108b3cd-4a85-46ed-bac2-a237ad492e24>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0>;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9eb703d7-93e3-4ebf-b645-e36bc26e8ee7> a hqdm:representation_by_sign;
+    hqdm:beginning diag:aa492e6f-b971-459f-aa02-299f42618c03;
+    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#424b7c55-110f-4932-8c70-fc7e0dc1efba>;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#18f4662f-17cc-4694-825b-7bf328005d07>;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3fde1f16-b10d-40de-b69c-2a50dea835a3>;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9ecdc727-c045-473b-a6be-e47d67b7277f> a hqdm:representation_by_sign;
+    hqdm:beginning diag:ea68e87c-32a7-4d0a-b303-0d5c5b8867c5;
+    hqdm:consists_of diag:b89d21b5-0c75-4678-a30f-5d75a6d8a9e4;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5bf0c4fe-fced-4d50-85fd-4c1062e620f8>;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#645af630-ccab-4af9-a9fb-ed1d969b9c4e>;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents diag:b3360736-7206-42b2-bce0-a75396c2c4ed.
+<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9ee48f12-4a81-4426-8c76-01063212836e> a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5b9e5c78-ce26-4bf7-b5fe-2e446f304742>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#003b00f0-03b2-4b0a-82a8-17670bc85d73>;
     hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a720f43-d7aa-47d8-9f80-2975fa977839>;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0>;
     hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
 <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14> a hqdm:role;
     hqdm:data_EntityName "Commander_role";
     hqdm:member_of_kind hqdm:role;
     hqdm:part_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#39370411-581c-48a3-9a07-23c70c7c988a>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#416e339b-a1ca-4e5d-bdc4-ad9556348480>, diag:afd257be-0b14-4603-a44b-bc46aac02a52, diag:b41158ca-2619-4097-9cf5-890979343127, diag:cbd74da0-05bb-4ee5-826d-4b9ad826cc19, diag:de6ee557-ed85-4b19-aa94-cb35d066aefc.
-<https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9ff8708f-bbbb-4b74-bb87-a1e22692637c> a hqdm:event;
-    hqdm:data_EntityName "369938999";
+diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5 a hqdm:event;
+    hqdm:data_EntityName "447720000";
     hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
     hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:a376022c-2dd0-4235-a25b-28a9257907dd a hqdm:event;
-    hqdm:data_EntityName "Infinity";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:a46616b5-6b4b-4444-9470-39583274f09b a hqdm:identification;
-    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#52508a64-5db9-4f43-b860-2d43fa1f3a8f>;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:identification;
-    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8d6d92fb-c1ff-4f4a-a255-6ebba8e0d3ce>.
-diag:a559504a-5c57-4bba-ace5-cc3b7186e85e a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4b68028a-8557-476f-8573-bf0fd61f6db4>;
-    hqdm:ending diag:ccdfb28a-f4a2-4705-87d2-36001b29a0e0;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0>;
-    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
 diag:a589d9e5-919f-476d-aa54-8c6dac941061 a hqdm:person;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#81fa3c6b-6211-4a9f-9115-727352f29470>;
-    hqdm:ending diag:d2a5e812-0d70-48bd-89e7-6a73d76549d9;
+    hqdm:beginning diag:aa492e6f-b971-459f-aa02-299f42618c03;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#18f4662f-17cc-4694-825b-7bf328005d07>;
     hqdm:member_of_kind hqdm:person;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:a7003327-bb1b-42ec-baf1-0b576da82c70 a hqdm:event;
-    hqdm:data_EntityName "0";
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+diag:aa492e6f-b971-459f-aa02-299f42618c03 a hqdm:event;
+    hqdm:data_EntityName "-Infinity";
     hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
     hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:a7d905ff-3fdf-4969-9fe1-e12261768195 a hqdm:event;
-    hqdm:data_EntityName "468540000";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:a9b005c9-01ed-48bc-9df2-ac78de623143 a hqdm:event;
-    hqdm:data_EntityName "447720000";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:aba51b56-5a0d-4ad3-aa84-fec67666d5b3 a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4b68028a-8557-476f-8573-bf0fd61f6db4>;
-    hqdm:ending diag:ccdfb28a-f4a2-4705-87d2-36001b29a0e0;
-    hqdm:member_of_kind diag:b4eebfca-cd08-40b4-a6f9-bfe5f793c93c, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0>;
-    hqdm:temporal_part_of diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426.
-diag:ac211a6a-634f-40d2-aa2e-735d90ab1f9f a hqdm:event;
-    hqdm:data_EntityName "447720000";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:ae2d4ea2-8390-4fc3-8f96-876550778919 a hqdm:sign;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#108d42fc-7517-494e-b737-7e379cdbf72b>;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:e0ee6cb9-58b6-4882-a66d-573011e1a038.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+diag:ab9fd44e-ff12-4a21-915a-849816c5198e a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#158e354d-ffbb-481c-981f-b8d609860a69>;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#47639691-4458-4dec-84ea-541480fcf363>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#40ae87d9-8a1b-417c-86a8-a00bd70fe239>;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4974518d-53c0-4f56-8017-3a989bf36065>.
+diag:afb97f1a-181b-4dcb-b6a8-8b8c4ec85417 a hqdm:representation_by_sign;
+    hqdm:beginning diag:cac9c78a-ca48-44f6-80e6-35cab8d1affe;
+    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#46463512-97cb-4eb4-93b2-6de8c24beadc>;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#75cff61c-12ac-4120-a639-574b915b178e>;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5d92026d-e88d-446e-815c-5bf0c8f0f78b>;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72>.
 diag:afd257be-0b14-4603-a44b-bc46aac02a52 a hqdm:kind_of_activity;
     hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, diag:b4eebfca-cd08-40b4-a6f9-bfe5f793c93c, diag:becf0e5b-f094-43eb-be03-a36de244a05d;
     hqdm:data_EntityName "Lunar_liftoff_preparations_kind_of_activity";
     hqdm:member_of_kind hqdm:kind_of_activity.
-diag:b1ea1c7e-71ad-4230-9cc1-26544eb5b185 a hqdm:description;
-    hqdm:consists_of_by_class diag:c8791967-d2c3-4578-b5e3-8afce3135592;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:description;
-    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fa69efb-c9a8-49f4-a9ee-c479bf52c756>.
-diag:b207b1ca-0089-41e8-ae2b-070c969146ab a hqdm:sign;
-    hqdm:member_of_ diag:b40b055d-696d-4272-83dd-93bfc9d43930;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2b14d3ea-02d6-4ddf-bda1-4de8f21e6b1a>.
-diag:b2783c4f-5776-4e90-92f2-f28a52a79bdb a hqdm:pattern;
-    hqdm:data_EntityName "Launch to lunar orbit";
-    hqdm:member_of_kind hqdm:pattern.
+diag:b03bcc5b-472e-46f7-a888-84ead09494bf a hqdm:representation_by_sign;
+    hqdm:beginning diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#52947f2f-981e-4f09-90a8-ce214f4e0ec4>;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#158e354d-ffbb-481c-981f-b8d609860a69>;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#76c8b441-0103-4aaf-ba08-035951f3ac37>;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#40ae87d9-8a1b-417c-86a8-a00bd70fe239>.
 diag:b27a8e15-d59d-4381-b9f7-a00af257dd6d a hqdm:activity;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8accb393-6ab9-49a9-b635-a9143cdba2d8>;
-    hqdm:ending diag:a9b005c9-01ed-48bc-9df2-ac78de623143;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7b20bd8f-9529-4d00-ac21-8e42ba52d518>;
+    hqdm:ending diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
     hqdm:member_of_kind diag:afd257be-0b14-4603-a44b-bc46aac02a52, hqdm:activity;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+diag:b2e6fbf2-3e9d-4912-a79d-feb522e2d519 a hqdm:representation_by_sign;
+    hqdm:beginning diag:d5fdfbb6-dc66-4481-8dde-1cb654bada14;
+    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1672fa8e-06c4-4204-aa7b-c7cfd7e4b12e>;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8ffc0351-3964-4323-a464-7c684f2004b5>;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7b5c7f1a-126a-4ca3-be5a-fcb7ad41130d>;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3ef81692-beb4-4d5d-a44e-15ab783e27c2>.
 diag:b3360736-7206-42b2-bce0-a75396c2c4ed a hqdm:activity;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1e0fa8b1-301f-44ea-8120-6917e8ea6ceb>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5878324d-0ef5-4445-8fb7-779a476cfac4>;
+    hqdm:beginning diag:ea68e87c-32a7-4d0a-b303-0d5c5b8867c5;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5bf0c4fe-fced-4d50-85fd-4c1062e620f8>;
     hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8a67b92a-4df6-4477-aa17-f4442f7f890c>, hqdm:activity;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:b3f58cf1-6baa-4db7-a8c7-7690b8d71076 a hqdm:sign;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#090f65fd-4d36-49e1-8b95-979a56545306>;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#70de83b3-0797-44d6-9cec-7215f421d220>.
-diag:b40b055d-696d-4272-83dd-93bfc9d43930 a hqdm:pattern;
-    hqdm:data_EntityName "LMP on Lunar Surface";
-    hqdm:member_of_kind hqdm:pattern.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+diag:b3f553c3-de9c-41c8-8924-5741d29c3984 a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:f8ccc6df-9249-4a47-8b0c-94ef6d93b150;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1355c273-1166-4b41-8e78-b9ef4faaac85>;
+    hqdm:member_of_kind diag:becf0e5b-f094-43eb-be03-a36de244a05d, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a720f43-d7aa-47d8-9f80-2975fa977839>;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
 diag:b41158ca-2619-4097-9cf5-890979343127 a hqdm:kind_of_activity;
     hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#47639691-4458-4dec-84ea-541480fcf363>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, diag:becf0e5b-f094-43eb-be03-a36de244a05d;
     hqdm:data_EntityName "Ascent_from_lunar_surface_kind_of_activity";
     hqdm:member_of_kind hqdm:kind_of_activity.
-diag:b4361a8f-a86b-41b7-854f-dd5824515571 a hqdm:sign;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#03d259ba-0d46-41a5-bdf6-d5036b4b91f6>;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#312b53d2-b7bd-48cc-9a84-b840dda4322c>.
 diag:b4eebfca-cd08-40b4-a6f9-bfe5f793c93c a hqdm:role;
     hqdm:data_EntityName "Lunar_lander_role";
     hqdm:member_of_kind hqdm:role;
     hqdm:part_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#416e339b-a1ca-4e5d-bdc4-ad9556348480>, diag:afd257be-0b14-4603-a44b-bc46aac02a52, diag:cca1d414-bdc4-4e1b-aa3e-46fb297ac4c9.
-diag:b556d60a-95d1-4d91-b825-f04c8185612b a hqdm:representation_by_sign;
-    hqdm:beginning diag:c15efd61-547b-4f5c-853c-a4601f2da172;
-    hqdm:consists_of diag:df8f71c6-eecf-4680-92ad-954db1b5e08b;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5e206f8a-d1ed-4392-b4a2-a3cf7fb30319>;
-    hqdm:member_of_ diag:a46616b5-6b4b-4444-9470-39583274f09b;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8d6d92fb-c1ff-4f4a-a255-6ebba8e0d3ce>.
-diag:b56d8c7f-ee23-4275-a91d-867c0039bc06 a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8925994a-8b8e-46ad-aecf-9c1a49dad6f3>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9ff8708f-bbbb-4b74-bb87-a1e22692637c>;
-    hqdm:member_of_kind hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a720f43-d7aa-47d8-9f80-2975fa977839>;
-    hqdm:temporal_part_of diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426.
-diag:b5baa414-a7d2-4744-aa6c-3c2b21e884da a hqdm:representation_by_sign;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4791c096-a3ff-4ccf-9c00-b8fdf447f4d2>;
-    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5aa98e3a-76cf-4cc0-a2de-5039c21cb6ae>;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending diag:f806dc55-68b1-4a10-b831-2c03ab476c8e;
-    hqdm:member_of_ diag:da89e93b-219b-4994-bbb5-89545334e22a;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
-diag:bbb6938d-67d7-4fc5-b468-1395868f1a55 a hqdm:representation_by_sign;
-    hqdm:beginning diag:a7003327-bb1b-42ec-baf1-0b576da82c70;
-    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#38106d6d-b553-4156-b30d-60749ce92403>;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending diag:d1701cbb-3464-4c6f-9886-7127f97f0952;
-    hqdm:member_of_ diag:f0a4f62f-47eb-4951-83e4-4cbc7fc2882a;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d.
-diag:bcc83e77-c5e3-4667-ad25-953b45d3bfb7 a hqdm:sign;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#12122060-689f-4f2a-a217-84b5bcb11b0c>;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#62a16c9a-fb5a-4301-a5da-3b00692dc0fd>.
-diag:bce88488-8e9f-419f-a522-7175269233e5 a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:a7003327-bb1b-42ec-baf1-0b576da82c70;
-    hqdm:ending diag:d1701cbb-3464-4c6f-9886-7127f97f0952;
-    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3aba62a5-68bb-4494-9f01-8fded382f472>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d;
-    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
-diag:be5d79ab-5df3-45c8-a701-9ce6072fd01a a hqdm:identification;
-    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0f11b5f1-00b8-4c85-a3ef-05f7a6ea1e43>;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
+diag:b5103c81-f6fd-4a73-839d-2905a085a8e9 a hqdm:identification;
+    hqdm:consists_of_by_class diag:bd360708-ebda-4afd-8d44-4d13960377ae;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
     hqdm:member_of_kind hqdm:identification;
-    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
+    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8d6d92fb-c1ff-4f4a-a255-6ebba8e0d3ce>.
+diag:b6c715f3-79be-49fa-bdc6-d38c8fb4cb73 a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:cac9c78a-ca48-44f6-80e6-35cab8d1affe;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#75cff61c-12ac-4120-a639-574b915b178e>;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3108b3cd-4a85-46ed-bac2-a237ad492e24>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72>;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
+diag:b7957810-366b-4247-b873-71b23337db78 a hqdm:representation_by_sign;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5b9e5c78-ce26-4bf7-b5fe-2e446f304742>;
+    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#85bf59ad-93bb-45d5-9df3-fca1439d6209>;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#003b00f0-03b2-4b0a-82a8-17670bc85d73>;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#040c87dc-fea2-4a94-9a07-4a06b717ac90>;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0>.
+diag:b89d21b5-0c75-4678-a30f-5d75a6d8a9e4 a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#94eb786c-b31a-493d-9940-7433715df91e>;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9ecdc727-c045-473b-a6be-e47d67b7277f>.
+diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7 a hqdm:possible_world;
+    hqdm:member_of_kind hqdm:possible_world;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+diag:ba7b121b-8ba0-42fb-aa16-a0b2b306f944 a hqdm:representation_by_sign;
+    hqdm:beginning diag:aa492e6f-b971-459f-aa02-299f42618c03;
+    hqdm:consists_of diag:d302a935-f4bd-49e6-9951-73ecdfea43a5;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending diag:bccc99ae-2ca2-4a88-9fb2-79c7a207b67b;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fb588a3-eb45-4196-80ca-13ac4da09ae1>;
+    hqdm:member_of_kind hqdm:representation_by_sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fa69efb-c9a8-49f4-a9ee-c479bf52c756>.
+diag:bc29e81b-65e2-4929-8d76-78722d9260c3 a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#58575fb9-6d61-4b01-a89b-21ad6121d471>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:identification;
+    hqdm:represented diag:b27a8e15-d59d-4381-b9f7-a00af257dd6d.
+diag:bccc99ae-2ca2-4a88-9fb2-79c7a207b67b a hqdm:event;
+    hqdm:data_EntityName "11722999";
+    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
+    hqdm:member_of_kind hqdm:event;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+diag:bd360708-ebda-4afd-8d44-4d13960377ae a hqdm:pattern;
+    hqdm:data_EntityName "CDR on Lunar Surface";
+    hqdm:member_of_kind hqdm:pattern.
 diag:becf0e5b-f094-43eb-be03-a36de244a05d a hqdm:role;
     hqdm:data_EntityName "Lunar_module_pilot_role";
     hqdm:member_of_kind hqdm:role;
     hqdm:part_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#39370411-581c-48a3-9a07-23c70c7c988a>, diag:afd257be-0b14-4603-a44b-bc46aac02a52, diag:b41158ca-2619-4097-9cf5-890979343127, diag:cbd74da0-05bb-4ee5-826d-4b9ad826cc19, diag:de6ee557-ed85-4b19-aa94-cb35d066aefc.
-diag:c15efd61-547b-4f5c-853c-a4601f2da172 a hqdm:event;
-    hqdm:data_EntityName "393556000";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:c1da4717-2425-4218-bef5-065812cf2e1c a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8accb393-6ab9-49a9-b635-a9143cdba2d8>;
-    hqdm:ending diag:a9b005c9-01ed-48bc-9df2-ac78de623143;
-    hqdm:member_of_kind diag:becf0e5b-f094-43eb-be03-a36de244a05d, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:b27a8e15-d59d-4381-b9f7-a00af257dd6d;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
-diag:c71b80af-8dd3-4756-b9b3-162bc0d468fc a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8925994a-8b8e-46ad-aecf-9c1a49dad6f3>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9ff8708f-bbbb-4b74-bb87-a1e22692637c>;
-    hqdm:member_of_kind diag:becf0e5b-f094-43eb-be03-a36de244a05d, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a720f43-d7aa-47d8-9f80-2975fa977839>;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
-diag:c72cc826-a382-4fe3-9daa-5e3064999605 a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:ac211a6a-634f-40d2-aa2e-735d90ab1f9f;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#065dc7fa-357b-4207-b94e-f0fedd5153a9>;
-    hqdm:member_of_kind diag:becf0e5b-f094-43eb-be03-a36de244a05d, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#40ae87d9-8a1b-417c-86a8-a00bd70fe239>;
-    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
-diag:c8791967-d2c3-4578-b5e3-8afce3135592 a hqdm:pattern;
+diag:c26a78b1-cfe5-4975-9a41-2500068725c8 a hqdm:pattern;
     hqdm:data_EntityName "Full stack of boosters, main stage and modules";
     hqdm:member_of_kind hqdm:pattern.
-diag:c970c403-a3b6-4176-b3a9-6b7e03802146 a hqdm:representation_by_sign;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#738fd8ef-c928-4f1b-9a86-8f66e52fbf3d>;
-    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#79f81aee-afaa-4157-99d7-a9e9a03d331c>;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#66e7876c-a67d-4f71-ba9b-68fc4e61270a>;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#55ee2c2b-cedb-479f-8cd5-e2ff05925018>;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426.
-diag:c9d2ad27-bef7-4c60-9996-273f4d5a27fc a hqdm:representation_by_sign;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8925994a-8b8e-46ad-aecf-9c1a49dad6f3>;
-    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3e1cc1e6-08b4-4358-9b92-621404d1ec19>;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9ff8708f-bbbb-4b74-bb87-a1e22692637c>;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4b0c7194-c16c-476e-b5b5-7bf9dd8da311>;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a720f43-d7aa-47d8-9f80-2975fa977839>.
-diag:ca5e10be-ffb0-4ba4-be0a-5069ba40a657 a hqdm:pattern;
-    hqdm:data_EntityName "CDR and LMP in LM-5 for Descent to Lunar Surface";
-    hqdm:member_of_kind hqdm:pattern.
+diag:c8a4dfd5-32c6-470a-94c1-f92b2bbfceb1 a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0ab1b6b8-508c-4de5-8402-87323855817c>;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#880665d0-5d11-4d13-b098-b05bef4a1de0>.
+diag:cac9c78a-ca48-44f6-80e6-35cab8d1affe a hqdm:event;
+    hqdm:data_EntityName "465600000";
+    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
+    hqdm:member_of_kind hqdm:event;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
 diag:cbd74da0-05bb-4ee5-826d-4b9ad826cc19 a hqdm:kind_of_activity;
     hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, diag:becf0e5b-f094-43eb-be03-a36de244a05d;
     hqdm:data_EntityName "Descent_to_lunar_surface_kind_of_activity";
@@ -751,135 +705,111 @@ diag:cca1d414-bdc4-4e1b-aa3e-46fb297ac4c9 a hqdm:kind_of_activity;
     hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3108b3cd-4a85-46ed-bac2-a237ad492e24>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3aba62a5-68bb-4494-9f01-8fded382f472>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#82b0f93c-76a5-492a-b2f7-b5d054ff72bf>, diag:b4eebfca-cd08-40b4-a6f9-bfe5f793c93c;
     hqdm:data_EntityName "Launch_to_lunar_orbit_kind_of_activity";
     hqdm:member_of_kind hqdm:kind_of_activity.
-diag:ccdfb28a-f4a2-4705-87d2-36001b29a0e0 a hqdm:event;
-    hqdm:data_EntityName "360720000";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:ce6b02b6-712b-4d90-a51a-93c450d6853e a hqdm:representation_by_sign;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4791c096-a3ff-4ccf-9c00-b8fdf447f4d2>;
-    hqdm:consists_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#64b3c4cd-21b3-4ce2-a949-e0d56c8865b5>;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending diag:f806dc55-68b1-4a10-b831-2c03ab476c8e;
-    hqdm:member_of_ diag:be5d79ab-5df3-45c8-a701-9ce6072fd01a;
+diag:d0d80986-5bac-470d-84ad-ec8dd699dedf a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:e45ee6a6-e01b-4dc1-9072-538164417c5a;
+    hqdm:ending diag:bccc99ae-2ca2-4a88-9fb2-79c7a207b67b;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#82b0f93c-76a5-492a-b2f7-b5d054ff72bf>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fa69efb-c9a8-49f4-a9ee-c479bf52c756>.
+diag:d0f0b4ee-1797-41c7-9a63-b5c32b359d5c a hqdm:representation_by_sign;
+    hqdm:beginning diag:aa492e6f-b971-459f-aa02-299f42618c03;
+    hqdm:consists_of diag:f657d022-43e2-407c-8849-9acef3151550;
+    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:ending diag:bccc99ae-2ca2-4a88-9fb2-79c7a207b67b;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#74d91091-6ec5-4eea-ac73-90333600bae7>;
     hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
-diag:d1701cbb-3464-4c6f-9886-7127f97f0952 a hqdm:event;
-    hqdm:data_EntityName "11722999";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:d2a5e812-0d70-48bd-89e7-6a73d76549d9 a hqdm:event;
-    hqdm:data_EntityName "Infinity";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:d35f47df-b0af-4be3-ae9f-0c90ba9b46ad a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:c15efd61-547b-4f5c-853c-a4601f2da172;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5e206f8a-d1ed-4392-b4a2-a3cf7fb30319>;
-    hqdm:member_of_kind diag:e6240184-40d0-4808-acba-6dd6dc7ab952, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8d6d92fb-c1ff-4f4a-a255-6ebba8e0d3ce>;
-    hqdm:temporal_part_of diag:a589d9e5-919f-476d-aa54-8c6dac941061.
-diag:d72c6bd0-fff6-49c2-b0f0-febb67fec748 a hqdm:pattern;
-    hqdm:data_EntityName "Crew re-enter CM";
-    hqdm:member_of_kind hqdm:pattern.
-diag:d81576cb-7d4a-453f-ac8c-db0717d1179a a hqdm:state_of_ordinary_physical_object;
-    hqdm:beginning diag:a7d905ff-3fdf-4969-9fe1-e12261768195;
-    hqdm:ending diag:ee73ddcd-e15a-4894-8e40-1de951491b05;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8fa69efb-c9a8-49f4-a9ee-c479bf52c756>.
+diag:d1f7335c-c255-4358-9dc3-2d78aa3ba81d a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#158e354d-ffbb-481c-981f-b8d609860a69>;
     hqdm:member_of_kind diag:becf0e5b-f094-43eb-be03-a36de244a05d, hqdm:participant, hqdm:state_of_ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3ef81692-beb4-4d5d-a44e-15ab783e27c2>;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#40ae87d9-8a1b-417c-86a8-a00bd70fe239>;
     hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
-diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d a hqdm:activity;
-    hqdm:beginning diag:a7003327-bb1b-42ec-baf1-0b576da82c70;
-    hqdm:ending diag:d1701cbb-3464-4c6f-9886-7127f97f0952;
-    hqdm:member_of_kind diag:cca1d414-bdc4-4e1b-aa3e-46fb297ac4c9, hqdm:activity;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:d9fdb621-76ec-48de-83a5-00b44a0039a3 a hqdm:identification;
-    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#03d259ba-0d46-41a5-bdf6-d5036b4b91f6>;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:identification;
-    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
-diag:da89e93b-219b-4994-bbb5-89545334e22a a hqdm:description;
-    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7536fae0-62e1-42b5-b22b-116c86f91114>;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:description;
-    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
-diag:dc85065c-feba-441c-a5db-d23346f49155 a hqdm:possible_world;
-    hqdm:member_of_kind hqdm:possible_world;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:dddb864e-e9b6-4cfe-aa61-17d531df3ecd a hqdm:event;
-    hqdm:data_EntityName "-Infinity";
+diag:d302a935-f4bd-49e6-9951-73ecdfea43a5 a hqdm:sign;
+    hqdm:member_of_ diag:c26a78b1-cfe5-4975-9a41-2500068725c8;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:ba7b121b-8ba0-42fb-aa16-a0b2b306f944.
+diag:d48af6d8-b841-411d-8938-f87535e77d6d a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning diag:f8ccc6df-9249-4a47-8b0c-94ef6d93b150;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1355c273-1166-4b41-8e78-b9ef4faaac85>;
+    hqdm:member_of_kind hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#1a720f43-d7aa-47d8-9f80-2975fa977839>;
+    hqdm:temporal_part_of diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426.
+diag:d5fdfbb6-dc66-4481-8dde-1cb654bada14 a hqdm:event;
+    hqdm:data_EntityName "468540000";
     hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
     hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+diag:d823bbb7-67b8-473b-964f-2f4456949166 a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5b9e5c78-ce26-4bf7-b5fe-2e446f304742>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#003b00f0-03b2-4b0a-82a8-17670bc85d73>;
+    hqdm:member_of_kind diag:b4eebfca-cd08-40b4-a6f9-bfe5f793c93c, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0>;
+    hqdm:temporal_part_of diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426.
+diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d a hqdm:activity;
+    hqdm:beginning diag:e45ee6a6-e01b-4dc1-9072-538164417c5a;
+    hqdm:ending diag:bccc99ae-2ca2-4a88-9fb2-79c7a207b67b;
+    hqdm:member_of_kind diag:cca1d414-bdc4-4e1b-aa3e-46fb297ac4c9, hqdm:activity;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
 diag:de6ee557-ed85-4b19-aa94-cb35d066aefc a hqdm:kind_of_activity;
     hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3108b3cd-4a85-46ed-bac2-a237ad492e24>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#47639691-4458-4dec-84ea-541480fcf363>, <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#9f55ec51-3926-46bc-9c1e-a96f1379ce14>, diag:becf0e5b-f094-43eb-be03-a36de244a05d;
     hqdm:data_EntityName "Crew_re-entering_orbiting_spacecraft_kind_of_activity";
     hqdm:member_of_kind hqdm:kind_of_activity.
-diag:df8f71c6-eecf-4680-92ad-954db1b5e08b a hqdm:sign;
-    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#52508a64-5db9-4f43-b860-2d43fa1f3a8f>;
-    hqdm:member_of_kind hqdm:sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:participant_in diag:b556d60a-95d1-4d91-b825-f04c8185612b.
-diag:e0ee6cb9-58b6-4882-a66d-573011e1a038 a hqdm:representation_by_sign;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#0799021d-4fd7-4c35-8675-f26e389e36e4>;
-    hqdm:consists_of diag:ae2d4ea2-8390-4fc3-8f96-876550778919;
-    hqdm:consists_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7c7bcd53-d0a6-4717-ad2e-9c148fa199ec>;
-    hqdm:member_of_ diag:f1633bc5-4175-40be-a2a6-cb5964d5e35b;
-    hqdm:member_of_kind hqdm:representation_by_sign;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155;
-    hqdm:represents <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4974518d-53c0-4f56-8017-3a989bf36065>.
-diag:e42ba57b-f6aa-4b2c-93fc-5dea920ccdb5 a hqdm:event;
-    hqdm:data_EntityName "Infinity";
+diag:e45ee6a6-e01b-4dc1-9072-538164417c5a a hqdm:event;
+    hqdm:data_EntityName "0";
     hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
     hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:e527f365-ab1b-4bbe-8885-b92912bdec75 a hqdm:event;
-    hqdm:data_EntityName "465600000";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
 diag:e6240184-40d0-4808-acba-6dd6dc7ab952 a hqdm:role;
     hqdm:data_EntityName "Astronaut_during_lunar_surface_activities_external_to_lunar_module_role";
     hqdm:member_of_kind hqdm:role;
     hqdm:part_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#8a67b92a-4df6-4477-aa17-f4442f7f890c>, hqdm:activity.
-diag:ee73ddcd-e15a-4894-8e40-1de951491b05 a hqdm:event;
-    hqdm:data_EntityName "703114999";
+diag:e8d42cff-875f-4d65-a197-aecf16dcfc37 a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4eef358f-06cf-42a7-a6c7-57e56cc95bb1>;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5b3788e0-7619-40b0-b0ce-4fa05b80cc32>.
+diag:ea68e87c-32a7-4d0a-b303-0d5c5b8867c5 a hqdm:event;
+    hqdm:data_EntityName "394797000";
     hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
     hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:f0a4f62f-47eb-4951-83e4-4cbc7fc2882a a hqdm:identification;
-    hqdm:consists_of_by_class diag:b2783c4f-5776-4e90-92f2-f28a52a79bdb;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:identification;
-    hqdm:represented diag:d9a38583-3a93-4dd2-a787-08d0406f4f9d.
-diag:f1633bc5-4175-40be-a2a6-cb5964d5e35b a hqdm:identification;
-    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#108d42fc-7517-494e-b737-7e379cdbf72b>;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:identification;
-    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4974518d-53c0-4f56-8017-3a989bf36065>.
-diag:f553acb9-5024-4e78-b3e4-15e30b18d653 a hqdm:identification;
-    hqdm:consists_of_by_class diag:d72c6bd0-fff6-49c2-b0f0-febb67fec748;
-    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#54f23653-339e-4615-9f54-705b0aaab216>;
-    hqdm:member_of_kind hqdm:identification;
-    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#06c94f4d-db7c-4cdd-9695-9e26a7821c72>.
-diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426 a hqdm:ordinary_physical_object;
-    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#738fd8ef-c928-4f1b-9a86-8f66e52fbf3d>;
-    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#66e7876c-a67d-4f71-ba9b-68fc4e61270a>;
-    hqdm:member_of_kind hqdm:ordinary_physical_object;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:f806dc55-68b1-4a10-b831-2c03ab476c8e a hqdm:event;
-    hqdm:data_EntityName "Infinity";
-    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
-    hqdm:member_of_kind hqdm:event;
-    hqdm:part_of_possible_world diag:dc85065c-feba-441c-a5db-d23346f49155.
-diag:f8b90705-acd5-4096-b38f-d5ce277d748f a hqdm:pattern;
-    hqdm:data_EntityName "CM return to Earth";
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+diag:eadd2a00-1d3a-40e8-a7da-ac1e4720b118 a hqdm:state_of_ordinary_physical_object;
+    hqdm:beginning <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#5b9e5c78-ce26-4bf7-b5fe-2e446f304742>;
+    hqdm:ending <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#003b00f0-03b2-4b0a-82a8-17670bc85d73>;
+    hqdm:member_of_kind <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3aba62a5-68bb-4494-9f01-8fded382f472>, hqdm:participant, hqdm:state_of_ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#2a5188b6-11b4-481c-bf07-9b37af66e3d0>;
+    hqdm:temporal_part_of <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#7bbf504e-f834-40dc-b060-974827fbef76>.
+diag:f2af6c7d-6934-45fb-b6fb-0de9a24aa5e1 a hqdm:pattern;
+    hqdm:data_EntityName "Return from Lunar Surface to CSM";
     hqdm:member_of_kind hqdm:pattern.
+diag:f5b6e533-4bb6-4c7c-a079-23c1aeef1426 a hqdm:ordinary_physical_object;
+    hqdm:beginning diag:aa492e6f-b971-459f-aa02-299f42618c03;
+    hqdm:ending diag:a0f6879b-1127-438d-bb78-43ae5de9d2c5;
+    hqdm:member_of_kind hqdm:ordinary_physical_object;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+diag:f657d022-43e2-407c-8849-9acef3151550 a hqdm:sign;
+    hqdm:member_of_ <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#221d28e2-36fb-46c8-82d2-bc2c6932dc43>;
+    hqdm:member_of_kind hqdm:sign;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7;
+    hqdm:participant_in diag:d0f0b4ee-1797-41c7-9a63-b5c32b359d5c.
+diag:f8ccc6df-9249-4a47-8b0c-94ef6d93b150 a hqdm:event;
+    hqdm:data_EntityName "343200000";
+    hqdm:member_of diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2;
+    hqdm:member_of_kind hqdm:event;
+    hqdm:part_of_possible_world diag:ba3aa2d3-50bf-4f11-9e60-5b35eb3dc1d7.
+diag:fad6ed66-3275-4ea6-87e0-1ec53be83d65 a hqdm:identification;
+    hqdm:consists_of_by_class <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#4eef358f-06cf-42a7-a6c7-57e56cc95bb1>;
+    hqdm:consists_of_in_members <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#48504f71-078e-4f00-8254-27cb78f0f364>;
+    hqdm:member_of_kind hqdm:identification;
+    hqdm:represented <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#3582486f-f51c-428f-be8b-1edadcda2e74>.
 <https://apollo-protocol.github.io/ns/2023/hqdm-lib> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2".
 <https://apollo-protocol.github.io/ns/2023/hqdm-lib#rdf-representation> <http://www.w3.org/2002/07/owl#versionInfo> "1".
 hqdm:activity hqdm:consists_of_by_class diag:e6240184-40d0-4808-acba-6dd6dc7ab952.
