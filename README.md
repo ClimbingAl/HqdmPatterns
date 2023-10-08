@@ -32,8 +32,8 @@ Some source material for the examples:
 
 # TODO:
 - Add discussions to some pages.
-- example code release
-- system & system-component
-- requirements/need
-- all of the other remaining sections that have placeholder pages
+- Example code release
+- System & system-component
+- Requirement methodology and Information Management Landscape pages
+- All of the other remaining sections that have placeholder pages
 - Lessons: degree of strictness, emergence, recognisably similar results, modelling decisions, etc
