@@ -1,6 +1,7 @@
 # HqdmPatterns1
+## Documentation on implementation patterns for HQDM
 
-A markdown-based documentation pack on implementation patterns for the use of the Topl Level Ontology (TLO)-based integration data model called ["HQDM"](https://www.oreilly.com/library/view/developing-high-quality/9780123751065/), using ```mkdocs material``` and related plugins.  The documentation is experimantal and will be updated when capacity allows.
+A markdown-based documentation pack on implementation patterns for the use of the Topl Level Ontology (TLO)-based integration data model created by Dr Matthew West called ["HQDM"](https://www.oreilly.com/library/view/developing-high-quality/9780123751065/), using ```mkdocs material``` and related plugins.  The documentation is experimantal and will be updated when capacity allows.
 
 The goal of this documentation is to illustrate the data model patterns that are integral to HQDM and encourage consistent, practical implementation of them.  The code examples used will be released soon.  All the example files (TTL and mermaid files) have been generated in code using both [MagmaCore](https://github.com/ClimbingAl/MagmaCore) and the [Apollo Protocol Activity Editor](https://apollo-protocol.github.io/4d-activity-editor/).
 
@@ -15,7 +16,7 @@ While each eample stands on its own, collectively they comprise an integrated se
 
 Above all, the documentation is intended to encourage discussion.  Let me know if there are improvements that can be made.
 
-I am grateful to the patience and insight into information quality management offered to me by Dr Matthew West over the last 8 years.  Matthew passed away in early August 2023 but hopefully his work will become more widely recognised as 
+I am grateful to the patience and insight into information quality management offered to me by Matthew West over the last 8 years.  Matthew passed away in early August 2023 but hopefully his work will become more widely recognised as the paving the way to transformed information management within, and between, organisations that need it.
 
 --------------------------------------------------------------
 
@@ -29,10 +30,10 @@ Some source material for the examples:
     https://www.dfj.com/ApolloConstruction/Apollo_11_LM-5_Construction_Log.pdf
 
 
--- TODO:
+# TODO:
 - Add discussions to some pages.
-- example code release
-- system & system-component
-- requirements/need
-- all of the other remaining sections that have placeholder pages
+- Example code release
+- System & system-component
+- Requirement methodology and Information Management Landscape pages
+- All of the other remaining sections that have placeholder pages
 - Lessons: degree of strictness, emergence, recognisably similar results, modelling decisions, etc
