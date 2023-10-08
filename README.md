@@ -1,4 +1,5 @@
 # HqdmPatterns1
+## Documentation on implementation patterns for HQDM
 
 A markdown-based documentation pack on implementation patterns for the use of the Topl Level Ontology (TLO)-based integration data model called ["HQDM"](https://www.oreilly.com/library/view/developing-high-quality/9780123751065/), using ```mkdocs material``` and related plugins.  The documentation is experimantal and will be updated when capacity allows.
 
@@ -29,7 +30,7 @@ Some source material for the examples:
     https://www.dfj.com/ApolloConstruction/Apollo_11_LM-5_Construction_Log.pdf
 
 
--- TODO:
+# TODO:
 - Add discussions to some pages.
 - example code release
 - system & system-component
