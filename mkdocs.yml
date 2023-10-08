@@ -66,9 +66,11 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
 
 nav:
-  - 'index.md'
+  - 'index.md'  
   - 'type_instance_patterns.md'
   - 'Introducing HQDM':
     - introducing_hqdm\basic _intro_to_hqdm.md
@@ -90,9 +92,12 @@ nav:
       - activity\activity.md
       - activity\activityEagle.md
   - 'Sign and Pattern':
+    - signs_and_patterns\what_are_signs.md
+    - signs_and_patterns\sign.md
+    - signs_and_patterns\sign_options_by_diagram.md
     - signs_and_patterns\patterns.md
-    - signs_and_patterns\signs.md
     - signs_and_patterns\sign_and_pattern.md
+    - signs_and_patterns\sign_and_pattern_apollo_example.md
   - 'System and System Component':
     - system\system.md
     - system\system_component.md

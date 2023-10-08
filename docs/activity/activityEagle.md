@@ -64,11 +64,25 @@ The data objects shown in the diagram above have been imported into a `MagmaCore
     Adding or changing predicates is not good practice as the data objects should be treated as immutable to ensure that there is integrity to the data management activities of integrated datasets like these.  This is explored [here](../implementation_guidance/managing_immutable_data.md)
 
 
-UPDATEUPDATEUPDATE These examples of `activity` also build on the [individual examples](../individual/individual.md) data object examples, showing how data can be added to existing data that has been consistently generated using HQDM (with MagmaCore, in this case).  The TURTLE dataset showing the data used to generate these node-edge graphs is shown in the tab below.
+These examples of `activity` also build on the [individual Eagle examples](../individual/individual_LM5.md) and [association Eagle examples](../association/associationEagleCrew.md) data object examples.  However, these examples are not collectively integrated as the `activity` example was generated using a separate application and imported into the MagmaCore-based environment that the previous examples were created in.  Addressing the remaining integration steps is covered in the [model mapping section](../implementation_guidance/model_mapping_process.md).  
+
+The TURTLE dataset showing the data used to generate these node-edge graphs is shown in the tab below.
 
 ??? info "TURTLE"
     ``` title="Association objects example in TURTLE"
     --8<-- "activityEaglePattern.ttl"
     ```
+??? question "I have noticed that the time values look funny, why is that?"
+    Representing time in a computational system is never as straightforward as we may may want to assume.  This is where the use of HQDM also allows a robust way to dealing with different representations of `event` objects that map to *time values* that have a specific context.  In the extended node-edge graph time values like "447720000" can be seen.  To take stock of this we have the following:
 
+    - Published times from NASA that were logged from the original Apollo-11 Mission.  They are given in both GMT date-time format and elapsed time in hhh:mm:ss (although for some they are in integer numbers of seconds and for others they have decimal fractions of a second for the elapsed time from RANGE ZERO, the nominal loftoff point).  Even these two source data formats is not completely consistent.  Some judgement was applied in their use for this worked example (this is a common data wrangling experience and took quite some time to address.  The human readable results are shown in the table at the top of this page).
+
+    - The Activity Editor is implemented in JavaScript and uses the [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) type to store event number values.  This data type is in [double-precision 64-bit binary format IEEE 7540](https://en.wikipedia.org/wiki/Double-precision_floating-point_format). It was not a requirement for the Activity Editor to support actual time values.  In addition, it does not support negative values as the nominal start is always 0, or a declared value above 0.  However, the Activity Editor assigns every instance of `event` to be a `hqdm:member_of  diag:c9ecb65e-4b1f-4633-ac5c-f765e36586f2 ;`.  The uuid value is hard-coded and represents a [`class_of_event`](https://github.com/hqdmTop/hqdmFramework/wiki/class_of_event).
+
+    - Reflecting the duration of the Apollo-11 Mission activities using the Activity Editor required a way of using a positive `number` to represent the `event` times that bounded each `activity` of interest.  Therefore, [Unix time](https://en.wikipedia.org/wiki/Unix_time), as a millisecond tick count from an established "0" (Unix epoch).  However, the Unix epoch started at "00:00:00 UTC on 1 January 1970".  The Apollo-11 Mission took place the year prior to that.  Therfore, the millisecond tick count was re-based to be "0" at the RANGE ZERO time in the NASA timeline.
+
+    `beginning` `event`: "447720000".  This corresponds to: 1969-07-21T17:54:00
+    `ending` `event`: "460980000".  This corresponds to: 1969-07-21T21:35:00
+
+    Ensuring that the context of the time values (XML Date-time values for the MagmaCore generated examples and the re-based Millisecond Tick Count values from the Activity Editor) stored in the examples datasets is unambiguous allows mappings between them to be implemented in code, if required.  To adopt this in a repeatable way some further model restrictions could be applied but this hopefully illustrates the potential.
 

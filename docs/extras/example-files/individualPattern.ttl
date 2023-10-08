@@ -1,92 +1,92 @@
-@prefix diagram:      <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#> .
+@prefix diag:         <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#> .
 @prefix hqdm:         <https://hqdmtop.github.io/hqdm#> .
 @prefix patterns:     <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#> .
 @prefix patterns-rdl: <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#> .
 
-patterns-rdl:2f3695bb-0df5-4ada-8c25-fbeee8b998e5
+patterns:4a6f9953-b92b-490b-a8f8-783c03835187
+        a                            hqdm:state ;
+        patterns-rdl:record_created  "2023-10-08T14:38:16.042202100Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:beginning               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#48c19fb8-9a91-4d48-aa90-b504a03730fc" ;
+        hqdm:data_EntityName         "Example_state_of_X" ;
+        hqdm:ending                  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#57ff3c8e-fb76-4800-9d72-b899234aa85c" ;
+        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#a541f4c7-e000-4823-9e12-8600af7267bb" ;
+        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#5c7ef7bd-41e7-4641-85c6-155cac7d75a6" ;
+        hqdm:temporal_part_of        "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#f4374c94-e368-4d71-82b3-2096ae783a7a" .
+
+patterns:f4374c94-e368-4d71-82b3-2096ae783a7a
+        a                            hqdm:individual ;
+        patterns-rdl:record_created  "2023-10-08T14:38:16.042150Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:beginning               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#b9a25e58-355a-4ab5-a105-d97b9c41edb2" ;
+        hqdm:data_EntityName         "Example_individual_X" ;
+        hqdm:ending                  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#baf40c75-f1d2-4c8e-8821-05677187dfd3" ;
+        hqdm:member_of_kind          "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#058f4fbe-3fcd-4953-9919-a2428babf970" ;
+        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#5c7ef7bd-41e7-4641-85c6-155cac7d75a6" .
+
+patterns-rdl:a541f4c7-e000-4823-9e12-8600af7267bb
         a                            hqdm:class_of_state ;
         patterns-rdl:comment         "Class_of_state_of_X" ;
-        patterns-rdl:record_created  "2023-10-01T09:56:57.820529900Z" ;
+        patterns-rdl:record_created  "2023-10-08T14:38:16.040758200Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "ClassOfState_X" .
 
-patterns:b2f12506-19f7-4f64-888b-6c2aaf76e373
-        a                            hqdm:event ;
-        patterns-rdl:record_created  "2023-10-01T09:56:57.823653300Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "t2" ;
-        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#3557766e-762f-4a7b-9ab8-d6e72b4e7514" ;
-        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#c952855c-5e0b-4d3b-aad4-586efee6620e" .
-
-patterns:9800915b-8e65-4b6c-80bb-7df8ac56725f
-        a                            hqdm:event ;
-        patterns-rdl:record_created  "2023-10-01T09:56:57.823079600Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "t3" ;
-        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#3557766e-762f-4a7b-9ab8-d6e72b4e7514" ;
-        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#c952855c-5e0b-4d3b-aad4-586efee6620e" .
-
-patterns:c952855c-5e0b-4d3b-aad4-586efee6620e
-        a                            hqdm:possible_world ;
-        patterns-rdl:record_created  "2023-10-01T09:56:57.821838600Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "Possible_World_for_generic_pattern_examples" ;
-        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#fabda255-8112-4220-bdd0-14509d3497d2" .
-
-patterns:e7f4d48a-d1e1-4ace-a519-a2304dca2054
-        a                            hqdm:event ;
-        patterns-rdl:record_created  "2023-10-01T09:56:57.823556300Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "t1" ;
-        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#3557766e-762f-4a7b-9ab8-d6e72b4e7514" ;
-        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#c952855c-5e0b-4d3b-aad4-586efee6620e" .
-
-patterns-rdl:3557766e-762f-4a7b-9ab8-d6e72b4e7514
-        a                            hqdm:class_of_event ;
-        patterns-rdl:comment         "Class_of_event_for_Generic_pattern_examples" ;
-        patterns-rdl:record_created  "2023-10-01T09:56:57.820699900Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "ClassOfEvent_ExampleEvents" .
-
-patterns-rdl:9dec180a-e191-4ef8-b0d8-3dad6f9c9bf9
+patterns-rdl:058f4fbe-3fcd-4953-9919-a2428babf970
         a                            hqdm:kind_of_individual ;
         patterns-rdl:comment         "Kind_of_X" ;
-        patterns-rdl:record_created  "2023-10-01T09:56:57.820085400Z" ;
+        patterns-rdl:record_created  "2023-10-08T14:38:16.040611900Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "KindOfIndividual_X" .
 
-patterns-rdl:fabda255-8112-4220-bdd0-14509d3497d2
+patterns:b9a25e58-355a-4ab5-a105-d97b9c41edb2
+        a                            hqdm:event ;
+        patterns-rdl:record_created  "2023-10-08T14:38:16.041523200Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "t0" ;
+        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#ca934102-741b-4aae-aa37-970e33802cb1" ;
+        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#5c7ef7bd-41e7-4641-85c6-155cac7d75a6" .
+
+patterns:48c19fb8-9a91-4d48-aa90-b504a03730fc
+        a                            hqdm:event ;
+        patterns-rdl:record_created  "2023-10-08T14:38:16.041998300Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "t1" ;
+        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#ca934102-741b-4aae-aa37-970e33802cb1" ;
+        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#5c7ef7bd-41e7-4641-85c6-155cac7d75a6" .
+
+patterns:baf40c75-f1d2-4c8e-8821-05677187dfd3
+        a                            hqdm:event ;
+        patterns-rdl:record_created  "2023-10-08T14:38:16.041684800Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "t3" ;
+        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#ca934102-741b-4aae-aa37-970e33802cb1" ;
+        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#5c7ef7bd-41e7-4641-85c6-155cac7d75a6" .
+
+patterns:57ff3c8e-fb76-4800-9d72-b899234aa85c
+        a                            hqdm:event ;
+        patterns-rdl:record_created  "2023-10-08T14:38:16.042084Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "t2" ;
+        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#ca934102-741b-4aae-aa37-970e33802cb1" ;
+        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#5c7ef7bd-41e7-4641-85c6-155cac7d75a6" .
+
+patterns-rdl:db014632-eea6-4daf-be39-00eb5f3ab8d5
         a                            hqdm:class_of_possible_world ;
         patterns-rdl:comment         "Class_of_possible_world_for_generic_pattern_examples" ;
-        patterns-rdl:record_created  "2023-10-01T09:56:57.821303300Z" ;
+        patterns-rdl:record_created  "2023-10-08T14:38:16.041161200Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "ClassOfPossibleWorld__GenericPatternExamples" .
 
-patterns:9742dfa2-aef6-4389-8cb4-3f788a3bb75e
-        a                            hqdm:individual ;
-        patterns-rdl:record_created  "2023-10-01T09:56:57.823735200Z" ;
+patterns-rdl:ca934102-741b-4aae-aa37-970e33802cb1
+        a                            hqdm:class_of_event ;
+        patterns-rdl:comment         "Class_of_event_for_Generic_pattern_examples" ;
+        patterns-rdl:record_created  "2023-10-08T14:38:16.040820100Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:beginning               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#f0ed3833-2e82-46e5-b388-d97c17815c26" ;
-        hqdm:data_EntityName         "Example_individual_X" ;
-        hqdm:ending                  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#9800915b-8e65-4b6c-80bb-7df8ac56725f" ;
-        hqdm:member_of_kind          "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#9dec180a-e191-4ef8-b0d8-3dad6f9c9bf9" ;
-        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#c952855c-5e0b-4d3b-aad4-586efee6620e" .
+        hqdm:data_EntityName         "ClassOfEvent_ExampleEvents" .
 
-patterns:9b3221bd-9cbd-492f-b346-38cb03bd79a9
-        a                            hqdm:state ;
-        patterns-rdl:record_created  "2023-10-01T09:56:57.823805800Z" ;
+patterns:5c7ef7bd-41e7-4641-85c6-155cac7d75a6
+        a                            hqdm:possible_world ;
+        patterns-rdl:record_created  "2023-10-08T14:38:16.041376Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:beginning               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#e7f4d48a-d1e1-4ace-a519-a2304dca2054" ;
-        hqdm:data_EntityName         "Example_state_of_X" ;
-        hqdm:ending                  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#b2f12506-19f7-4f64-888b-6c2aaf76e373" ;
-        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#2f3695bb-0df5-4ada-8c25-fbeee8b998e5" ;
-        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#c952855c-5e0b-4d3b-aad4-586efee6620e" ;
-        hqdm:temporal_part_of        "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#9742dfa2-aef6-4389-8cb4-3f788a3bb75e" .
-
-patterns:f0ed3833-2e82-46e5-b388-d97c17815c26
-        a                            hqdm:event ;
-        patterns-rdl:record_created  "2023-10-01T09:56:57.822243200Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "t0" ;
-        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#3557766e-762f-4a7b-9ab8-d6e72b4e7514" ;
-        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#c952855c-5e0b-4d3b-aad4-586efee6620e" .
+        hqdm:data_EntityName         "Possible_World_for_generic_pattern_examples" ;
+        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#db014632-eea6-4daf-be39-00eb5f3ab8d5" .

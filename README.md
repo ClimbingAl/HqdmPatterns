@@ -19,3 +19,10 @@ https://www.dfj.com/ApolloConstruction/Apollo_11_LM-5_Construction_Log.pdf
 
 TODO:
 - Add discussions to some pages.
+
+- requirements/need
+- representational consistency
+- degree of strictness, emergence, recognisably similar results
+- modelling decisions
+
+--- follow MW book where practical

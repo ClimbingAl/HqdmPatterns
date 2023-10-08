@@ -1,5 +1,4 @@
 @prefix diag:         <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#> .
-@prefix diagram:      <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#> .
 @prefix hqdm:         <https://hqdmtop.github.io/hqdm#> .
 @prefix patterns:     <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#> .
 @prefix patterns-rdl: <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#> .
@@ -378,7 +377,7 @@ diag:1f1448c0-a0af-4a68-9fa4-18cee5d1e6f3
 
 diag:221d28e2-36fb-46c8-82d2-bc2c6932dc43
         rdf:type              hqdm:pattern ;
-        hqdm:data_EntityName  "Apollo-11 Rocket Asembly" ;
+        hqdm:data_EntityName  "SA-506" ;
         hqdm:member_of_kind   hqdm:pattern .
 
 diag:24d7f535-e0ff-4cf6-8dfd-3b1d9029bc75
