@@ -36,7 +36,7 @@ Although beyond the scope of this documentation, any combination of signs, any m
 
 Where all, or part, of a *sign* becomes important-enough to have a information records of to be clear about what it is and what it represents, we have a pathway for doing that with HQDM.  An important aspect of *signs* is that the context in which they are recognised as intended is down to the community of individuals (e.g. a group of people, computers, etc) that can participate in that recognition.  For the examples here, the primary community that recognised all of the signs used as illustrations were NASA and the Apollo Programme participants.  Together they needed to recognise those signs to conduct the Apollo Missions.
 
-Let's take a look at the [*sign*](./signs.md) model pattern in HQDM.
+Let's take a look at the [*sign*](./sign.md) model pattern in HQDM.
 
 
 

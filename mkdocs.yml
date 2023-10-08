@@ -71,7 +71,6 @@ markdown_extensions:
 
 nav:
   - 'index.md'  
-  - 'type_instance_patterns.md'
   - 'Introducing HQDM':
     - introducing_hqdm\basic _intro_to_hqdm.md
     - introducing_hqdm\top_level_type.md
