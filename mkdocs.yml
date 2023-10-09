@@ -4,7 +4,7 @@ copyright: Copyright &copy; 2023 Critical Insight Security Ltd
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/ClimbingAl/HqdmPatterns1
+      link: https://github.com/ClimbingAl/HqdmPatterns
 
 extra_css:
   - stylesheets/extra.css
@@ -71,41 +71,41 @@ markdown_extensions:
 
 nav:
   - 'index.md'  
-  - 'Introducing HQDM':
-    - introducing_hqdm\basic _intro_to_hqdm.md
-    - introducing_hqdm\top_level_type.md
+  - 'Introducing_HQDM':
+    - introducing_hqdm/basic_intro_to_hqdm.md
+    - introducing_hqdm/top_level_type.md
   - 'Fundamental Relations':
-    - fundamental_elements\relations.md
-    - fundamental_elements\parts.md
-    - fundamental_elements\sets.md
-    - fundamental_elements\order.md
+    - fundamental_elements/relations.md
+    - fundamental_elements/parts.md
+    - fundamental_elements/sets.md
+    - fundamental_elements/order.md
   - 'Individual':
     - individual/individual.md
     - individual/individual_LM5.md
     - individual/individual_queries.md
   - 'Activity and Association':
     - 'Association' :
-      - association\association.md
-      - association\associationEagleCrew.md
+      - association/association.md
+      - association/associationEagleCrew.md
     - 'Activity' :
-      - activity\activity.md
-      - activity\activityEagle.md
+      - activity/activity.md
+      - activity/activityEagle.md
   - 'Sign and Pattern':
-    - signs_and_patterns\what_are_signs.md
-    - signs_and_patterns\sign.md
-    - signs_and_patterns\sign_options_by_diagram.md
-    - signs_and_patterns\patterns.md
-    - signs_and_patterns\sign_and_pattern.md
-    - signs_and_patterns\sign_and_pattern_apollo_example.md
+    - signs_and_patterns/what_are_signs.md
+    - signs_and_patterns/sign.md
+    - signs_and_patterns/sign_options_by_diagram.md
+    - signs_and_patterns/patterns.md
+    - signs_and_patterns/sign_and_pattern.md
+    - signs_and_patterns/sign_and_pattern_apollo_example.md
   - 'System and System Component':
-    - system\system.md
-    - system\system_component.md
+    - system/system.md
+    - system/system_component.md
   - 'Properties and Qualities':
-    - properties\properties.md
+    - properties/properties.md
   - 'Levels of Reality':
-    - levels_of_reality\multiple_inheritance.md
-    - levels_of_reality\types_of_states.md
+    - levels_of_reality/multiple_inheritance.md
+    - levels_of_reality/types_of_states.md
   - 'Implementation Guidance':
-    - implementation_guidance\managing_immutable_data.md
-    - implementation_guidance\model_mapping_pro,cess.md
+    - implementation_guidance/managing_immutable_data.md
+    - implementation_guidance/model_mapping_process.md
 

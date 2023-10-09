@@ -1,4 +1,4 @@
-# HqdmPatterns1
+# HqdmPatterns
 ## Documentation on implementation patterns for HQDM
 
 A markdown-based documentation pack on implementation patterns for the use of the Topl Level Ontology (TLO)-based integration data model created by Dr Matthew West called ["HQDM"](https://www.oreilly.com/library/view/developing-high-quality/9780123751065/), using ```mkdocs material``` and related plugins.  The documentation is experimantal and will be updated when capacity allows.
