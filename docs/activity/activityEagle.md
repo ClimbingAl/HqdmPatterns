@@ -86,3 +86,13 @@ The TURTLE dataset showing the data used to generate these node-edge graphs is s
 
     Ensuring that the context of the time values (XML Date-time values for the MagmaCore generated examples and the re-based Millisecond Tick Count values from the Activity Editor) stored in the examples datasets is unambiguous allows mappings between them to be implemented in code, if required.  To adopt this in a repeatable way some further model restrictions could be applied but this hopefully illustrates the potential.
 
+## References
+
+HQDM book references: 11.8, 17.14, 17.15, 17.16
+
+Entity Types: [`activity`](https://github.com/hqdmTop/hqdmFramework/wiki/activity), [`participant`](https://github.com/hqdmTop/hqdmFramework/wiki/participant)
+
+MagmaCore (Java) reference: [`activity`](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/Activity.java), [`participant`](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/Participant.java)
+
+Source code for this example is available [here](https://github.com/ClimbingAl/code-for-hqdm-patterns/blob/main/patterns/src/main/java/patterns/hqdm/activity/ActivityEagleExample.java)
+

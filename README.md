@@ -16,7 +16,7 @@ While each eample stands on its own, collectively they comprise an integrated se
 
 Above all, the documentation is intended to encourage discussion.  Let me know if there are improvements that can be made.
 
-I am grateful to the patience and insight into information quality management offered to me by Matthew West over the last 8 years.  Matthew passed away in early August 2023 but hopefully his work will become more widely recognised as the paving the way to transformed information management within, and between, organisations that need it.
+I am grateful to the patience and insight into information quality management offered to me by Matthew West over the last 8 years.  Matthew passed away in early August 2023 but hopefully his work will become more widely recognised as paving the way to transformed information management within, and between, organisations that need it.
 
 --------------------------------------------------------------
 

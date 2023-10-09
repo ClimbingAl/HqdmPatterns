@@ -10,11 +10,23 @@ One of the first HQDM patterns that is key to many of the more involved patterns
 
 ### Spacetime Diagram
 
+This is the first use of a spacetime diagram in this documentation.  These diagrams are useful in showing how distinct, physical things relate to each other (in whole and in part).
+
+The diagram below indicates that a whole-life `individual` exists between two instants in time (`t0` and `t3`) and has a single tamporal part, a `state` between `t1` and `t2`.  The actual physical thing that it represents may extend beyond those events and there may (will!) be many more states of it.  It is an information quality decision how diligently the representation is created and maintained to corrrespond to the actual (or possible) *individual* in the real world.
+
 ![Individual X and State Of X](../extras/source-images/individualX.svg)
 
-## Implementation
+??? question "How should I interpret a spacetime diagram?"
+    While spacetime is familiar territory for physicists it is not a common notion.  However, for many practical modelling situations, it is generally **stuff** that you can point at, kick, measure or sense.  For all the worked examples here it may have been better to call them *stuff-time* diagrams.  
+
+    Most people find it natural to accept that the people they met at a meeting existed continuously for the duration of that meeting (and likely for a significant period prior to and after it).  This is true for other things that are 'real', such as physical equipment, systems, computers, symbols/signs that we can create and interpret to help us communicate, etc.
+
+### Implementation
+Each instance of an `individual` will be a `member_of_kind` of some `kind_of_individual` (this pattern is inhereted by all subtypes of `individual`).  A node-edge graph that illustrates "Example Individual X" from the diagram above is below.  As SETs (like `kind_of_individual` are not material things they are not shown on a spacetime diagram).
 
 --8<-- "individualAndKindNodeEdgeGraph.mermaid"
+
+The full data object pattern for the `individual` and a `state` that is `temporal_part_of` it is shown in the node-edge graph below.
 
 --8<-- "individualExampleNodeEdgeGraph.mermaid"
 
@@ -38,7 +50,15 @@ One of the first HQDM patterns that is key to many of the more involved patterns
     4. Model implementation requries understanding the information requirement and the associated implementation choices.  If a particular requirement is better served by not using the Entity Type `individual` (and it's subtypes) then this can also be done using HQDM.  This should only be done if the consequences are understood.
 
 ??? tip "Strategies for implementation of the `individual` pattern"
-    GGG
+    TBC
     Mention `part__of_by_class`
 
-Other properties may be chosen, or added, for additional data management purposes (e.g. logical deletion or data record copying).  They are described in the HQDM References below and are provided in the [`PatternsUtils.java`](https://github.com/ClimbingAl/code-for-hqdm-patterns/blob/cb73d64e61fda53b48af49f2793d6761ba79cd2a/thing/thing/src/main/java/patterns/hqdm/PatternsUtils.java#L31).
+## References
+
+HQDM book references: 11.2, 17.6
+
+Entity Types: [`individual`](https://github.com/hqdmTop/hqdmFramework/wiki/individual), [`state`](https://github.com/hqdmTop/hqdmFramework/wiki/state), [`kind_of_individual`](https://github.com/hqdmTop/hqdmFramework/wiki/kind_of_individual)
+
+MagmaCore (Java) reference: [`individual`](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/Individual.java), [`state`](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/State.java)
+
+Source code used to generate the data for this `individual` example is available [here](https://github.com/ClimbingAl/code-for-hqdm-patterns/blob/main/patterns/src/main/java/patterns/hqdm/individual/IndividualExample.java).

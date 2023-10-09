@@ -71,7 +71,7 @@ markdown_extensions:
 
 nav:
   - 'index.md'  
-  - 'Introducing_HQDM':
+  - 'Introducing HQDM':
     - introducing_hqdm/basic_intro_to_hqdm.md
     - introducing_hqdm/top_level_type.md
   - 'Fundamental Relations':

@@ -8,5 +8,7 @@ There are a number of applications of order in data models but for our integrati
 
 --8<-- "orderEventsNodeEdgeGraph.mermaid"
 
-Additional aspects of oder; sequences, lists, ordered pairs and tuples.
-__To Be Completed.  Advanced topic for the extension of HQDM to address multidimensional_objects, using 15926-2 as an example__
+Other topics to expand upon include: 
+
+- Additional aspects of oder; sequences, lists, ordered pairs and tuples.
+- Advanced topic for the extension of HQDM to address `multidimensional_objects` (although this name for them may be sub-optimal), using 15926-2 as an example.

@@ -69,6 +69,14 @@ These examples of `association` also build on the [individual examples](../indiv
     - Sometimes the `beginning` or `ending` of an association isn't completely known (for example, it may still be in-place and the possible ending may be in the future).  In this case only store the `begniing` or `ending` that is known (as long as one of them is known).
 
 
-Other properties may be chosen, or added, for additional data management purposes (e.g. logical deletion or data record copying).  They are described in the HQDM References below and are provided in the [`PatternsUtils.java`](https://github.com/ClimbingAl/code-for-hqdm-patterns/blob/cb73d64e61fda53b48af49f2793d6761ba79cd2a/thing/thing/src/main/java/patterns/hqdm/PatternsUtils.java#L31).
+## References
+
+HQDM book references: 11.8, 17.13, 17.15, 17.16
+
+Entity Types: [`association`](https://github.com/hqdmTop/hqdmFramework/wiki/association), [`participant`](https://github.com/hqdmTop/hqdmFramework/wiki/participant)
+
+MagmaCore (Java) reference: [`association`](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/Association.java), [`participant`](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/Participant.java)
+
+Source code for this example is available [here](https://github.com/ClimbingAl/code-for-hqdm-patterns/blob/main/patterns/src/main/java/patterns/hqdm/association/AssociationExample.java)
 
 

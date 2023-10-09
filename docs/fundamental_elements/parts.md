@@ -11,7 +11,7 @@ A commonly used parthood relation is `temporal_part_of`, where a state of someth
 
 --8<-- "temporalPartOfNodeEdgeGraph.mermaid"
 
-The events bounding the state of the LM-5 lander are shown in the next diagram.  The events are points in time (`point_in_time`) that have ISO-8601 DateTime stamps to record the instant in time.  More detail on the handling of `point_in_time` records can be seen in the source TURTLE file.  The use of the `data_EntityName` relation is a compromise discussed **Here TBC Sign And Pattern**.
+The events bounding the state of the LM-5 lander are shown in the next diagram.  The events are points in time (`point_in_time`) that have ISO-8601 DateTime stamps to record the instant in time.  More detail on the handling of `point_in_time` records can be seen in the source TURTLE file.  The use of the `data_EntityName` relation is a compromise discussed in the [`sign`](../signs_and_patterns/what_are_signs.md) section.
 
 --8<-- "temporalPartOfIncEventsNodeEdgeGraph.mermaid"
 

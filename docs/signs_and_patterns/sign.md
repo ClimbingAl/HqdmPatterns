@@ -25,3 +25,13 @@ This `sign` pattern is one of the mode advanced HQDM data model patterns but it 
 The following diagram illustrates the association of two states, each state being a `temporal_part_of` an `individual` X and Y respectively.  The constituent states in this `association` all share the same temporal bounds.  This examples will be implemented below to illustrate the general entity-relationship and data patterns resulting from it.
 
 ![An association between a state of X and a state of Y](../extras/source-images/signInitial.svg)
+
+## References
+
+HQDM book references: 13.9, 17.45
+
+Entity Types: [`sign`](https://github.com/hqdmTop/hqdmFramework/wiki/sign), [`representation_by_sign`](https://github.com/hqdmTop/hqdmFramework/wiki/representation_by_sign), [`recognizing_language_community`](https://github.com/hqdmTop/hqdmFramework/wiki/recognizing_language_community)
+
+MagmaCore (Java) reference: [`sign`](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/Sign.java), [`representation_by_sign`](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/RepresentatioBySign.java)
+
+Source code for this example is available [here](https://github.com/ClimbingAl/code-for-hqdm-patterns/blob/main/patterns/src/main/java/patterns/hqdm/sign/SignExample.java)

@@ -43,10 +43,10 @@ While it is unusual to create instances of the `thing` entity-type, this is the 
 
 ## References
 
-HQDM book references: 6.3.7, 7.2.1 & 7.3 **???**
+HQDM book references: 11.2, 17.6, 17.26
 
 MagmaCore (Java) reference: [`functional_object`](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/FunctionalObject.java), [`state_of_functional_object`](https://github.com/gchq/MagmaCore/blob/main/hqdm/src/main/java/uk/gov/gchq/magmacore/hqdm/model/StateOfFunctionalObject.java)
 
-Other implementation issues: ???
+Source code for this example is available [here](https://github.com/ClimbingAl/code-for-hqdm-patterns/blob/main/patterns/src/main/java/patterns/hqdm/individual/IndividualEagleExample.java)
 
 
