@@ -2,7 +2,7 @@
 
 
 ## Example
-For periods of time the *Eagle* lander module was occupied by austronats that were from the Apollo-11 crew.  Of the three Apollo-11 crew, two individuals, Neil Armstrong (Mission Commander) and Buzz Aldrin (Lunar Module Pilot), made the visit to the lunar surface in the *Eagle*.
+For periods of time the *Eagle* lander module was occupied by astronauts that were from the Apollo-11 crew.  Of the three Apollo-11 crew, two individuals, Neil Armstrong (Mission Commander) and Buzz Aldrin (Lunar Module Pilot), made the visit to the lunar surface in the *Eagle*.
 
 ??? question "What information requirement does this meet?"
     Operational questions like:
@@ -11,7 +11,7 @@ For periods of time the *Eagle* lander module was occupied by austronats that we
 
     - When did any of the occupants of a Lunar Lander leave/enter it?
 
-    - What was the duration of the crew's desecent to the Lunar Surface?
+    - What was the duration of the crew's descent to the Lunar Surface?
 
     - What Lunar Lander(s) did Buzz Aldrin crew?
 
@@ -71,7 +71,7 @@ These examples of `association` also build on the [individual examples](../indiv
 
     - If lots of a particular `association` sub-type need to be created and the set membership of each is the same, consider creating a subtype of `association` and map it to a storage schema that includes the `participant` states and their `role`s.  This would be a mapping that could be mapped back to a full HQDM schema if/when required.
 
-    - Sometimes the `beginning` or `ending` of an association isn't completely known (for example, it may still be in-place and the possible ending may be in the future).  In this case only store the `begniing` or `ending` that is known (as long as one of them is known).
+    - Sometimes the `beginning` or `ending` of an association isn't completely known (for example, it may still be in-place and the possible ending may be in the future).  In this case only store the `beginning` or `ending` that is known (as long as one of them is known).
 
 ## References
 

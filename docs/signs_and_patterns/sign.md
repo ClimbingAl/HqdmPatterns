@@ -3,9 +3,9 @@
 ??? question "What information requirement does this meet?"
     It is common to require information about how material things are identified, or named, using [signs](./what_are_signs.md).  Examples include:
 
-    - The identifer that is used to unambiguously refer to something (e.g. VIN number, passport number, MAC address).  This can allow formal documents, asset records and licensing consitions to refer to the thing that is allocated that identifer (either permanently, at least for luch of its existence, or for part of it)
+    - The identifier that is used to unambiguously refer to something (e.g. VIN number, passport number, MAC address).  This can allow formal documents, asset records and licensing conditions to refer to the thing that is allocated that identifier (either permanently, at least for much of its existence, or for part of it)
 
-    - Keeping records of names, nicknames, spelling differences of people, otehr physical items and activities (such as projects).
+    - Keeping records of names, nicknames, spelling differences of people, other physical items and activities (such as projects).
 
     - ...
 
