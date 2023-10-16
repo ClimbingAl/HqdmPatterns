@@ -1,6 +1,6 @@
 # Representation options based on need
 
-The range and variety of contexts in which *signs* can be used in our daily lives presents some modelling challenges.  How do I capture the information I need relating to *signs* based on the model patterns that are present in HQDM?  These are information requirement trade-off decisons against the cost and complexity of implementing the available patterns.
+The range and variety of contexts in which *signs* can be used in our daily lives presents some modelling challenges.  How do I capture the information I need relating to *signs* based on the model patterns that are present in HQDM?  These are information requirement trade-off decisions against the cost and complexity of implementing the available patterns.
 
 The starting point is to recognise that we are very unlikely to need all *signs*, their composition and class membership to be captured for all actual, possible and abstract *things* in our domain of interest.  Key *signs* are likely to be the identifiers and names *given* to particular *things* so that they can be recognised and referred to in documents, have physical labels that carry a *sign* attached to them or allow people to find and understand the context of an item (e.g. a document) by its `sign`.
 
@@ -15,7 +15,7 @@ This section presents a range of options that the Author explored while creating
 === "Pros"
 
     - Once implemented, it is a natural pattern (actual signs representing actual things).
-    - Cosest to the conceptual HQDM model.
+    - Closest to the conceptual HQDM model.
     - Worth understanding before adopting any of the other patterns.
     - Convenient for associating with external references to the actual signs (e.g. fabrication drawings, photos, strings, etc).
     - `language_community` part useful for recording when changes in agreed terms, identifiers, etc change within an organisation or wider community.
@@ -83,7 +83,7 @@ This section presents a range of options that the Author explored while creating
 === "Pros"
 
     - Less verbose.  Avoids the clutter of data objects involved in creating the spatio-temporal instances of *signs* used.
-    - Retains the use of `recognising_language_community` to commit to the conitext in which the identifier is recognised.
+    - Retains the use of `recognising_language_community` to commit to the context in which the identifier is recognised.
 
 
 === "Cons"
@@ -94,8 +94,8 @@ This section presents a range of options that the Author explored while creating
 #### Case 6: Identifiers minimal
 **I require a solid, repeatable implementation of all *identifiers* that represent the *things* my information system needs records of.  The *individual signs* and the *connunities* that recognise them are less important to me**
 
-??? info "Basic 'full' `representation_by_pattern` without using `sign` or `recognizing_language_comunity`"
-    ![Basic Pattern for `representation_by_pattern` without using `sign` or `recognizing_language_comunity`](../extras/source-images/identificationByPattern5.svg)
+??? info "Basic 'full' `representation_by_pattern` without using `sign` or `recognizing_language_community`"
+    ![Basic Pattern for `representation_by_pattern` without using `sign` or `recognizing_language_community`](../extras/source-images/identificationByPattern5.svg)
     The ellipses outside of the space-time axes denote SETs (subtypes of HQDM `class`).
 
 === "Pros"
