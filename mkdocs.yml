@@ -1,4 +1,4 @@
-site_name: Model Implementation Patterns
+site_name: HQDM Implementation Patterns
 copyright: Copyright &copy; 2023 Critical Insight Security Ltd
 
 extra:
@@ -70,7 +70,8 @@ markdown_extensions:
       alternate_style: true
 
 nav:
-  - 'index.md'  
+  - 'index.md'
+  - 'scenario.md'
   - 'Introducing HQDM':
     - introducing_hqdm/basic_intro_to_hqdm.md
     - introducing_hqdm/top_level_type.md
