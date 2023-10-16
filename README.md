@@ -1,7 +1,7 @@
 # HqdmPatterns
 ## Documentation on implementation patterns for HQDM
 
-A markdown-based documentation pack on implementation patterns for the use of the Topl Level Ontology (TLO)-based integration data model created by Dr Matthew West called ["HQDM"](https://www.oreilly.com/library/view/developing-high-quality/9780123751065/), using ```mkdocs material``` and related plugins.  The documentation is experimantal and will be updated when capacity allows.
+A markdown-based documentation pack on implementation patterns for the use of the Topl Level Ontology (TLO)-based integration data model created by Dr Matthew West called ["HQDM"](https://www.oreilly.com/library/view/developing-high-quality/9780123751065/), using ```mkdocs material``` and related plugins.  The documentation is experimental and will be updated when capacity allows.
 
 The goal of this documentation is to illustrate the data model patterns that are integral to HQDM and encourage consistent, practical implementation of them.  The code examples used will be released soon.  All the example files (TTL and mermaid files) have been generated in code using both [MagmaCore](https://github.com/ClimbingAl/MagmaCore) and the [Apollo Protocol Activity Editor](https://apollo-protocol.github.io/4d-activity-editor/).
 
@@ -12,7 +12,7 @@ The core patterns are introduced and worked examples have been created using the
 - Many people are familiar with the first trip by humans to the Moon, if not the details of the Mission.
 - Using a modelling situation of something that actually happened is a good way to illustrate the decisions that have to be made to implement the information at appropriate quality.
 
-While each eample stands on its own, collectively they comprise an integrated set of data that illustrates what can be achieved with the use of a foundational data model that has a TLO at its roots.
+While each example stands on its own, collectively they comprise an integrated set of data that illustrates what can be achieved with the use of a foundational data model that has a TLO at its roots.
 
 Above all, the documentation is intended to encourage discussion.  Let me know if there are improvements that can be made.
 

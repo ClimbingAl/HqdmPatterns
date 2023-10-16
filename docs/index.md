@@ -13,14 +13,14 @@ Why document the 'patterns'?  Well, getting to grips with the theory and structu
 *Personal note:* I am grateful to the patience and insight into information quality management offered to me by Dr Matthew West, author of HQDM, over the last 8 years.  Matthew passed away in early August 2023 but hopefully his work will become more widely recognised as paving the way to transformed information management within, and between, organisations that need it.
 
 ??? tip "Useful pre-reading"
-    * Developing High Quality Data Models by Matthew West, Chapters 1 to 4 (the less theoratical ones &#128578)
+    * Developing High Quality Data Models by Matthew West, Chapters 1 to 4 (the less theoretical ones &#128578)
     * Familiarity with the Information Management Landscape
         - What it takes to manage information in a way that is fit for purpose.  This covers everything that can be identified as necessary to ensure information is managed in a sufficiently mature manner. 
     * Use of the [Process-based Information Requirements Methodology](https://github.com/Apollo-Protocol/information-requirement-methodology)
         - See associated [Activity Modeller Tool](https://apollo-protocol.github.io/4d-activity-editor/)
     * Initial model mapping results
 
-    Understanding the HQDM patterns can help in all of the activities listed above but they are essential to implementation activities, contributing to the consistent application of the model itself and allowing conscious decisions to be made around implementation choises and performance optimisations.
+    Understanding the HQDM patterns can help in all of the activities listed above but they are essential to implementation activities, contributing to the consistent application of the model itself and allowing conscious decisions to be made around implementation choices and performance optimisations.
 
 ??? info "Format of each pattern"
     Each model pattern will include the following:
