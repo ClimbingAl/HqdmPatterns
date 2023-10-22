@@ -11,22 +11,46 @@ We will start by fetching the *physical_object* that represents the Saturn V lau
     --8<-- "saturnVObjectsOnlyNodeEdgeGraph.mermaid"
     The node in **bold** is the uuid for the physical item that we will see in the subsequent diagrams is represented by the `identifier` that has the `pattern` "SA-506".  Its spatio-temporal extent is visible by it having both `beginning` and `ending` events and it having a `part_of_possible_world` predicate.
 
-In order to have the *pattern* "SA-506" recorded we have an instance of `pattern` with the `data_EntityName` predicate set to the Literal "SA-506".  An *identifier* is the created that has 
+In order to have the *pattern* "SA-506" recorded we have an instance of `pattern` with the `data_EntityName` predicate set to the Literal "SA-506"(1).  An *identifier* is then created that `consists_of_by_class` that particular `pattern`.  The `identifier` (a subtype of HQDM's `Class` Entity Type(2)) is also restricted in its interpretation to a `recognizing_language_community` (an *actual* community)(3) by the `consists_of_in_members` predicate.
+{ .annotate }
 
-??? info "`identifier` constructed that has `consists_of_by_class` the `pattern` SA-506"
-    --8<-- "saturnVIdentifierNodeEdgeGraph.mermaid"
+1.  How to store examples of (or pointers to) the actual *signs*, or the *patterns* that they are `member_of_`, is an implementation choice.  We have chosen to store the referenced pattern as a string using the `data_EntityName` property of the instance of *type* `pattern` as a record of the actual *pattern*.
+
+2. The use of an upper-case "C" for `Class` is due to the significant role that the word *class* has in programming languages and, in this case, the website's documentation builder scripts.
+
+3. This shows that the utility of SETs (HQDM `Class` and all of its subtypes) in HQDM is also down to their (intended) purpose.
+
+This is illustrated in the next graph:
+
+??? info "`identifier` constructed that has `consists_of_by_class` the `pattern` "SA-506""
     The node in **bold** is the instance of `pattern` that is "SA-506".  The instance of `identifier` `consists_of_by_class` that `pattern`.  The other predicates are expanded upon below.
+    --8<-- "saturnVIdentifierNodeEdgeGraph.mermaid"
+    In this example the predicate `represented` is used to indicate what *thing* is represented by this `identifier`.  Whether that is a good idea is down to the requirements around its use and subsequently is an implementation choice (see the [options](sign_options_by_diagram.md)).
 
+We can now develop this example by adding a `representation_by_sign` *association* between an actual *sign* (an instance of `sign` that is a `member_of_` our `identifier` for this Saturn V Rocket Assembly), the `recognizing_language_community` that can recognise it for its intended purpose and the actual Saturn V Rocket Assembly itself:
 
---8<-- "saturnVRepresentationBySignNodeEdgeGraph.mermaid"
+??? info "`representation_by_sign` constructed such that a particular `sign` with the pattern "SA-506" is used to *identify* the actual Saturn V (rocket) launch vehicle"
+    --8<-- "saturnVRepresentationBySignNodeEdgeGraph.mermaid"
+    Although this example shows that the `sign` for the Saturn V Rocket Assembly and the rocket assembly itself share the same temporal bounds this does not need to be the case.  NASA will likely have designated "SA_506" before the rocket assembly was manufactured and certainly carried on using it to *represent* for decades after the rocket assembly was successfully used (and destroyed in that process).
 
---8<-- "saturnVSignAndIdentifierNodeEdgeGraph.mermaid"
+We now have the necessary data objects to generate a "full" node-edge graph of the instances of both `representation_by_sign` and `representation_by_pattern` to specifically represent the Saturn V Rocket Assembly with the specified `identifier`:
 
---8<-- "saturnVRBSAndIdentifierNodeEdgeGraph.mermaid"
+??? info "Full `representation_by_sign` and `representation_by_pattern` Node-Edge graph"
+    --8<-- "saturnVRBSAndIdentifierNodeEdgeGraph.mermaid"
+    Well done if you have noticed that the two predicates `represents` and `represented` are present in this graph.  This can look like repetition (overkill).  This isn't the case for our worked example but for use of this implementation pattern in a business / enterprise application it will result in some data management choices.  This will likely result in only the `represents` relation being used where the `representation_by_sign` *association* is required and the `represented` relation being used where only `representation_by_pattern` is used.  Each involves a different trade-off.
 
---8<-- "saturnVRepresentationBySignAllParticipantRelsNodeEdgeGraph.mermaid"
+As an illustration of data object re-use the following node-edge graph illustrates the same `recognizing_language_community` being used in multiple `representation_by_sign` and `representation_by_pattern` contexts:
 
---8<-- "saturnVIdentifierAndPatternRepresentedNodeEdgeGraph.mermaid"
+??? info "Illustration of the participation of this particular `recognizing_language_community` in many `representation_by_sign` *associations* and `representation_by_pattern` relationships"
+    --8<-- "saturnVRepresentationBySignAllParticipantRelsNodeEdgeGraph.mermaid"
+
+Our final Apollo example is the node-edge graph of only the `identifier` (subtype of `representation_by_pattern`) to *represent* the actual Saturn V rocket assembly.
+
+??? info "Illustration of the use of a particular `identifier` such that it directly `represented` the actual Saturn V rocket assembly"
+    This example is just an extension of the first graph above that shows "`identifier` constructed that has `consists_of_by_class` the `pattern` "SA-506"".
+    --8<-- "saturnVIdentifierAndPatternRepresentedNodeEdgeGraph.mermaid"
+
+Although the use of *signs* &/or *patterns* to *represent* actual *things* is one of the more involved HQDM patterns it is in accord with how we used *signs* in our day-to-day lives.  These patterns (and the implementation choices relating to them) provide flexibility in modelling to accommodate any (and all?) uses of *signs* that can crop up in a business / enterprise context.
 
 ## References
 

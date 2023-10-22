@@ -1,4 +1,4 @@
-# Model home
+# Model patterns home
 
 Welcome to *HQDM Patterns*, documentation on the general model-patterns embedded in the [HQDM](https://www.oreilly.com/library/view/developing-high-quality/9780123751065/) Top Level Data Model.
 

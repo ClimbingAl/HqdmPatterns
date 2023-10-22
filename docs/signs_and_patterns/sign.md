@@ -7,6 +7,8 @@
 
     - Keeping records of names, nicknames, spelling differences of people, other physical items and activities (such as projects).
 
+    - Having indexes of part identifers, glossaries, records of product & product family names, etc.
+    
     - ...
 
     The `sign` model pattern can be crucial in keeping track of anything that there is an information requirement about.  It is important to note here that the unique identifier used as a key for data objects based on HQDM (such as in Magma Core) are nothing to do with the *signs* that are used to name & refer to the physical items that these data objects represent.  
