@@ -3,74 +3,74 @@
 @prefix patterns:     <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#> .
 @prefix patterns-rdl: <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#> .
 
-patterns:bc6618c0-83a0-42cc-81ed-a804738e28a5
+patterns:25943610-434b-4b81-a068-9ba3ba517c55
+        a                            hqdm:possible_world ;
+        patterns-rdl:record_created  "2023-11-04T16:29:43.966813337Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "Possible_world_for_Apollo_pattern_examples" ;
+        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#a57983bb-9ca5-4302-b7af-cc3dd41565d1" .
+
+patterns:06cff4dc-17fe-47e6-aacf-790ce7932037
+        a                            hqdm:functional_object ;
+        patterns-rdl:record_created  "2023-11-04T16:29:43.966851037Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "Example_individual_that_is_Lunar_Module_Eagle_LM-5" ;
+        hqdm:ending                  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#f07448d6-8532-424d-a925-12302feb38c3" ;
+        hqdm:member_of_kind          "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#172f46a0-0aec-423a-b027-8c40867e729a" ;
+        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#25943610-434b-4b81-a068-9ba3ba517c55" .
+
+patterns-rdl:172f46a0-0aec-423a-b027-8c40867e729a
+        a                            hqdm:kind_of_functional_object ;
+        patterns-rdl:comment         "Kind_of_functional_object_that_is_Lunar_Lander" ;
+        patterns-rdl:record_created  "2023-11-04T16:29:43.965877633Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "KindOfFunctionalObject__Lunar_Lander" .
+
+patterns:ad8a4ae8-00e7-4cd1-9faf-d37806f1ce76
         a                            hqdm:point_in_time ;
-        patterns-rdl:record_created  "2023-10-08T14:38:16.517893300Z" ;
+        patterns-rdl:record_created  "2023-11-04T16:29:43.969220448Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "1969-07-20T20:17:40" ;
-        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#5b4ad1b8-c914-4d5c-b973-ddab4cb1abd4" ;
-        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#5edd2b90-3c12-4053-8b06-79b80065ac00" .
+        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#3bb879da-bdf9-443a-b36c-844b1fe3e7d7" ;
+        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#25943610-434b-4b81-a068-9ba3ba517c55" .
 
-patterns-rdl:5b4ad1b8-c914-4d5c-b973-ddab4cb1abd4
-        a                            hqdm:class_of_point_in_time ;
-        patterns-rdl:comment         "Class_of_point_in_time_for_events_in_ISO_8601-1:2019_date-time_format" ;
-        patterns-rdl:record_created  "2023-10-08T14:38:16.513158100Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "ClassOfPointInTime__ISO8601_DateTime" .
-
-patterns-rdl:90b644bc-dfe1-4a98-ad36-0a42e6aaeb09
+patterns-rdl:a57983bb-9ca5-4302-b7af-cc3dd41565d1
         a                            hqdm:class_of_possible_world ;
         patterns-rdl:comment         "Class_of_possible_world_for_pattern_examples" ;
-        patterns-rdl:record_created  "2023-10-08T14:38:16.513979900Z" ;
+        patterns-rdl:record_created  "2023-11-04T16:29:43.966731737Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "ClassOfPossibleWorld_PatternExamples" .
 
-patterns:2c359446-0a90-415c-9677-e6c20f83b724
+patterns-rdl:3bb879da-bdf9-443a-b36c-844b1fe3e7d7
+        a                            hqdm:class_of_point_in_time ;
+        patterns-rdl:comment         "Class_of_point_in_time_for_events_in_ISO_8601-1:2019_date-time_format" ;
+        patterns-rdl:record_created  "2023-11-04T16:29:43.966357635Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "ClassOfPointInTime__ISO8601_DateTime" .
+
+patterns:bf0718b8-b671-4d54-8658-04548cc6e04c
         a                            hqdm:state_of_functional_object ;
-        patterns-rdl:record_created  "2023-10-08T14:38:16.518758900Z" ;
+        patterns-rdl:record_created  "2023-11-04T16:29:43.969678750Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:beginning               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#bc6618c0-83a0-42cc-81ed-a804738e28a5" ;
+        hqdm:beginning               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#ad8a4ae8-00e7-4cd1-9faf-d37806f1ce76" ;
         hqdm:data_EntityName         "Example_state_of_Lunar_Lander_Module_Eagle_LM-5" ;
-        hqdm:ending                  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#71f7bfff-0ae0-4279-bd7d-e9845ae5999c" ;
-        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#ac6d584f-7705-4549-8d97-fb3bfe70b409" ;
-        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#5edd2b90-3c12-4053-8b06-79b80065ac00" ;
-        hqdm:temporal_part_of        "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#b665b61f-b776-4688-89a5-37ec91f7d473" .
+        hqdm:ending                  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#f07448d6-8532-424d-a925-12302feb38c3" ;
+        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#6600dfb9-35d7-40f7-af91-1dde87437031" ;
+        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#25943610-434b-4b81-a068-9ba3ba517c55" ;
+        hqdm:temporal_part_of        "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#06cff4dc-17fe-47e6-aacf-790ce7932037" .
 
-patterns:5edd2b90-3c12-4053-8b06-79b80065ac00
-        a                            hqdm:possible_world ;
-        patterns-rdl:record_created  "2023-10-08T14:38:16.514154800Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "Possible_world_for_Apollo_pattern_examples" ;
-        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#90b644bc-dfe1-4a98-ad36-0a42e6aaeb09" .
-
-patterns-rdl:ac6d584f-7705-4549-8d97-fb3bfe70b409
-        a                            hqdm:class_of_state_of_functional_object ;
-        patterns-rdl:comment         "Class_of_state_of_functional_object_that_is_temporal_part_of_Lunar_Lander" ;
-        patterns-rdl:record_created  "2023-10-08T14:38:16.512880600Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "ClassOfStateOfFunctionalObject__State_Of_Lunar_Lander" ;
-        hqdm:part__of_by_class       "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#db9e85eb-5b97-44e7-ba4b-31445b6436da" .
-
-patterns:b665b61f-b776-4688-89a5-37ec91f7d473
-        a                            hqdm:functional_object ;
-        patterns-rdl:record_created  "2023-10-08T14:38:16.514210400Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "Example_individual_that_is_Lunar_Module_Eagle_LM-5" ;
-        hqdm:ending                  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#71f7bfff-0ae0-4279-bd7d-e9845ae5999c" ;
-        hqdm:member_of_kind          "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#db9e85eb-5b97-44e7-ba4b-31445b6436da" ;
-        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#5edd2b90-3c12-4053-8b06-79b80065ac00" .
-
-patterns:71f7bfff-0ae0-4279-bd7d-e9845ae5999c
+patterns:f07448d6-8532-424d-a925-12302feb38c3
         a                            hqdm:point_in_time ;
-        patterns-rdl:record_created  "2023-10-08T14:38:16.518641400Z" ;
+        patterns-rdl:record_created  "2023-11-04T16:29:43.969606650Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "1969-07-21T17:54:01" ;
-        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#5b4ad1b8-c914-4d5c-b973-ddab4cb1abd4" ;
-        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#5edd2b90-3c12-4053-8b06-79b80065ac00" .
+        hqdm:member_of               "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#3bb879da-bdf9-443a-b36c-844b1fe3e7d7" ;
+        hqdm:part_of_possible_world  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#25943610-434b-4b81-a068-9ba3ba517c55" .
 
-patterns-rdl:db9e85eb-5b97-44e7-ba4b-31445b6436da
-        a                            hqdm:kind_of_functional_object ;
-        patterns-rdl:comment         "Kind_of_functional_object_that_is_Lunar_Lander" ;
-        patterns-rdl:record_created  "2023-10-08T14:38:16.512534100Z" ;
+patterns-rdl:6600dfb9-35d7-40f7-af91-1dde87437031
+        a                            hqdm:class_of_state_of_functional_object ;
+        patterns-rdl:comment         "Class_of_state_of_functional_object_that_is_temporal_part_of_Lunar_Lander" ;
+        patterns-rdl:record_created  "2023-11-04T16:29:43.966114034Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "KindOfFunctionalObject__Lunar_Lander" .
+        hqdm:data_EntityName         "ClassOfStateOfFunctionalObject__State_Of_Lunar_Lander" ;
+        hqdm:part__of_by_class       "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#172f46a0-0aec-423a-b027-8c40867e729a" .

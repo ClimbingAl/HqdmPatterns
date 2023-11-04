@@ -3,8 +3,8 @@
 @prefix patterns:     <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#> .
 @prefix patterns-rdl: <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#> .
 
-patterns:e4909452-1067-4893-806a-3391a8d744a5
+patterns:7851859e-bf43-4f56-8998-685c13e4a300
         a                            hqdm:thing ;
-        patterns-rdl:record_created  "2023-10-08T14:38:15.179714700Z" ;
+        patterns-rdl:record_created  "2023-11-04T16:29:42.779087466Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "Example_Thing_As_Instance_Of_TopLevelHQDM_EntityType_THING" .
