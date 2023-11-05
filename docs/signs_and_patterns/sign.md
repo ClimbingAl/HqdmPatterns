@@ -28,6 +28,46 @@ The following diagram illustrates the association of two states, each state bein
 
 ![An association between a state of X and a state of Y](../extras/source-images/signInitial.svg)
 
+## Data Object Block Diagrams
+The block diagram below illustrates the data objects comprising the generic *representation by sign* shown on the space-time diagram above.
+
+![Data object block diagram of representation_by_sign between a sigm, recognizing language community and the thing being represented](../extras/source-images/signGenericDataObjects.svg)
+
+??? info "Full data object block diagram"
+    The diagram below shows additional data objects required to populate the generic `representation_by_sign` pattern in 'full'.  The dotted line shows the `represented` relationship sowing that this `representation_by_pattern` HQDM `class` has this `pattern` as a surrogate for the *thing* being represented.
+
+    ![Full association between a state of X and a state of Y](../extras/source-images/signGenericDataObjectsFull.svg)
+
+    Additional data objects could also be used, if required, based on the inheritance patterns within HQDM but this diagram shows the primary objects entailed by the HQDM model.
+
+
+## Implementation
+The data objects shown in the diagram above have been implemented using MagmaCore in [`SignExample.java`](https://github.com/ClimbingAl/code-for-hqdm-patterns/blob/main/patterns/src/main/java/patterns/hqdm/sign/SignExample.java).  The filtered node-edge graphs below correspond to the data objects and their relationships with each other to implement the `sign` and `pattern` HQDM *pattern*.  The `Example_RepresentationBySign` and the `participant` objects named `Example_Sign` and `Example_RecognizingLanguageCommunity` are shown in the first node-edge graph.
+
+--8<-- "genericRepresentationBySignAndParticipantsNodeEdgeGraph.mermaid"
+
+??? info "Extended node-edge graph"
+    An extended node-edge graph showing some of the additional dependencies is shown next.
+
+    --8<-- "genericRepresentationBySignAndParticipantsFullNodeEdgeGraph.mermaid"
+
+These examples of `sign` also build on the [individual examples](../individual/individual.md) data object examples, showing how data can be added to existing data that has been consistently generated using HQDM (with MagmaCore, in this case).  The TURTLE dataset showing the data used to generate these node-edge graphs is shown in the tab below.
+
+??? info "TURTLE"
+    ``` title="Association objects example in TURTLE"
+    --8<-- "representationBySignGenericPattern.ttl"
+    ```
+
+??? tip "Strategies for implementation of the `representation_by_sign` HQDM *pattern*"
+    While HQDM is parsimonious with its entities and relationships there are some implementation choices that may make implementation easier depending on the application, its architecture and data storage facilities.  Here are some suggestions:
+
+    - Don't store the `beginning` and `ending` relationships for each `association` as they can be queried from the `participant` states that it `consists_of`.
+
+    - If lots of a particular `association` sub-type need to be created and the set membership of each is the same, consider creating a subtype of `association` and map it to a storage schema that includes the `participant` states and their `role`s.  This would be a mapping that could be mapped back to a full HQDM schema if/when required.
+
+    - Sometimes the `beginning` or `ending` of an association isn't completely known (for example, it may still be in-place and the possible ending may be in the future).  In this case only store the `beginning` or `ending` that is known (as long as one of them is known).
+
+
 ## References
 
 HQDM book references: 13.9, 17.45
