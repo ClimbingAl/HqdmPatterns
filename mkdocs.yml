@@ -75,6 +75,7 @@ nav:
   - 'Introducing HQDM':
     - introducing_hqdm/basic_intro_to_hqdm.md
     - introducing_hqdm/top_level_type.md
+    - introducing_hqdm/diagrams_used.md
   - 'Fundamental Relations':
     - fundamental_elements/relations.md
     - fundamental_elements/parts.md
@@ -101,6 +102,7 @@ nav:
   - 'System and System Component':
     - system/system.md
     - system/system_component.md
+    - system/system_LM5.md
   - 'Properties and Qualities':
     - properties/properties.md
   - 'Levels of Reality':
@@ -109,4 +111,5 @@ nav:
   - 'Implementation Guidance':
     - implementation_guidance/managing_immutable_data.md
     - implementation_guidance/model_mapping_process.md
+    - implementation_guidance/lifecycle_activity_models_to_support_information_requirements.md
 

@@ -32,7 +32,7 @@ This `association` pattern involves one `functional_object` (in this example, th
     --8<-- "associationEagleTypesSupertypes.mermaid"
 
 ## Spacetime Diagram
-The following diagram illustrates the association of two states, each state being a `temporal_part_of` an `individual` X and Y respectively.  The constituent states in this `association` all share the same temporal bounds.  This examples will be implemented below to illustrate the general entity-relationship and data patterns resulting from it.
+The following diagram illustrates the association of two states, each state being a `temporal_part_of` an `individual` X and Y respectively.  The constituent states in this `association` all share the same temporal bounds.  This example will be implemented below to illustrate the general entity-relationship and data patterns resulting from it.
 
 ![An association between *Eagle* and its crew during descent](../extras/source-images/associationBuzzInEagle.svg)
 

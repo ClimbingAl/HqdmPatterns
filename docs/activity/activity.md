@@ -27,7 +27,7 @@ This `activity` pattern is a very common one where two or more `individual` obje
     --8<-- "activityTypesSupertypes.mermaid"
 
 ## Spacetime Diagram
-The following diagram illustrates the activity of two states, each state being a `temporal_part_of` an `individual` X and Z respectively.  The constituent states in this `activity` all share the same temporal bounds.  This examples will be implemented below to illustrate the general entity-relationship and data patterns resulting from it.
+The following diagram illustrates the activity of two states, each state being a `temporal_part_of` an `individual` X and Z respectively.  The constituent states in this `activity` all share the same temporal bounds.  This example will be implemented below to illustrate the general entity-relationship and data patterns resulting from it.
 
 ![An activity between a state of X and a state of Z](../extras/source-images/activityXZ.svg)
 
