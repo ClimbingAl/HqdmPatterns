@@ -27,7 +27,7 @@ This `association` pattern is a very common one where two or more `individual` o
     --8<-- "associationTypesSupertypes.mermaid"
 
 ## Spacetime Diagram
-The following diagram illustrates the association of two states, each state being a `temporal_part_of` an `individual` X and Y respectively.  The constituent states in this `association` all share the same temporal bounds.  This examples will be implemented below to illustrate the general entity-relationship and data patterns resulting from it.
+The following diagram illustrates the association of two states, each state being a `temporal_part_of` an `individual` X and Y respectively.  The constituent states in this `association` all share the same temporal bounds.  This example will be implemented below to illustrate the general entity-relationship and data patterns resulting from it.
 
 ![An association between a state of X and a state of Y](../extras/source-images/associationXY.svg)
 
