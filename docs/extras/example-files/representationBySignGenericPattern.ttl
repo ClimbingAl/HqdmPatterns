@@ -3,81 +3,80 @@
 @prefix patterns:     <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#> .
 @prefix patterns-rdl: <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#> .
 
-patterns:73598abe-91fd-4228-a9f6-6f9b8a8abe84
+patterns:ff7ac571-b575-46bd-a409-a60a8bb06d14
         a                            hqdm:sign ;
-        patterns-rdl:record_created  "2023-11-05T15:49:44.711206659Z" ;
+        patterns-rdl:record_created  "2023-12-31T09:47:38.414665780Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:beginning               patterns:38822d93-19a0-4d3f-9429-f917202322d7 ;
+        hqdm:beginning               patterns:564946e1-4551-4c4a-ba22-77f1d2b7b5fa ;
         hqdm:data_EntityName         "Example_Sign" ;
-        hqdm:ending                  patterns:855f0637-e868-4d5a-b877-2f1a58dfb48f ;
-        hqdm:member_of_              patterns-rdl:c4b5d803-6d83-41b3-927c-453a36acba8c ;
-        hqdm:part_of_possible_world  patterns:ed671ad0-2327-41b2-aeab-2687efcd871f ;
-        hqdm:participant_in          patterns-rdl:1f8fef26-69f7-45b6-bd55-33ac6dea45cb .
+        hqdm:ending                  patterns:6a3efc17-6555-4efa-a059-b3a9d130edde ;
+        hqdm:member_of_              patterns-rdl:a781cc4b-a7f7-455c-b38c-e20ed36d5879 ;
+        hqdm:part_of_possible_world  patterns:689749bd-c9e9-4f48-80ac-7c90a51f70ac ;
+        hqdm:participant_in          patterns-rdl:42848d3a-a3fa-4c31-b5b6-3ff074556fd0 .
 
-patterns:855f0637-e868-4d5a-b877-2f1a58dfb48f
+patterns:6a3efc17-6555-4efa-a059-b3a9d130edde
         a                            hqdm:event ;
-        patterns-rdl:record_created  "2023-11-05T15:49:44.708157065Z" ;
+        patterns-rdl:record_created  "2023-12-31T09:47:38.412044708Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "ts2" ;
-        hqdm:member_of               patterns-rdl:5b74c2bd-5f3d-41c7-ac28-3a90137d2803 ;
-        hqdm:part_of_possible_world  patterns:ed671ad0-2327-41b2-aeab-2687efcd871f .
+        hqdm:member_of               patterns-rdl:72901b2c-a5bb-48d6-962b-6fd09d481bf8 ;
+        hqdm:part_of_possible_world  patterns:689749bd-c9e9-4f48-80ac-7c90a51f70ac .
 
-patterns-rdl:1f8fef26-69f7-45b6-bd55-33ac6dea45cb
+patterns-rdl:42848d3a-a3fa-4c31-b5b6-3ff074556fd0
         a                             hqdm:representation_by_sign ;
-        patterns-rdl:record_created   "2023-11-05T15:49:44.710645860Z" ;
+        patterns-rdl:record_created   "2023-12-31T09:47:38.414269084Z" ;
         patterns-rdl:record_creator   "HqdmPatternProject_User1" ;
-        hqdm:beginning                patterns:38822d93-19a0-4d3f-9429-f917202322d7 ;
-        hqdm:consists_of_participant  "https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#73598abe-91fd-4228-a9f6-6f9b8a8abe84" ;
-        hqdm:consists_of_participant  patterns:958cd081-600e-4846-a76a-989d088bf4a5 ;
+        hqdm:beginning                patterns:564946e1-4551-4c4a-ba22-77f1d2b7b5fa ;
+        hqdm:consists_of_participant  patterns:ff7ac571-b575-46bd-a409-a60a8bb06d14 , patterns:a89f2fe4-b5fc-41c4-8904-a717d1cd8295 ;
         hqdm:data_EntityName          "Example_RepresentationBySign" ;
-        hqdm:ending                   patterns:855f0637-e868-4d5a-b877-2f1a58dfb48f ;
-        hqdm:member_of_               patterns-rdl:14c65a7f-77e5-4f25-9a40-a678890631bd ;
-        hqdm:member_of_kind           patterns-rdl:bc179375-ef37-426a-8f4c-34fbaaf29987 ;
-        hqdm:part_of_possible_world   patterns:ed671ad0-2327-41b2-aeab-2687efcd871f ;
-        hqdm:represents               patterns:ab98b45d-72d2-4e3d-912e-0f405402e754 .
+        hqdm:ending                   patterns:6a3efc17-6555-4efa-a059-b3a9d130edde ;
+        hqdm:member_of_               patterns-rdl:184db41d-1b75-4437-94a2-6bb4851bddf7 ;
+        hqdm:member_of_kind           patterns-rdl:b1475be6-b52e-44c1-ab57-967682660d30 ;
+        hqdm:part_of_possible_world   patterns:689749bd-c9e9-4f48-80ac-7c90a51f70ac ;
+        hqdm:represents               patterns:0d269b63-a840-4131-891e-3d9a4428a337 .
 
-patterns:38822d93-19a0-4d3f-9429-f917202322d7
+patterns:564946e1-4551-4c4a-ba22-77f1d2b7b5fa
         a                            hqdm:event ;
-        patterns-rdl:record_created  "2023-11-05T15:49:44.708077965Z" ;
+        patterns-rdl:record_created  "2023-12-31T09:47:38.411996908Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "ts1" ;
-        hqdm:member_of               patterns-rdl:5b74c2bd-5f3d-41c7-ac28-3a90137d2803 ;
-        hqdm:part_of_possible_world  patterns:ed671ad0-2327-41b2-aeab-2687efcd871f .
+        hqdm:member_of               patterns-rdl:72901b2c-a5bb-48d6-962b-6fd09d481bf8 ;
+        hqdm:part_of_possible_world  patterns:689749bd-c9e9-4f48-80ac-7c90a51f70ac .
 
-patterns-rdl:c4b5d803-6d83-41b3-927c-453a36acba8c
+patterns-rdl:a781cc4b-a7f7-455c-b38c-e20ed36d5879
         a                            hqdm:pattern ;
         patterns-rdl:comment         "This_is_an_example_pattern_held_as_the_data_EntityName" ;
-        patterns-rdl:record_created  "2023-11-05T15:49:44.704839872Z" ;
+        patterns-rdl:record_created  "2023-12-31T09:47:38.410678022Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "P@773rN" .
 
-patterns-rdl:bc179375-ef37-426a-8f4c-34fbaaf29987
+patterns-rdl:184db41d-1b75-4437-94a2-6bb4851bddf7
+        a                            hqdm:representation_by_pattern ;
+        patterns-rdl:record_created  "2023-12-31T09:47:38.413306394Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:consists_of_by_class    patterns-rdl:a781cc4b-a7f7-455c-b38c-e20ed36d5879 ;
+        hqdm:consists_of_in_members  patterns:a89f2fe4-b5fc-41c4-8904-a717d1cd8295 ;
+        hqdm:data_EntityName         "Representation_by_pattern_class_for_sign_examples" ;
+        hqdm:represented             patterns:0d269b63-a840-4131-891e-3d9a4428a337 .
+
+patterns-rdl:b1475be6-b52e-44c1-ab57-967682660d30
         a                            hqdm:kind_of_association ;
-        patterns-rdl:record_created  "2023-11-05T15:49:44.710109261Z" ;
+        patterns-rdl:record_created  "2023-12-31T09:47:38.413738590Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "KindOfAssociation_Kind_of_representation_by_sign_class_for_sign_examples" .
 
-patterns:958cd081-600e-4846-a76a-989d088bf4a5
+patterns:a89f2fe4-b5fc-41c4-8904-a717d1cd8295
         a                            hqdm:recognizing_language_community ;
-        patterns-rdl:record_created  "2023-11-05T15:49:44.708842164Z" ;
+        patterns-rdl:record_created  "2023-12-31T09:47:38.412623102Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:beginning               patterns:38822d93-19a0-4d3f-9429-f917202322d7 ;
+        hqdm:beginning               patterns:564946e1-4551-4c4a-ba22-77f1d2b7b5fa ;
         hqdm:data_EntityName         "Example_RecognizingLanguageCommunity" ;
-        hqdm:ending                  patterns:855f0637-e868-4d5a-b877-2f1a58dfb48f ;
-        hqdm:member_of_kind          patterns-rdl:615cd7a9-f86b-4aac-8d3f-b2b424494a3e ;
-        hqdm:part_of_possible_world  patterns:ed671ad0-2327-41b2-aeab-2687efcd871f .
+        hqdm:ending                  patterns:6a3efc17-6555-4efa-a059-b3a9d130edde ;
+        hqdm:member_of_kind          patterns-rdl:3bd16590-de0c-4ccf-a7dd-43fb944dc962 ;
+        hqdm:part_of_possible_world  patterns:689749bd-c9e9-4f48-80ac-7c90a51f70ac .
 
-patterns-rdl:14c65a7f-77e5-4f25-9a40-a678890631bd
-        a                            hqdm:representation_by_pattern ;
-        patterns-rdl:record_created  "2023-11-05T15:49:44.709447263Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:consists_of_by_class    patterns-rdl:c4b5d803-6d83-41b3-927c-453a36acba8c ;
-        hqdm:consists_of_in_members  patterns:958cd081-600e-4846-a76a-989d088bf4a5 ;
-        hqdm:data_EntityName         "Representation_by_pattern_class_for_sign_examples" ;
-        hqdm:represented             patterns:ab98b45d-72d2-4e3d-912e-0f405402e754 .
-
-patterns-rdl:615cd7a9-f86b-4aac-8d3f-b2b424494a3e
+patterns-rdl:3bd16590-de0c-4ccf-a7dd-43fb944dc962
         a                            hqdm:role ;
-        patterns-rdl:record_created  "2023-11-05T15:49:44.705284371Z" ;
+        patterns-rdl:record_created  "2023-12-31T09:47:38.411055318Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "Kind_of_recognizing_language_community_for_sign_examples" .

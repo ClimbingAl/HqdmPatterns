@@ -50,6 +50,7 @@ theme:
 markdown_extensions:
   - abbr
   - attr_list
+  - def_list
   - md_in_html
   - admonition
   - pymdownx.highlight:
