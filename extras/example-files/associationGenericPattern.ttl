@@ -1,0 +1,89 @@
+@prefix diag:         <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#> .
+@prefix hqdm:         <https://hqdmtop.github.io/hqdm#> .
+@prefix patterns:     <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#> .
+@prefix patterns-rdl: <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#> .
+
+patterns-rdl:c1889793-fe3a-439e-bbf5-2b992823e034
+        a                            hqdm:role ;
+        patterns-rdl:comment         "Role_of_Y_in_a_kind_of_association_for_generic_pattern_examples" ;
+        patterns-rdl:record_created  "2023-12-31T09:47:37.231286027Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "RoleOfYInKindOfAssociation" ;
+        hqdm:part_of_by_class_       patterns-rdl:f078b099-3ee3-4db0-8679-df67c88d27fd .
+
+patterns-rdl:f078b099-3ee3-4db0-8679-df67c88d27fd
+        a                            hqdm:kind_of_association ;
+        patterns-rdl:comment         "Kind_of_association_for_generic_pattern_examples" ;
+        patterns-rdl:record_created  "2023-12-31T09:47:37.230703733Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:consists_of_by_class    patterns-rdl:c1889793-fe3a-439e-bbf5-2b992823e034 , patterns-rdl:858b1f26-a135-4a7a-a543-359c83f1a30a ;
+        hqdm:data_EntityName         "KindOfAssociation__GenericKindOfAssociation" .
+
+patterns-rdl:858b1f26-a135-4a7a-a543-359c83f1a30a
+        a                            hqdm:role ;
+        patterns-rdl:comment         "Role_of_X_in_a_kind_of_association_for_generic_pattern_examples" ;
+        patterns-rdl:record_created  "2023-12-31T09:47:37.230947231Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "RoleOfXInKindOfAssociation" ;
+        hqdm:part_of_by_class_       patterns-rdl:f078b099-3ee3-4db0-8679-df67c88d27fd .
+
+patterns:da4b735f-490d-421c-868b-73ae12c1b69f
+        a                             hqdm:association ;
+        patterns-rdl:record_created   "2023-12-31T09:47:37.300696809Z" ;
+        patterns-rdl:record_creator   "HqdmPatternProject_User1" ;
+        hqdm:beginning                patterns:17eba654-3d6d-48fb-8a64-22097c019018 ;
+        hqdm:consists_of_participant  patterns:9f1298f0-f7c3-48ca-b6b7-ef0799d029e1 , patterns:7c969d52-5c1c-482a-aabd-aafb79943eb9 ;
+        hqdm:data_EntityName          "Example_association_between_X_and_Y" ;
+        hqdm:ending                   patterns:2e5f51b9-a317-4653-904f-e262da911bf9 ;
+        hqdm:member_of_kind           patterns-rdl:f078b099-3ee3-4db0-8679-df67c88d27fd ;
+        hqdm:part_of_possible_world   patterns:689749bd-c9e9-4f48-80ac-7c90a51f70ac .
+
+patterns:9f1298f0-f7c3-48ca-b6b7-ef0799d029e1
+        a                            hqdm:participant ;
+        patterns-rdl:record_created  "2023-12-31T09:47:37.231658024Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:beginning               patterns:17eba654-3d6d-48fb-8a64-22097c019018 ;
+        hqdm:data_EntityName         "Example_participant_state_of_X" ;
+        hqdm:ending                  patterns:2e5f51b9-a317-4653-904f-e262da911bf9 ;
+        hqdm:member_of               patterns-rdl:8128d83d-bf6c-4b8b-b9ed-0b8c469be0c2 ;
+        hqdm:member_of_kind          patterns-rdl:858b1f26-a135-4a7a-a543-359c83f1a30a ;
+        hqdm:part_of_possible_world  patterns:689749bd-c9e9-4f48-80ac-7c90a51f70ac ;
+        hqdm:participant_in          patterns:da4b735f-490d-421c-868b-73ae12c1b69f ;
+        hqdm:temporal_part_of        patterns:0d269b63-a840-4131-891e-3d9a4428a337 .
+
+patterns:7c969d52-5c1c-482a-aabd-aafb79943eb9
+        a                            hqdm:participant ;
+        patterns-rdl:record_created  "2023-12-31T09:47:37.287480046Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:beginning               patterns:17eba654-3d6d-48fb-8a64-22097c019018 ;
+        hqdm:data_EntityName         "Example_participant_state_of_Y" ;
+        hqdm:ending                  patterns:2e5f51b9-a317-4653-904f-e262da911bf9 ;
+        hqdm:member_of               patterns-rdl:b7e0be9b-4891-4ef1-96e3-91d0dd1575ba ;
+        hqdm:member_of_kind          patterns-rdl:c1889793-fe3a-439e-bbf5-2b992823e034 ;
+        hqdm:part_of_possible_world  patterns:689749bd-c9e9-4f48-80ac-7c90a51f70ac ;
+        hqdm:participant_in          patterns:da4b735f-490d-421c-868b-73ae12c1b69f ;
+        hqdm:temporal_part_of        patterns:b699ac3a-ba3a-47f3-bc17-61b3aab35866 .
+
+patterns:b699ac3a-ba3a-47f3-bc17-61b3aab35866
+        a                            hqdm:individual ;
+        patterns-rdl:record_created  "2023-12-31T09:47:37.269131036Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:beginning               patterns:66ce1501-f7fe-4dd8-abcc-bd6a70c28a3f ;
+        hqdm:data_EntityName         "Example_individual_Y" ;
+        hqdm:ending                  patterns:ddb8ef44-345e-431f-928c-a56474b6cc8b ;
+        hqdm:member_of_kind          patterns-rdl:d81990bf-c3b9-458f-9fa7-7da4c374c854 ;
+        hqdm:part_of_possible_world  patterns:689749bd-c9e9-4f48-80ac-7c90a51f70ac .
+
+patterns-rdl:d81990bf-c3b9-458f-9fa7-7da4c374c854
+        a                            hqdm:kind_of_individual ;
+        patterns-rdl:comment         "Kind_of_Y" ;
+        patterns-rdl:record_created  "2023-12-31T09:47:37.231394426Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "KindOfIndividual_Y" .
+
+patterns-rdl:b7e0be9b-4891-4ef1-96e3-91d0dd1575ba
+        a                            hqdm:class_of_state ;
+        patterns-rdl:comment         "Class_of_state_of_Y" ;
+        patterns-rdl:record_created  "2023-12-31T09:47:37.231573324Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "ClassOfState_Y" .
