@@ -104,6 +104,7 @@ nav:
     - system/system.md
     - system/system_component.md
     - system/system_LM5.md
+    - system/system_spatio-temporal-extents.md
   - 'Properties and Qualities':
     - properties/properties.md
   - 'Levels of Reality':
