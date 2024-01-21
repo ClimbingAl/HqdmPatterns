@@ -1,0 +1,10 @@
+@prefix diag:         <https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#> .
+@prefix hqdm:         <https://hqdmtop.github.io/hqdm#> .
+@prefix patterns:     <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#> .
+@prefix patterns-rdl: <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#> .
+
+patterns:98a7df53-f44f-4bcf-91f6-81636af46743
+        a                            hqdm:thing ;
+        patterns-rdl:record_created  "2024-01-20T19:00:09.714589442Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "Example_Thing_As_Instance_Of_TopLevelHQDM_EntityType_THING" .
