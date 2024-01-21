@@ -63,7 +63,7 @@ In the previous figure we had no commitment that the two states of the Ascent an
 
 ??? example "Equivalent diagram generated from this example's TTL data"
     ![*Eagle* system and its component parts generated from data](../extras/source-images/EagleSystemAndComponentParts.svg)
-    *Diagram generated using prototype SVG diagram generator using HQDM objects as input TTL*
+    *Diagram generated using prototype SVG diagram generator using HQDM objects as input TTL.*
 
 However, according to the `system` and `system_component` pattern, a `system` can survive periods of non-existence of its parts.  This will have happened during the assembly and test activities and is a familiar occurrence for those observing the preparations by spaceX of their Starship for launch.  The `system_component` states of the LM-5 System are shown with dashed green lines around the states of the *installed* physical objects that are the states of the Ascent and Descent Modules respectively while installed in the LM-5 *system*.
 
@@ -71,7 +71,7 @@ However, according to the `system` and `system_component` pattern, a `system` ca
 
 ??? example "Equivalent diagram generated from this example's TTL data"
     ![*Eagle* system and its component parts generated from data](../extras/source-images/EagleSystemComponentEnds1560.svg)
-    *Diagram generated using prototype SVG diagram generator using HQDM objects as input TTL*
+    *Diagram generated using prototype SVG diagram generator using HQDM objects as input TTL.*
 
 From the equivalent diagram above, generated from the HQDM objects for this example, we can see that there is a bit more going on.  The *actual* Descent and Ascent modules are only part of the LM-5 `system` when they are *installed*.  This fits with our prima facie understanding of what comprises a *system*.  Something is only part of a *system* when it is connected in-place (&/or organised) to be part of that *system*.  When something is removed from that situation it generally still exists but is not part of that *system* until it is re-placed (re-installed).  We have the following whole-life data objects to represent the Eagle *system* as just described:
 
@@ -137,7 +137,5 @@ Each of the installed parts will have had an existence prior to being *installed
     It can be better to analyse the system to one level of detail beyond your current need.  This can pave the way to modelling it in more detail in the future and is a good test of the objectivity being applied to the analysis of the *system* to meet your current need.
 
 ![An association between *Eagle* and its crew during descent](../extras/source-images//LMSystem9.svg)
-
-??? question "
 
 We can now proceed to create HQDM data objects that implement these model patterns (TBC).  If done diligently, this `system` and `system_component` pattern can be used for any *system*.
