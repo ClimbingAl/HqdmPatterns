@@ -3,96 +3,96 @@
 @prefix patterns:     <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#> .
 @prefix patterns-rdl: <https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#> .
 
-patterns:81e8ce65-35be-459b-8ae2-47b1e5c6592e
+patterns:9b22ebc1-cbe1-4601-88f5-cd7f53aaa12f
         a                            hqdm:point_in_time ;
-        patterns-rdl:record_created  "2023-12-31T09:47:37.611501492Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "1969-07-20T20:12:52" ;
-        hqdm:member_of               patterns-rdl:f62af1d5-2958-40ad-917b-1a89c3e4a29b ;
-        hqdm:part_of_possible_world  patterns:56c160dd-0304-442f-90c8-e5e647bd65fe .
-
-patterns:c69ce5ec-0a61-4b10-996c-22ce85c1008b
-        a                             hqdm:association ;
-        patterns-rdl:record_created   "2023-12-31T09:47:37.640491092Z" ;
-        patterns-rdl:record_creator   "HqdmPatternProject_User1" ;
-        hqdm:beginning                patterns:81e8ce65-35be-459b-8ae2-47b1e5c6592e ;
-        hqdm:consists_of_participant  patterns:000a7aa3-9f07-4c2c-98a3-504bf27487cc , patterns:5ca0813b-3b63-456c-873c-641859a612a7 ;
-        hqdm:data_EntityName          "Association_of_Buzz_in_LM5_during_descent" ;
-        hqdm:ending                   patterns:89f2e8d7-70cb-4ba3-8204-30b405a7defc ;
-        hqdm:member_of_kind           patterns-rdl:64fd99c7-067e-461b-8122-a17c61a9cd24 ;
-        hqdm:part_of_possible_world   patterns:56c160dd-0304-442f-90c8-e5e647bd65fe .
-
-patterns-rdl:64fd99c7-067e-461b-8122-a17c61a9cd24
-        a                            hqdm:kind_of_association ;
-        patterns-rdl:comment         "Kind_of_association_for_human_crew_in_a_particular_Lunar_Lander_Module." ;
-        patterns-rdl:record_created  "2023-12-31T09:47:37.605320356Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:consists_of_by_class    patterns-rdl:713a0cde-94db-4e6a-9be4-6f138b647b5f , patterns-rdl:abfeb5b1-c434-442d-af49-c45b44f433f1 ;
-        hqdm:data_EntityName         "KindOfAssociation__CrewInLunarLanderKindOfAssociation" .
-
-patterns:000a7aa3-9f07-4c2c-98a3-504bf27487cc
-        a                            hqdm:participant ;
-        patterns-rdl:record_created  "2023-12-31T09:47:37.625583947Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:beginning               patterns:81e8ce65-35be-459b-8ae2-47b1e5c6592e ;
-        hqdm:data_EntityName         "Example_participant_state_of_Eagle_Lunar_Lander_in_descent" ;
-        hqdm:ending                  patterns:89f2e8d7-70cb-4ba3-8204-30b405a7defc ;
-        hqdm:member_of               patterns-rdl:8128d83d-bf6c-4b8b-b9ed-0b8c469be0c2 ;
-        hqdm:member_of_kind          patterns-rdl:713a0cde-94db-4e6a-9be4-6f138b647b5f ;
-        hqdm:part_of_possible_world  patterns:689749bd-c9e9-4f48-80ac-7c90a51f70ac ;
-        hqdm:participant_in          patterns:c69ce5ec-0a61-4b10-996c-22ce85c1008b ;
-        hqdm:temporal_part_of        patterns:2af35b4d-4c62-4d7d-942d-7c0f527f9a2c .
-
-patterns:5ca0813b-3b63-456c-873c-641859a612a7
-        a                            hqdm:participant ;
-        patterns-rdl:record_created  "2023-12-31T09:47:37.640425393Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:beginning               patterns:81e8ce65-35be-459b-8ae2-47b1e5c6592e ;
-        hqdm:data_EntityName         "Example_participant_state_of_Buzz_Aldrin_in_LM5" ;
-        hqdm:ending                  patterns:89f2e8d7-70cb-4ba3-8204-30b405a7defc ;
-        hqdm:member_of               patterns-rdl:82d64b48-67c5-412a-9257-afdfa5e34892 ;
-        hqdm:member_of_kind          patterns-rdl:abfeb5b1-c434-442d-af49-c45b44f433f1 ;
-        hqdm:part_of_possible_world  patterns:56c160dd-0304-442f-90c8-e5e647bd65fe ;
-        hqdm:participant_in          patterns:c69ce5ec-0a61-4b10-996c-22ce85c1008b ;
-        hqdm:temporal_part_of        patterns:bc48a41a-76b4-4d4d-8fb8-80727e0f59c7 .
-
-patterns:89f2e8d7-70cb-4ba3-8204-30b405a7defc
-        a                            hqdm:point_in_time ;
-        patterns-rdl:record_created  "2023-12-31T09:47:37.618774417Z" ;
+        patterns-rdl:record_created  "2024-01-20T19:00:12.856691681Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "1969-07-21T02:51:16" ;
-        hqdm:member_of               patterns-rdl:f62af1d5-2958-40ad-917b-1a89c3e4a29b ;
-        hqdm:part_of_possible_world  patterns:56c160dd-0304-442f-90c8-e5e647bd65fe .
+        hqdm:member_of               patterns-rdl:585c2993-cb10-49de-b336-41d5da2718dd ;
+        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 .
 
-patterns-rdl:713a0cde-94db-4e6a-9be4-6f138b647b5f
-        a                            hqdm:role ;
-        patterns-rdl:comment         "Role_of_Lunar_Lander_Module_in_association_as_occupied_by_its_human_crew." ;
-        patterns-rdl:record_created  "2023-12-31T09:47:37.605431655Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "RoleOfLunarLanderAsOccupiedByCrew" ;
-        hqdm:has_superclass          patterns-rdl:dd206fa1-6575-4e29-b0ff-b8299cc7a085 ;
-        hqdm:part_of_by_class_       patterns-rdl:64fd99c7-067e-461b-8122-a17c61a9cd24 .
-
-patterns-rdl:abfeb5b1-c434-442d-af49-c45b44f433f1
-        a                            hqdm:role ;
-        patterns-rdl:comment         "Role_of_Person_as_crew_in_association_as_occupier_of_Lunar_Lander_Module." ;
-        patterns-rdl:record_created  "2023-12-31T09:47:37.611194396Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "RoleOfPersonAsOccupierOfLunarLander" ;
-        hqdm:has_superclass          patterns-rdl:82d64b48-67c5-412a-9257-afdfa5e34892 ;
-        hqdm:part_of_by_class_       patterns-rdl:64fd99c7-067e-461b-8122-a17c61a9cd24 .
-
-patterns-rdl:82d64b48-67c5-412a-9257-afdfa5e34892
-        a                            hqdm:class_of_state_of_person ;
-        patterns-rdl:comment         "Class_of_state_of_person_as_a_referenceable_data_object." ;
-        patterns-rdl:record_created  "2023-12-31T09:47:37.581897399Z" ;
-        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
-        hqdm:data_EntityName         "ClassOfStateOfPerson" ;
-        hqdm:part__of_by_class       patterns-rdl:33a64748-54a2-492c-b131-1720a27950e8 .
-
-patterns-rdl:33a64748-54a2-492c-b131-1720a27950e8
+patterns-rdl:407f51e4-0bbd-47b5-b2d0-0e62fbed2a5b
         a                            hqdm:kind_of_person ;
         patterns-rdl:comment         "Kind_of_person_as_a_referenceable_data_object." ;
-        patterns-rdl:record_created  "2023-12-31T09:47:37.580762811Z" ;
+        patterns-rdl:record_created  "2024-01-20T19:00:12.815914773Z" ;
         patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
         hqdm:data_EntityName         "KindOfPerson" .
+
+patterns:a42cb13b-fc4d-4334-a2bb-31b91df7a3bc
+        a                            hqdm:participant ;
+        patterns-rdl:record_created  "2024-01-20T19:00:12.868134259Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:beginning               patterns:60dfc6df-a05b-47f9-b027-dc65a1deb0e7 ;
+        hqdm:data_EntityName         "Example_participant_state_of_Eagle_Lunar_Lander_in_descent" ;
+        hqdm:ending                  patterns:9b22ebc1-cbe1-4601-88f5-cd7f53aaa12f ;
+        hqdm:member_of               patterns-rdl:4ff87a8e-5670-4a18-8cf1-514489c3861a ;
+        hqdm:member_of_kind          patterns-rdl:d0a167f1-e47f-4322-b89b-f0f81dd6851e ;
+        hqdm:part_of_possible_world  patterns:aa4f2ebf-e408-4702-be85-bc7dc44fb60e ;
+        hqdm:participant_in          patterns:3fef33e3-86c7-4d51-803f-36437e4bf6ac ;
+        hqdm:temporal_part_of        patterns:a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f .
+
+patterns-rdl:d0a167f1-e47f-4322-b89b-f0f81dd6851e
+        a                            hqdm:role ;
+        patterns-rdl:comment         "Role_of_Lunar_Lander_Module_in_association_as_occupied_by_its_human_crew." ;
+        patterns-rdl:record_created  "2024-01-20T19:00:12.836141380Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "RoleOfLunarLanderAsOccupiedByCrew" ;
+        hqdm:has_superclass          patterns-rdl:e42236eb-5602-4897-a2e3-a373944e3de9 ;
+        hqdm:part_of_by_class_       patterns-rdl:0c0fb20c-1fb7-4cf9-9d33-05f26ebc67b0 .
+
+patterns:3fef33e3-86c7-4d51-803f-36437e4bf6ac
+        a                             hqdm:association ;
+        patterns-rdl:record_created   "2024-01-20T19:00:12.901827404Z" ;
+        patterns-rdl:record_creator   "HqdmPatternProject_User1" ;
+        hqdm:beginning                patterns:60dfc6df-a05b-47f9-b027-dc65a1deb0e7 ;
+        hqdm:consists_of_participant  patterns:a42cb13b-fc4d-4334-a2bb-31b91df7a3bc , patterns:81a9d319-f37d-4db2-aed3-cab3956564e2 ;
+        hqdm:data_EntityName          "Association_of_Buzz_in_LM5_during_descent" ;
+        hqdm:ending                   patterns:9b22ebc1-cbe1-4601-88f5-cd7f53aaa12f ;
+        hqdm:member_of_kind           patterns-rdl:0c0fb20c-1fb7-4cf9-9d33-05f26ebc67b0 ;
+        hqdm:part_of_possible_world   patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 .
+
+patterns:60dfc6df-a05b-47f9-b027-dc65a1deb0e7
+        a                            hqdm:point_in_time ;
+        patterns-rdl:record_created  "2024-01-20T19:00:12.846695875Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "1969-07-20T20:12:52" ;
+        hqdm:member_of               patterns-rdl:585c2993-cb10-49de-b336-41d5da2718dd ;
+        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 .
+
+patterns-rdl:0302247a-f8ab-409f-9634-ce3e99b6f00c
+        a                            hqdm:class_of_state_of_person ;
+        patterns-rdl:comment         "Class_of_state_of_person_as_a_referenceable_data_object." ;
+        patterns-rdl:record_created  "2024-01-20T19:00:12.817089851Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "ClassOfStateOfPerson" ;
+        hqdm:part__of_by_class       patterns-rdl:407f51e4-0bbd-47b5-b2d0-0e62fbed2a5b .
+
+patterns-rdl:6340b207-0d9d-4b77-b589-6dc2fef9021b
+        a                            hqdm:role ;
+        patterns-rdl:comment         "Role_of_Person_as_crew_in_association_as_occupier_of_Lunar_Lander_Module." ;
+        patterns-rdl:record_created  "2024-01-20T19:00:12.846243684Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:data_EntityName         "RoleOfPersonAsOccupierOfLunarLander" ;
+        hqdm:has_superclass          patterns-rdl:0302247a-f8ab-409f-9634-ce3e99b6f00c ;
+        hqdm:part_of_by_class_       patterns-rdl:0c0fb20c-1fb7-4cf9-9d33-05f26ebc67b0 .
+
+patterns-rdl:0c0fb20c-1fb7-4cf9-9d33-05f26ebc67b0
+        a                            hqdm:kind_of_association ;
+        patterns-rdl:comment         "Kind_of_association_for_human_crew_in_a_particular_Lunar_Lander_Module." ;
+        patterns-rdl:record_created  "2024-01-20T19:00:12.836046882Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:consists_of_by_class    patterns-rdl:d0a167f1-e47f-4322-b89b-f0f81dd6851e , patterns-rdl:6340b207-0d9d-4b77-b589-6dc2fef9021b ;
+        hqdm:data_EntityName         "KindOfAssociation__CrewInLunarLanderKindOfAssociation" .
+
+patterns:81a9d319-f37d-4db2-aed3-cab3956564e2
+        a                            hqdm:participant ;
+        patterns-rdl:record_created  "2024-01-20T19:00:12.901663107Z" ;
+        patterns-rdl:record_creator  "HqdmPatternProject_User1" ;
+        hqdm:beginning               patterns:60dfc6df-a05b-47f9-b027-dc65a1deb0e7 ;
+        hqdm:data_EntityName         "Example_participant_state_of_Buzz_Aldrin_in_LM5" ;
+        hqdm:ending                  patterns:9b22ebc1-cbe1-4601-88f5-cd7f53aaa12f ;
+        hqdm:member_of               patterns-rdl:0302247a-f8ab-409f-9634-ce3e99b6f00c ;
+        hqdm:member_of_kind          patterns-rdl:6340b207-0d9d-4b77-b589-6dc2fef9021b ;
+        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 ;
+        hqdm:participant_in          patterns:3fef33e3-86c7-4d51-803f-36437e4bf6ac ;
+        hqdm:temporal_part_of        patterns:2f78193a-ff8a-4203-92cd-a31a56ea18b6 .
