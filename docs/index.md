@@ -10,7 +10,7 @@ Why document the 'patterns'?  Well, getting to grips with the theory and structu
 ??? info "Intended audience"
     Anyone interested in implementing an integration data model for the first time or as a reference for those who have some experience and want to learn more and share experience (once discussion feature is enabled).
 
-*Personal note:* I am grateful to the patience and insight into information quality management offered to me by Dr Matthew West, author of HQDM, over the last 8 years.  Matthew passed away in early August 2023 but hopefully his work will become more widely recognised as paving the way to transformed information management within, and between, organisations that need it.
+*Personal note:* I am grateful to the patience and insight into information quality management offered to me by Dr Matthew West, author of HQDM, since meeting him in 2015.  Matthew passed away in early August 2023 but hopefully his work will become more widely recognised as paving the way to transformed information management within, and between, organisations that need it.
 
 ??? tip "Useful pre-reading"
     * Developing High Quality Data Models by Matthew West, Chapters 1 to 4 (the less theoretical ones &#128578)
