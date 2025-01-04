@@ -96,6 +96,11 @@ There is also a state of each of #4 and #5 that represents the state of each (su
     --8<-- "systemAndComponentEaglePattern.ttl"
     ```
 
+??? info "Basic node-edge graph"
+    A basic node-edge graph showing some of the dependencies is shown (without installed parts).
+
+    --8<-- "systemAndComponentEagleExampleNodeEdgeGraph.mermaid"
+
 ??? info "Extended node-edge graph"
     An extended node-edge graph showing some of the additional dependencies is shown next.
 
