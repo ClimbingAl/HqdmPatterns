@@ -18,3 +18,5 @@ The events bounding the state of the LM-5 lander are shown in the next diagram. 
 Another common parthood relation is `part_of_possible_world`.  All material things exist in at least one _possible world_.  The node-edge graph belows shows the same Lunar Lander states from the example above existing in the same `possible_world`.
 
 --8<-- "temporalPartOfAllRelsNodeEdgeGraph.mermaid"
+
+--8<-- "temporalPartOfAllRelsNodeEdgeGraphNoProperties.mermaid"

@@ -80,6 +80,7 @@ nav:
     - introducing_hqdm/top_level_type.md
     - introducing_hqdm/diagrams_used.md
   - 'Fundamental Relations':
+    - fundamental_elements/types.md
     - fundamental_elements/relations.md
     - fundamental_elements/parts.md
     - fundamental_elements/sets.md
