@@ -24,5 +24,5 @@ jobs:
                 mkdocs-material \
                 mkdocs-glightbox \
                 mkdocs-table-reader-plugin \
-                mermaid
+                mkdocs-mermaid2-plugin
       - run: mkdocs gh-deploy --force
