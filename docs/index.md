@@ -5,7 +5,9 @@ Welcome to *HQDM Patterns*, documentation on the general model-patterns embedded
 Why document the 'patterns'?  Well, getting to grips with the theory and structure of the Top Level Data Model (aka. Integration Data Model) that is HQDM is only part of what it takes to make use of it.  In this documentation the model theory underpinning HQDM is taken as given.  We focus instead on the choices involved in implementing the model for some scenarios that are commonly found in information management.  Despite being common, the use of approaches to achieve consistent ways of representing and managing the resulting models is rare.
 
 ??? question "Do I need to have any background in data integration or the theory behind HQDM to use this documentation?"  
-    No.  The goal is to avoid much of the theory (without discarding it) and focus on how the modelling can be applied.  Much of this is about getting this right is about doing good, objective analysis of the need for information.  Many of the patterns in HQDM are both intuitive and emerge naturally from the construction that the book HQDM covers.  Applying them repeatably and effectively can enable a clearer path to managing information and getting the quality of it right for the decisions that it is intended to support.
+    No.  
+    
+    The goal is to avoid much of the theory (without discarding it) and focus on how the modelling can be applied.  Much of this is about getting this right is about doing good, objective analysis of the need for information.  Many of the patterns in HQDM are both intuitive and emerge naturally from the construction that the book HQDM covers.  Applying them repeatably and effectively can enable a clearer path to managing information and getting the quality of it right for the decisions that it is intended to support.
 
 ??? info "Intended audience"
     Anyone interested in implementing an integration data model for the first time or as a reference for those who have some experience and want to learn more and share experience (once discussion feature is enabled).
