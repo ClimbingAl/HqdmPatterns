@@ -1,5 +1,5 @@
 # HqdmPatterns
-## Documentation on implementation patterns for HQDM
+## Documentation on implementation patterns for HQDM, hosted here: [https://climbingal.github.io/HqdmPatterns/](https://climbingal.github.io/HqdmPatterns/)
 
 A markdown-based documentation pack on implementation patterns for the use of the Topl Level Ontology (TLO)-based integration data model created by Dr Matthew West called ["HQDM"](https://www.oreilly.com/library/view/developing-high-quality/9780123751065/), using ```mkdocs material``` and related plugins.  The documentation is experimental and will be updated when capacity allows.
 
