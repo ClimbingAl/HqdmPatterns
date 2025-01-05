@@ -1,0 +1,2150 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../system_component/">
+      
+      
+        <link rel="next" href="../system_spatio-temporal-extents/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Eagle Lunar Lander 'System' and its component parts - HQDM Implementation Patterns</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775m1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25m13.274 9.537zl-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074M4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5M4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.5 4.5 0 0 1-.563-1.191 3.84 3.84 0 0 1-.05-2.063 4.65 4.65 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .75.75 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4 2.4 0 0 1-.507-.441 3.1 3.1 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19.01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.7 3.7 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.76 2.76 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6 6 0 0 0-.26.16 1 1 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1 1 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.61.61 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1 1 0 0 0-.34.398M9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0M9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343za8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746m1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275M6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L6.94 8 4.97 6.03a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.25 1.25 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005 0-.009.004"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.5 3.5 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327q0 .15-.025.292c.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5q-.002.615-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A5 5 0 0 1 8 16a5 5 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5 5 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.7 1.7 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06m.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.17.17 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.75.75 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5m4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5m0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5M2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0"/></svg>');}</style>
+
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#eagle-lunar-lander-system-and-its-component-parts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HQDM Implementation Patterns" class="md-header__button md-logo" aria-label="HQDM Implementation Patterns" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HQDM Implementation Patterns
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Eagle Lunar Lander 'System' and its component parts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HQDM Implementation Patterns" class="md-nav__button md-logo" aria-label="HQDM Implementation Patterns" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HQDM Implementation Patterns
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model patterns home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scenario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introducing HQDM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Introducing HQDM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introducing_hqdm/basic_intro_to_hqdm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What HQDM is, and isn't
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introducing_hqdm/top_level_type/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Top Level Type
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introducing_hqdm/diagrams_used/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagrams used in this documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fundamental Relations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fundamental Relations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamental_elements/types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamental_elements/relations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamental_elements/parts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamental_elements/sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set membership
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamental_elements/order/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Order
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Individual
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Individual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../individual/individual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Individual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../individual/individual_LM5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eagle Lunar Lander 'Whole-life' Individual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../individual/individual_queries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Individual queries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Activity and Association
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Activity and Association
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Association
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Association
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../association/association/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Association
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../association/associationEagleCrew/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eagle Lunar Lander 'Association' with its crew
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Activity
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Activity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../activity/activity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../activity/activityEagle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apollo-11 Activities involving Eagle and its crew
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sign and Pattern
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Sign and Pattern
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signs_and_patterns/what_are_signs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What are signs?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signs_and_patterns/sign/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sign
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signs_and_patterns/sign_options_by_diagram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Representation options based on need
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signs_and_patterns/patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signs_and_patterns/sign_and_pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sign and Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signs_and_patterns/sign_and_pattern_apollo_example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apollo example of identifiying Saturn V using sign and pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    System and System Component
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            System and System Component
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system_component/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System component
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Eagle Lunar Lander 'System' and its component parts
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Eagle Lunar Lander 'System' and its component parts
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-and-system_component-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      system and system_component in action.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spacetime-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spacetime Diagrams
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system_spatio-temporal-extents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eagle spatio-temporal extents by diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Properties and Qualities
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Properties and Qualities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties/properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qualities, quantities, units of measure, etc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Levels of Reality
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Levels of Reality
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../levels_of_reality/multiple_inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple inheritance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../levels_of_reality/types_of_states/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Types of states
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../levels_of_reality/actual_and_possible_individuals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actual and Possible Individuals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Requirements
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Requirements
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements/requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Implementation Guidance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Implementation Guidance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation_guidance/managing_immutable_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing data that is immutable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation_guidance/model_mapping_process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation_guidance/lifecycle_activity_models_to_support_information_requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lifecycle activity models to support information requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-and-system_component-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      system and system_component in action.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spacetime-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spacetime Diagrams
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="eagle-lunar-lander-system-and-its-component-parts">Eagle Lunar Lander 'System' and its component parts</h1>
+<h2 id="system-and-system_component-in-action"><code>system</code> and <code>system_component</code> in action.</h2>
+<p><em>Representing actual systems and their composition</em> worked example.</p>
+<p>While it is common to invest in the design and creation of actual <em>systems</em>, it is unusual to represent these systems as they actually are.  If we don't admit, in our data models, that these systems (which is most systems that we have today) are dynamic (i.e. can change state) we won't be able to maintain consistent records in data with the state of the actual systems.  We shouldn't be surprised that we fail to keep track of the state of basic systems, and can't address more complex situations in which <em>systems</em> can be reconfigured or upgraded (not being able to address this is a limiting factor when we require through-life management or up-to-date situational awareness).</p>
+<details class="question">
+<summary>What information requirement does this meet?</summary>
+<p>It is common to require information about systems.  In fact, managing information related to the lifecycle of functional systems was the primary driver for the creation of ISO 15926 and, subsequently, HQDM.  Examples include:</p>
+<ul>
+<li>
+<p>What is the composition of System X now?</p>
+</li>
+<li>
+<p>How many systems use this specific kind of part?</p>
+</li>
+<li>
+<p>What is the maintenance history of part Y?</p>
+</li>
+<li>
+<p>Where is the documentation for each part of the system today?</p>
+</li>
+<li>
+<p>How many parts that have required urgent replacement/maintenance are in critical parts of System Z?</p>
+</li>
+<li>
+<p>If we need to manufacture another system like System K, what parts will we need to buy/make?</p>
+</li>
+<li>
+<p>...</p>
+</li>
+</ul>
+<p>The <code>system</code> and <code>system_component</code> pattern can be crucial in addressing these sorts of questions, and an almost limitless number of others like them.</p>
+</details>
+<details class="tip">
+<summary>System representation guidance</summary>
+<p>When designing (or, in our case, analysing) a system to have a consistent representation of it (at whatever level of detail is required) some key considerations can help up front.  This list is not exhaustive but should complement good engineering, design and information practices:</p>
+<ul>
+<li>Each <code>system_component</code> part of a <code>system</code> maps to a distinct part of the intended (or actual) system.</li>
+<li>Each <code>installed_object</code> only counts once.  That is, each material part of a system should not be represented in data more than once.
+    This is an interesting discipline to enforce.  Good systems engineering practices can involve the diagramming of a <code>system</code> into sub-systems.  This can lead to ambiguity - is the heat-shield that protects electrical cables from destructive heat part of the electrical sub-system, the propulsion sub-system or the structural sub-system?  Well, the answer is that the heat-shield may play a part in all of those logically separated sub-systems but there is only one heat-shield.  Another example is in more modern computer-based systems; is the embedded computer in a modern <code>system</code> that has a Real-Time Operating System that performs tasks for the Guidance, Navigation, Communications and Environmental sub-systems separately part of each of them?  Well, if there is only one such computer in the <code>system</code> then it only counts once, even if it has dedicated tasks to support all of those logical subs-systems.</li>
+<li>Represent things as they are in their own right, before working out whether and how they interact/connect with other distinct things.  Such composition will likely take place at the system level, with many <em>system components</em> being systems in their own right.</li>
+<li>Characteristics of the <em>system</em> and its <em>system components</em>, such as geometry, physical properties, qualities, etc are likely to be specified as requirements (see <a href="https://github.com/hqdmTop/hqdmFramework/wiki/requirement_specification"><code>requirement_specification</code></a>) and are therefore <em>classes</em> that the <em>installed objects</em> are at the (<em>class membership</em>) intersection of.</li>
+</ul>
+</details>
+<h2 id="spacetime-diagrams">Spacetime Diagrams</h2>
+<p>The following diagrams illustrate the Lunar Lander Module, LM-5, and how it was composed as a <code>system</code> with many <code>system_component</code> parts.  How the <em>component</em> parts were arranged is not as complex as may initially appear from the copious design documents made available by NASA.  How these parts worked together was complex, but diligent systems engineering and programme management practices resulted in the clarity they required to make and operate a series of Lunar Lander modules based on a common design with re-use of many of the component parts (to be clear, the actual parts were not re-used, but where the design was re-used they were built to the same specification by the same suppliers).</p>
+<details class="info">
+<summary>The Apollo Space Vehicle System</summary>
+<p>The Apollo Space Vehicle was assembled as a <a href="https://airandspace.si.edu/explore/stories/apollo-11-launch-vehicle-and-spacecraft">complete system for launch</a>.  It comprised the Saturn V Launch Vehicle, itself comprising three rocket stages to provide the lift required to escape the Earth's gravitational influence and set the Apollo spacecraft on a translunar trajectory, plus an instrumentation unit, Lunar Module (LM-5), Service Module, Command Module plus ancillaries like protective covers and a Launch Escape System.  As such, the LM-5 is a <em>system</em> in its own right but for part of its existence it was a <em>system component</em> of an Apollo Space Vehicle system.  That system changed state significantly as it performed its intended functions and ultimately enabled the LM-5 to operate as a system on its own as it descended successfully to the lunar surface.
+<a class="glightbox" href="../../extras/source-images/Apollo-Space_Vehicle.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Entire Apollo Space Vehicle" src="../../extras/source-images/Apollo-Space_Vehicle.png" /></a></p>
+<p>Source: <a href="https://www.ibiblio.org/apollo/Documents/LMA790-3-LM10-ApolloOperationsHandbookLunarModuleLM10AndSubsequent-Volume1-SubsystemsData.pdf">Released documents</a> as part of the <a href="https://www.ibiblio.org/apollo/">Virtual Apollo Guidance Computer Project</a></p>
+</details>
+<details class="info">
+<summary>Design of the LM-5</summary>
+<p>Many systems are complicated and can be created from a vast number of parts.  Design, fabrication and assembly of all the parts into an actual system can be an involved, costly, drawn-out undertaking.  Despite a large amount of documentation being created to set out the basis for the system, keeping track of the state of the resulting system can often be ignored or done in an ad-hoc manner.  Maintenance activities can be carried out using original documentation even if the system itself has evolved and diverged from the original design material.  In this LM-5 example we will explore some of these issues.  As an illustration, the following schematic is an extract from one of the Lunar Module's (LM-8) Systems Handbook, a 121MB, 179 page document.
+<a class="glightbox" href="../../extras/source-images/LM-Equipment-Locations-snip1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="An example schematic of the LM" src="../../extras/source-images/LM-Equipment-Locations-snip1.png" /></a></p>
+<p>Source: <a href="https://www.ibiblio.org/apollo/Documents/LM-8_Systems_Handbook_Rev_B.pdf">Lunar Module Systems Handbook, LM-8 Vehicle</a>, November 15 1970</p>
+</details>
+<p>Before modelling the LM-5 <em>Eagle" as a </em>system* we need to analyse it to ensure that we have a rigorous footing on which to construct a HQDM-based information model.  Firstly, the LM-5 itself was one of a series of Lunar Lander modules involved in the prototyping, unmanned test flights and subsequent lunar landing excursions of the entire Apollo programme.  They were designed to be similar to each other with improvements and new features being added as the Missions advanced what NASA could do.  At the time it was probably the most significant advanced engineering enterprise undertaken under significant geopolitical pressure.  Diligence in the engineering design, test, manufacturing and operation of the entire Space Vehicle was necessary but mostly paper-based.  This worked-example is illustrating how this can be done digitally.</p>
+<p>Firstly, we can return to the scenario that we introduced in the <a href="../../activity/activityEagle/">Eagle activity example</a>.  The activities that involved the LM-5 Lander included it descending successfully to the lunar surface.  However, not all of the LM-5 returned the astronauts back to the Command Module that orbited the moon while the LM-5 visited its surface.  One part of LM-5, the <em>Descent Module</em> (or <em>Descent Stage</em> in some descriptions) remained on the surface of the moon and is still there.  The two astronauts returned in the <em>Ascent Module</em> (or <em>Ascent Stage</em>, similarly).  So, the LM-5 Module was comprised of two major parts that functioned together as a system and then parted company, with the <em>Ascent module</em> having its own propulsion, navigation and control functions to return to lunar orbit.  This is shown in the following diagram.  The whole life <code>individual</code> for each of the two parts were assembled separately but brought together in the months prior to the launch (blue star marked on the time axis).  The codes <code>"1969-059C"</code> and <code>"1969-059D"</code> are the official NASA identifiers designated to each of those Modules (see <a href="../../signs_and_patterns/sign_and_pattern_apollo_example/"><code>identifier</code></a>).</p>
+<p><a class="glightbox" href="../../extras/source-images/LMSystem1.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="*Eagle* Descent and Ascent Modules" src="../../extras/source-images/LMSystem1.svg" /></a></p>
+<p>In the previous figure we had no commitment that the two states of the Ascent and Descent Modules were part of a <a href="https://github.com/hqdmTop/hqdmFramework/wiki/system"><code>system</code></a>.  The extent of the <code>system</code> is shown by the green dashed line around those states in the next diagram.  Although the whole-life states of the component parts still exist they are not relevant to the diagram of the <em>system</em> itself.  Only the relevant parts are diagrammed:</p>
+<p><a class="glightbox" href="../../extras/source-images/LMSystem2.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="*Eagle* system and its component parts" src="../../extras/source-images/LMSystem2.svg" /></a></p>
+<details class="example">
+<summary>Equivalent diagram generated from this example's TTL data</summary>
+<p><a class="glightbox" href="../../extras/source-images/EagleSystemAndComponentParts.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="*Eagle* system and its component parts generated from data" src="../../extras/source-images/EagleSystemAndComponentParts.svg" /></a>
+<em>Diagram generated using prototype SVG diagram generator using HQDM objects as input TTL.</em></p>
+</details>
+<p>However, according to the <code>system</code> and <code>system_component</code> pattern, a <code>system</code> can survive periods of non-existence of its parts.  This will have happened during the assembly and test activities and is a familiar occurrence for those observing the preparations by spaceX of their Starship for launch.  The <code>system_component</code> states of the LM-5 System are shown with dashed green lines around the states of the <em>installed</em> physical objects that are the states of the Ascent and Descent Modules respectively while installed in the LM-5 <em>system</em>.</p>
+<p><a class="glightbox" href="../../extras/source-images/LMSystem3.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="An association between *Eagle* and its crew during descent" src="../../extras/source-images/LMSystem3.svg" /></a></p>
+<details class="example">
+<summary>Equivalent diagram generated from this example's TTL data</summary>
+<p><a class="glightbox" href="../../extras/source-images/EagleSystemComponentEnds1560.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="*Eagle* system and its component parts generated from data" src="../../extras/source-images/EagleSystemComponentEnds1560.svg" /></a>
+<em>Diagram generated using prototype SVG diagram generator using HQDM objects as input TTL.</em></p>
+</details>
+<p>From the equivalent diagram above, generated from the HQDM objects for this example, we can see that there is a bit more going on.  The <em>actual</em> Descent and Ascent modules are only part of the LM-5 <code>system</code> when they are <em>installed</em>.  This fits with our prima facie understanding of what comprises a <em>system</em>.  Something is only part of a <em>system</em> when it is connected in-place (&amp;/or organised) to be part of that <em>system</em>.  When something is removed from that situation it generally still exists but is not part of that <em>system</em> until it is re-placed (re-installed).  We have the following whole-life data objects to represent the Eagle <em>system</em> as just described:</p>
+<div class="annotate">
+<ol>
+<li>LM-5 System itself ("The Eagle")(1)</li>
+<li>Descent Module System Component(2)</li>
+<li>Ascent Module System Component(3)</li>
+<li>Descent Module System(4)</li>
+<li>Ascent Module System(5)</li>
+</ol>
+</div>
+<ol>
+<li>"Example_individual_that_is_Lunar_module_Eagle_LM-5" in the TTL and generated diagrams.  This is a given-name of the object for illustrative purposes only.</li>
+<li>"Descent_Module_System_Component_1969-059D" in the TTL and generated diagrams.  This is a given-name of the object for illustrative purposes only.</li>
+<li>"Ascent_Module_System_Component_1969-059C" in the TTL and generated diagrams.  This is a given-name of the object for illustrative purposes only.</li>
+<li>"Descent_Module_Functional_System_1969-059D" in the TTL and generated diagrams.  This is a given-name of the object for illustrative purposes only.</li>
+<li>"Ascent_Module_Functional_System_1969-059C" in the TTL and generated diagrams.  This is a given-name of the object for illustrative purposes only.</li>
+</ol>
+<p>There is also a state of each of #4 and #5 that represents the state of each (sub-)system when it is installed in its respective *system component" (#2 and #3 respectively),</p>
+<details class="info">
+<summary>Full TURTLE for the actual LM-5 System</summary>
+<p>Example LM-5 System and its immediate component parts as HQDM data objects in TURTLE
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@prefix diag:         &lt;https://apollo-protocol.github.io/ns/2023/diagram-editor/diagram#&gt; .
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>@prefix hqdm:         &lt;https://hqdmtop.github.io/hqdm#&gt; .
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>@prefix patterns:     &lt;https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns#&gt; .
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>@prefix patterns-rdl: &lt;https://github.com/ClimbingAl/code-for-hqdm-patterns/patterns-rdl#&gt; .
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>patterns-rdl:40a31402-139b-4d96-9ae2-8c946ef2d48d
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        a                            hqdm:role ;
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        patterns-rdl:comment         &quot;Generic_role_of_Lunar_Lander_Ascent_Module_System_Component_when_functioning_in_intended_activities.&quot; ;
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.947772970Z&quot; ;
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        hqdm:data_EntityName         &quot;RoleOfLunarLanderAscentSystemComponent&quot; .
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>patterns-rdl:e44175ef-26eb-4d46-9c02-3b8dd9d92f6f
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        a                            hqdm:kind_of_functional_system_component ;
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        patterns-rdl:comment         &quot;Kind_of_system_component_whose_members_are_temporal_part_of_members_of_Lunar_Lander_Asescent_System&quot; ;
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.947414770Z&quot; ;
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        hqdm:data_EntityName         &quot;KindOfSystemComponent__Kind_of_Lunar_Lander_Ascescent_System_Component&quot; ;
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        hqdm:part__of_by_class       patterns-rdl:e7f02ac1-d9bd-4d5a-b961-442fcfdcd93c .
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>patterns-rdl:e7f02ac1-d9bd-4d5a-b961-442fcfdcd93c
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        a                            hqdm:kind_of_functional_system ;
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        patterns-rdl:comment         &quot;Modified_reference_data_class_during_system_and_system_component_Apollo_worked_example.&quot; , &quot;Kind_of_functional_system_that_is_Lunar_Lander._Note_this_is_subclass_of_class_of_ordinary_functional_object.&quot; ;
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.948890671Z&quot; ;
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        hqdm:data_EntityName         &quot;KindOfFunctionalSystem__Lunar_Lander&quot; ;
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        hqdm:has_component_by_class  patterns-rdl:e44175ef-26eb-4d46-9c02-3b8dd9d92f6f , patterns-rdl:807072cd-3d71-461a-827e-525df9df6dfc .
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>patterns-rdl:807072cd-3d71-461a-827e-525df9df6dfc
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>        a                            hqdm:kind_of_functional_system_component ;
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>        patterns-rdl:comment         &quot;Kind_of_system_component_whose_members_are_temporal_part_of_members_of_Lunar_Lander_Descent_System&quot; ;
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.947573270Z&quot; ;
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>        hqdm:data_EntityName         &quot;KindOfSystemComponent__Kind_of_Lunar_Lander_Ascescent_System_Component&quot; ;
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>        hqdm:part__of_by_class       patterns-rdl:e7f02ac1-d9bd-4d5a-b961-442fcfdcd93c .
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>patterns-rdl:d61a5efd-8c4c-479d-995b-2f9c1d8acd7f
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>        a                            hqdm:role ;
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>        patterns-rdl:comment         &quot;Generic_role_of_Lunar_Lander_Descent_Module_System_Component_when_functioning_in_intended_activities.&quot; ;
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.947687970Z&quot; ;
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>        hqdm:data_EntityName         &quot;RoleOfLunarLanderDescentSystemComponent&quot; .
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>patterns-rdl:786200d8-da22-4963-a1f3-f5e82d9655f1
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>        a                            hqdm:functional_system ;
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.961501180Z&quot; ;
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>        hqdm:data_EntityName         &quot;Descent_Module_Functional_System_1969-059D&quot; ;
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>        hqdm:member_of_kind          patterns-rdl:b971c536-fc63-4062-90ab-0a1eb6717137 ;
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 .
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>patterns-rdl:b971c536-fc63-4062-90ab-0a1eb6717137
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>        a                            hqdm:kind_of_functional_system ;
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>        patterns-rdl:comment         &quot;Kind_of_functional_system_that_is_Lunar_Lander_Descent_Module._Note_this_is_subclass_of_class_of_ordinary_functional_object.&quot; ;
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.945515768Z&quot; ;
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>        hqdm:data_EntityName         &quot;KindOfFunctionalSystem__Lunar_Lander_Descent_System&quot; .
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>patterns:a28be144-c67c-4def-aea0-41300be57703
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>        a                            hqdm:installed_functional_system_component ;
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.961482180Z&quot; ;
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>        hqdm:beginning               patterns:cdd05325-f963-40d8-91a8-962ecee6c388 ;
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>        hqdm:data_EntityName         &quot;Ascent_Module_Installed_As_LM-5_System_Component_1969-059C&quot; ;
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>        hqdm:ending                  patterns:3a3962dd-59f5-4a60-b8c7-d57509b1314f ;
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>        hqdm:member_of               patterns-rdl:402213b8-4fd1-44f3-a756-d55db638f6cc ;
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 ;
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>        hqdm:temporal__part_of       patterns:4e38d0e5-7414-405b-9f16-8b0322e1795b ;
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>        hqdm:temporal_part_of        patterns:21a0f52f-819b-433a-a08b-1d04c4df0bf0 .
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>patterns:cdd05325-f963-40d8-91a8-962ecee6c388
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>        a                            hqdm:point_in_time ;
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.961087180Z&quot; ;
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>        hqdm:data_EntityName         &quot;1968-03-23T18:56&quot; ;
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>        hqdm:member_of               patterns-rdl:585c2993-cb10-49de-b336-41d5da2718dd ;
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 .
+</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>
+</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>patterns:3a3962dd-59f5-4a60-b8c7-d57509b1314f
+</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>        a                            hqdm:point_in_time ;
+</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:12.049182974Z&quot; ;
+</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>        hqdm:data_EntityName         &quot;1969-07-21T17:54:01&quot; ;
+</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>        hqdm:member_of               patterns-rdl:585c2993-cb10-49de-b336-41d5da2718dd ;
+</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 .
+</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>
+</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>patterns-rdl:402213b8-4fd1-44f3-a756-d55db638f6cc
+</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>        a                            hqdm:class_of_installed_functional_system_component ;
+</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>        patterns-rdl:comment         &quot;Class_of_installed_system_component_whose_members_are_temporal_part_of_members_of_Lunar_Lander_Ascent_System_AND_Lunar_Lander_Ascent_System_Component&quot; ;
+</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.947519670Z&quot; ;
+</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>        hqdm:data_EntityName         &quot;ClassOfInstalledFunctionalSystemComponent__Class_of_Installed_Lunar_Lander_Ascent_System_Component&quot; ;
+</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>        hqdm:has_superclass          patterns-rdl:c93bfdba-5485-48a1-ae55-f1ac2b84ee2d ;
+</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>        hqdm:part__of_by_class       patterns-rdl:e44175ef-26eb-4d46-9c02-3b8dd9d92f6f .
+</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>
+</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>patterns:4e38d0e5-7414-405b-9f16-8b0322e1795b
+</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>        a                            hqdm:functional_system ;
+</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.961383680Z&quot; ;
+</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>        hqdm:data_EntityName         &quot;Ascent_Module_Functional_System_1969-059C&quot; ;
+</span><span id="__span-0-101"><a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>        hqdm:member_of_kind          patterns-rdl:dfb016f9-3ca6-4806-aac2-301c5ebde0e5 ;
+</span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a>        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 .
+</span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a>
+</span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a>patterns:21a0f52f-819b-433a-a08b-1d04c4df0bf0
+</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a>        a                            hqdm:functional_system_component ;
+</span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.961246680Z&quot; ;
+</span><span id="__span-0-107"><a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-108"><a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a>        hqdm:beginning               patterns:3b01c475-885f-4e5c-bdfe-fb507fe0cfa7 ;
+</span><span id="__span-0-109"><a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a>        hqdm:component_of            patterns:a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f ;
+</span><span id="__span-0-110"><a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a>        hqdm:data_EntityName         &quot;Ascent_Module_System_Component_1969-059C&quot; ;
+</span><span id="__span-0-111"><a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a>        hqdm:intended_role           patterns-rdl:40a31402-139b-4d96-9ae2-8c946ef2d48d ;
+</span><span id="__span-0-112"><a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a>        hqdm:member_of_kind          patterns-rdl:e44175ef-26eb-4d46-9c02-3b8dd9d92f6f ;
+</span><span id="__span-0-113"><a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a>        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 .
+</span><span id="__span-0-114"><a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a>
+</span><span id="__span-0-115"><a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a>patterns:403994c6-2454-4df8-a6a7-1391f5ed8ede
+</span><span id="__span-0-116"><a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a>        a                            hqdm:point_in_time ;
+</span><span id="__span-0-117"><a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.960766480Z&quot; ;
+</span><span id="__span-0-118"><a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-119"><a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a>        hqdm:data_EntityName         &quot;1968-01-14T20:32&quot; ;
+</span><span id="__span-0-120"><a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a>        hqdm:member_of               patterns-rdl:585c2993-cb10-49de-b336-41d5da2718dd ;
+</span><span id="__span-0-121"><a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a>        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 .
+</span><span id="__span-0-122"><a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a>
+</span><span id="__span-0-123"><a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a>patterns-rdl:b416bdd0-e175-4017-b8b2-ced2400d28af
+</span><span id="__span-0-124"><a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a>        a                            hqdm:class_of_installed_functional_system_component ;
+</span><span id="__span-0-125"><a id="__codelineno-0-125" name="__codelineno-0-125" href="#__codelineno-0-125"></a>        patterns-rdl:comment         &quot;Class_of_installed_system_component_whose_members_are_temporal_part_of_members_of_Lunar_Lander_Descent_System_AND_Lunar_Lander_Descent_System_Component&quot; ;
+</span><span id="__span-0-126"><a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.947654070Z&quot; ;
+</span><span id="__span-0-127"><a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-128"><a id="__codelineno-0-128" name="__codelineno-0-128" href="#__codelineno-0-128"></a>        hqdm:data_EntityName         &quot;ClassOfInstalledFunctionalSystemComponent__Class_of_Installed_Lunar_Lander_Descent_System_Component&quot; ;
+</span><span id="__span-0-129"><a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a>        hqdm:has_superclass          patterns-rdl:33d24296-5263-4e00-a2b9-6ed7186041bb ;
+</span><span id="__span-0-130"><a id="__codelineno-0-130" name="__codelineno-0-130" href="#__codelineno-0-130"></a>        hqdm:part__of_by_class       patterns-rdl:807072cd-3d71-461a-827e-525df9df6dfc .
+</span><span id="__span-0-131"><a id="__codelineno-0-131" name="__codelineno-0-131" href="#__codelineno-0-131"></a>
+</span><span id="__span-0-132"><a id="__codelineno-0-132" name="__codelineno-0-132" href="#__codelineno-0-132"></a>patterns-rdl:33d24296-5263-4e00-a2b9-6ed7186041bb
+</span><span id="__span-0-133"><a id="__codelineno-0-133" name="__codelineno-0-133" href="#__codelineno-0-133"></a>        a                            hqdm:class_of_state_of_system ;
+</span><span id="__span-0-134"><a id="__codelineno-0-134" name="__codelineno-0-134" href="#__codelineno-0-134"></a>        patterns-rdl:comment         &quot;Class_of_state_of_functional_system_whose_members_are_temporal_part_of_members_of_Lunar_Lander_Descent_System&quot; ;
+</span><span id="__span-0-135"><a id="__codelineno-0-135" name="__codelineno-0-135" href="#__codelineno-0-135"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.947263970Z&quot; ;
+</span><span id="__span-0-136"><a id="__codelineno-0-136" name="__codelineno-0-136" href="#__codelineno-0-136"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-137"><a id="__codelineno-0-137" name="__codelineno-0-137" href="#__codelineno-0-137"></a>        hqdm:data_EntityName         &quot;ClassOfStateOfFunctionalSystem__Class_Of_State_Of_Lunar_Lander_Descent_System&quot; ;
+</span><span id="__span-0-138"><a id="__codelineno-0-138" name="__codelineno-0-138" href="#__codelineno-0-138"></a>        hqdm:part__of_by_class       patterns-rdl:b971c536-fc63-4062-90ab-0a1eb6717137 .
+</span><span id="__span-0-139"><a id="__codelineno-0-139" name="__codelineno-0-139" href="#__codelineno-0-139"></a>
+</span><span id="__span-0-140"><a id="__codelineno-0-140" name="__codelineno-0-140" href="#__codelineno-0-140"></a>patterns-rdl:dfb016f9-3ca6-4806-aac2-301c5ebde0e5
+</span><span id="__span-0-141"><a id="__codelineno-0-141" name="__codelineno-0-141" href="#__codelineno-0-141"></a>        a                            hqdm:kind_of_functional_system ;
+</span><span id="__span-0-142"><a id="__codelineno-0-142" name="__codelineno-0-142" href="#__codelineno-0-142"></a>        patterns-rdl:comment         &quot;Kind_of_functional_system_that_is_Lunar_Lander_Ascent_Module._Note_this_is_subclass_of_class_of_ordinary_functional_object.&quot; ;
+</span><span id="__span-0-143"><a id="__codelineno-0-143" name="__codelineno-0-143" href="#__codelineno-0-143"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.945165568Z&quot; ;
+</span><span id="__span-0-144"><a id="__codelineno-0-144" name="__codelineno-0-144" href="#__codelineno-0-144"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-145"><a id="__codelineno-0-145" name="__codelineno-0-145" href="#__codelineno-0-145"></a>        hqdm:data_EntityName         &quot;KindOfFunctionalSystem__Lunar_Lander_Ascent_System&quot; .
+</span><span id="__span-0-146"><a id="__codelineno-0-146" name="__codelineno-0-146" href="#__codelineno-0-146"></a>
+</span><span id="__span-0-147"><a id="__codelineno-0-147" name="__codelineno-0-147" href="#__codelineno-0-147"></a>patterns-rdl:c93bfdba-5485-48a1-ae55-f1ac2b84ee2d
+</span><span id="__span-0-148"><a id="__codelineno-0-148" name="__codelineno-0-148" href="#__codelineno-0-148"></a>        a                            hqdm:class_of_state_of_system ;
+</span><span id="__span-0-149"><a id="__codelineno-0-149" name="__codelineno-0-149" href="#__codelineno-0-149"></a>        patterns-rdl:comment         &quot;Class_of_state_of_functional_system_whose_members_are_temporal_part_of_members_of_Lunar_Lander_Ascent_System&quot; ;
+</span><span id="__span-0-150"><a id="__codelineno-0-150" name="__codelineno-0-150" href="#__codelineno-0-150"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.947118569Z&quot; ;
+</span><span id="__span-0-151"><a id="__codelineno-0-151" name="__codelineno-0-151" href="#__codelineno-0-151"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-152"><a id="__codelineno-0-152" name="__codelineno-0-152" href="#__codelineno-0-152"></a>        hqdm:data_EntityName         &quot;ClassOfStateOfFunctionalSystem__Class_Of_State_Of_Lunar_Lander_Ascent_System&quot; ;
+</span><span id="__span-0-153"><a id="__codelineno-0-153" name="__codelineno-0-153" href="#__codelineno-0-153"></a>        hqdm:part__of_by_class       patterns-rdl:dfb016f9-3ca6-4806-aac2-301c5ebde0e5 .
+</span><span id="__span-0-154"><a id="__codelineno-0-154" name="__codelineno-0-154" href="#__codelineno-0-154"></a>
+</span><span id="__span-0-155"><a id="__codelineno-0-155" name="__codelineno-0-155" href="#__codelineno-0-155"></a>patterns:d68578cb-a88b-4c26-b48b-7ffe725e7bb4
+</span><span id="__span-0-156"><a id="__codelineno-0-156" name="__codelineno-0-156" href="#__codelineno-0-156"></a>        a                            hqdm:functional_system_component ;
+</span><span id="__span-0-157"><a id="__codelineno-0-157" name="__codelineno-0-157" href="#__codelineno-0-157"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.961354380Z&quot; ;
+</span><span id="__span-0-158"><a id="__codelineno-0-158" name="__codelineno-0-158" href="#__codelineno-0-158"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-159"><a id="__codelineno-0-159" name="__codelineno-0-159" href="#__codelineno-0-159"></a>        hqdm:beginning               patterns:3b01c475-885f-4e5c-bdfe-fb507fe0cfa7 ;
+</span><span id="__span-0-160"><a id="__codelineno-0-160" name="__codelineno-0-160" href="#__codelineno-0-160"></a>        hqdm:component_of            patterns:a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f ;
+</span><span id="__span-0-161"><a id="__codelineno-0-161" name="__codelineno-0-161" href="#__codelineno-0-161"></a>        hqdm:data_EntityName         &quot;Descent_Module_System_Component_1969-059D&quot; ;
+</span><span id="__span-0-162"><a id="__codelineno-0-162" name="__codelineno-0-162" href="#__codelineno-0-162"></a>        hqdm:intended_role           patterns-rdl:d61a5efd-8c4c-479d-995b-2f9c1d8acd7f ;
+</span><span id="__span-0-163"><a id="__codelineno-0-163" name="__codelineno-0-163" href="#__codelineno-0-163"></a>        hqdm:member_of_kind          patterns-rdl:807072cd-3d71-461a-827e-525df9df6dfc ;
+</span><span id="__span-0-164"><a id="__codelineno-0-164" name="__codelineno-0-164" href="#__codelineno-0-164"></a>        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 .
+</span><span id="__span-0-165"><a id="__codelineno-0-165" name="__codelineno-0-165" href="#__codelineno-0-165"></a>
+</span><span id="__span-0-166"><a id="__codelineno-0-166" name="__codelineno-0-166" href="#__codelineno-0-166"></a>patterns:a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f
+</span><span id="__span-0-167"><a id="__codelineno-0-167" name="__codelineno-0-167" href="#__codelineno-0-167"></a>        a                            hqdm:functional_system ;
+</span><span id="__span-0-168"><a id="__codelineno-0-168" name="__codelineno-0-168" href="#__codelineno-0-168"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:12.044100972Z&quot; ;
+</span><span id="__span-0-169"><a id="__codelineno-0-169" name="__codelineno-0-169" href="#__codelineno-0-169"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-170"><a id="__codelineno-0-170" name="__codelineno-0-170" href="#__codelineno-0-170"></a>        hqdm:data_EntityName         &quot;Example_individual_that_is_Lunar_Module_Eagle_LM-5&quot; ;
+</span><span id="__span-0-171"><a id="__codelineno-0-171" name="__codelineno-0-171" href="#__codelineno-0-171"></a>        hqdm:ending                  patterns:3a3962dd-59f5-4a60-b8c7-d57509b1314f ;
+</span><span id="__span-0-172"><a id="__codelineno-0-172" name="__codelineno-0-172" href="#__codelineno-0-172"></a>        hqdm:member_of_kind          patterns-rdl:e7f02ac1-d9bd-4d5a-b961-442fcfdcd93c ;
+</span><span id="__span-0-173"><a id="__codelineno-0-173" name="__codelineno-0-173" href="#__codelineno-0-173"></a>        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 .
+</span><span id="__span-0-174"><a id="__codelineno-0-174" name="__codelineno-0-174" href="#__codelineno-0-174"></a>
+</span><span id="__span-0-175"><a id="__codelineno-0-175" name="__codelineno-0-175" href="#__codelineno-0-175"></a>patterns:3b01c475-885f-4e5c-bdfe-fb507fe0cfa7
+</span><span id="__span-0-176"><a id="__codelineno-0-176" name="__codelineno-0-176" href="#__codelineno-0-176"></a>        a                            hqdm:point_in_time ;
+</span><span id="__span-0-177"><a id="__codelineno-0-177" name="__codelineno-0-177" href="#__codelineno-0-177"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.960443279Z&quot; ;
+</span><span id="__span-0-178"><a id="__codelineno-0-178" name="__codelineno-0-178" href="#__codelineno-0-178"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-179"><a id="__codelineno-0-179" name="__codelineno-0-179" href="#__codelineno-0-179"></a>        hqdm:data_EntityName         &quot;1968-01-01T20:17:40&quot; ;
+</span><span id="__span-0-180"><a id="__codelineno-0-180" name="__codelineno-0-180" href="#__codelineno-0-180"></a>        hqdm:member_of               patterns-rdl:585c2993-cb10-49de-b336-41d5da2718dd ;
+</span><span id="__span-0-181"><a id="__codelineno-0-181" name="__codelineno-0-181" href="#__codelineno-0-181"></a>        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 .
+</span><span id="__span-0-182"><a id="__codelineno-0-182" name="__codelineno-0-182" href="#__codelineno-0-182"></a>
+</span><span id="__span-0-183"><a id="__codelineno-0-183" name="__codelineno-0-183" href="#__codelineno-0-183"></a>patterns:91432187-235b-4167-9e5f-1842ea8c9a59
+</span><span id="__span-0-184"><a id="__codelineno-0-184" name="__codelineno-0-184" href="#__codelineno-0-184"></a>        a                            hqdm:installed_functional_system_component ;
+</span><span id="__span-0-185"><a id="__codelineno-0-185" name="__codelineno-0-185" href="#__codelineno-0-185"></a>        patterns-rdl:record_created  &quot;2024-01-20T19:00:13.961867880Z&quot; ;
+</span><span id="__span-0-186"><a id="__codelineno-0-186" name="__codelineno-0-186" href="#__codelineno-0-186"></a>        patterns-rdl:record_creator  &quot;HqdmPatternProject_User1&quot; ;
+</span><span id="__span-0-187"><a id="__codelineno-0-187" name="__codelineno-0-187" href="#__codelineno-0-187"></a>        hqdm:beginning               patterns:403994c6-2454-4df8-a6a7-1391f5ed8ede ;
+</span><span id="__span-0-188"><a id="__codelineno-0-188" name="__codelineno-0-188" href="#__codelineno-0-188"></a>        hqdm:data_EntityName         &quot;Descent_Module_Installed_As_LM-5_System_Component_1969-059D&quot; ;
+</span><span id="__span-0-189"><a id="__codelineno-0-189" name="__codelineno-0-189" href="#__codelineno-0-189"></a>        hqdm:ending                  patterns:3a3962dd-59f5-4a60-b8c7-d57509b1314f ;
+</span><span id="__span-0-190"><a id="__codelineno-0-190" name="__codelineno-0-190" href="#__codelineno-0-190"></a>        hqdm:member_of               patterns-rdl:b416bdd0-e175-4017-b8b2-ced2400d28af ;
+</span><span id="__span-0-191"><a id="__codelineno-0-191" name="__codelineno-0-191" href="#__codelineno-0-191"></a>        hqdm:part_of_possible_world  patterns:bb4dcf61-3ea6-48fa-820e-4eb739ae6671 ;
+</span><span id="__span-0-192"><a id="__codelineno-0-192" name="__codelineno-0-192" href="#__codelineno-0-192"></a>        hqdm:temporal__part_of       patterns-rdl:786200d8-da22-4963-a1f3-f5e82d9655f1 ;
+</span><span id="__span-0-193"><a id="__codelineno-0-193" name="__codelineno-0-193" href="#__codelineno-0-193"></a>        hqdm:temporal_part_of        patterns:d68578cb-a88b-4c26-b48b-7ffe725e7bb4 .
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>Basic node-edge graph</summary>
+<p>A basic node-edge graph showing some of the dependencies is shown (without installed parts).</p>
+<pre class="mermaid"><code>graph LR
+  a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"))---&gt;|"member_of_kind"|e7f02ac1-d9bd-4d5a-b961-442fcfdcd93c(("patterns-rdl &lt;br&gt; e7f02ac1-d9bd-4d5a &lt;br&gt; -b961-442fcfdcd93c"));
+  a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"))---&gt;|"data_EntityName"|Example_individual_that_is_Lunar_Module_Eagle_LM-5["Example_individual &lt;br&gt; _that_is_Lunar_Module_Eagle_LM-5"];
+  a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"))---&gt;|"ending"|3a3962dd-59f5-4a60-b8c7-d57509b1314f(("patterns &lt;br&gt; 3a3962dd-59f5-4a60 &lt;br&gt; -b8c7-d57509b1314f"));
+  a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"))---&gt;|"type"|functional_system(["hqdm &lt;br&gt; functional_system"]);
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"intended_role"|40a31402-139b-4d96-9ae2-8c946ef2d48d(("patterns-rdl &lt;br&gt; 40a31402-139b-4d96 &lt;br&gt; -9ae2-8c946ef2d48d"));
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"beginning"|3b01c475-885f-4e5c-bdfe-fb507fe0cfa7(("patterns &lt;br&gt; 3b01c475-885f-4e5c &lt;br&gt; -bdfe-fb507fe0cfa7"));
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"member_of_kind"|e44175ef-26eb-4d46-9c02-3b8dd9d92f6f(("patterns-rdl &lt;br&gt; e44175ef-26eb-4d46 &lt;br&gt; -9c02-3b8dd9d92f6f"));
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"component_of"|a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"));
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"data_EntityName"|Ascent_Module_System_Component_1969-059C["Ascent_Module_System &lt;br&gt; _Component_1969-059C"];
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"type"|functional_system_component(["hqdm &lt;br&gt; functional_system_ &lt;br&gt; component"]);
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"intended_role"|d61a5efd-8c4c-479d-995b-2f9c1d8acd7f(("patterns-rdl &lt;br&gt; d61a5efd-8c4c-479d &lt;br&gt; -995b-2f9c1d8acd7f"));
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"beginning"|3b01c475-885f-4e5c-bdfe-fb507fe0cfa7(("patterns &lt;br&gt; 3b01c475-885f-4e5c &lt;br&gt; -bdfe-fb507fe0cfa7"));
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"member_of_kind"|807072cd-3d71-461a-827e-525df9df6dfc(("patterns-rdl &lt;br&gt; 807072cd-3d71-461a &lt;br&gt; -827e-525df9df6dfc"));
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"component_of"|a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"));
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"data_EntityName"|Descent_Module_System_Component_1969-059D["Descent_Module_System &lt;br&gt; _Component_1969-059D"];
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"type"|functional_system_component(["hqdm &lt;br&gt; functional_system_ &lt;br&gt; component"]);</code></pre>
+</details>
+<details class="info">
+<summary>Extended node-edge graph</summary>
+<p>An extended node-edge graph showing some of the additional dependencies is shown next.</p>
+<pre class="mermaid"><code>graph LR
+  e7f02ac1-d9bd-4d5a-b961-442fcfdcd93c(("patterns-rdl &lt;br&gt; e7f02ac1-d9bd-4d5a &lt;br&gt; -b961-442fcfdcd93c"))---&gt;|"has_component_by_class"|807072cd-3d71-461a-827e-525df9df6dfc(("patterns-rdl &lt;br&gt; 807072cd-3d71-461a &lt;br&gt; -827e-525df9df6dfc"));
+  e7f02ac1-d9bd-4d5a-b961-442fcfdcd93c(("patterns-rdl &lt;br&gt; e7f02ac1-d9bd-4d5a &lt;br&gt; -b961-442fcfdcd93c"))---&gt;|"has_component_by_class"|e44175ef-26eb-4d46-9c02-3b8dd9d92f6f(("patterns-rdl &lt;br&gt; e44175ef-26eb-4d46 &lt;br&gt; -9c02-3b8dd9d92f6f"));
+  e7f02ac1-d9bd-4d5a-b961-442fcfdcd93c(("patterns-rdl &lt;br&gt; e7f02ac1-d9bd-4d5a &lt;br&gt; -b961-442fcfdcd93c"))---&gt;|"data_EntityName"|KindOfFunctionalSystem__Lunar_Lander["KindOfFunctionalSystem &lt;br&gt; __Lunar_Lander"];
+  e7f02ac1-d9bd-4d5a-b961-442fcfdcd93c(("patterns-rdl &lt;br&gt; e7f02ac1-d9bd-4d5a &lt;br&gt; -b961-442fcfdcd93c"))---&gt;|"type"|kind_of_functional_system(["hqdm &lt;br&gt; kind_of_functional &lt;br&gt; _system"]);
+  dfb016f9-3ca6-4806-aac2-301c5ebde0e5(("patterns-rdl &lt;br&gt; dfb016f9-3ca6-4806 &lt;br&gt; -aac2-301c5ebde0e5"))---&gt;|"data_EntityName"|KindOfFunctionalSystem__Lunar_Lander_Ascent_System["KindOfFunctionalSystem &lt;br&gt; __Lunar_Lander_Ascent_System"];
+  dfb016f9-3ca6-4806-aac2-301c5ebde0e5(("patterns-rdl &lt;br&gt; dfb016f9-3ca6-4806 &lt;br&gt; -aac2-301c5ebde0e5"))---&gt;|"type"|kind_of_functional_system(["hqdm &lt;br&gt; kind_of_functional &lt;br&gt; _system"]);
+  b971c536-fc63-4062-90ab-0a1eb6717137(("patterns-rdl &lt;br&gt; b971c536-fc63-4062 &lt;br&gt; -90ab-0a1eb6717137"))---&gt;|"data_EntityName"|KindOfFunctionalSystem__Lunar_Lander_Descent_System["KindOfFunctionalSystem &lt;br&gt; __Lunar_Lander_Descent_System"];
+  b971c536-fc63-4062-90ab-0a1eb6717137(("patterns-rdl &lt;br&gt; b971c536-fc63-4062 &lt;br&gt; -90ab-0a1eb6717137"))---&gt;|"type"|kind_of_functional_system(["hqdm &lt;br&gt; kind_of_functional &lt;br&gt; _system"]);
+  c93bfdba-5485-48a1-ae55-f1ac2b84ee2d(("patterns-rdl &lt;br&gt; c93bfdba-5485-48a1 &lt;br&gt; -ae55-f1ac2b84ee2d"))---&gt;|"data_EntityName"|ClassOfStateOfFunctionalSystem__Class_Of_State_Of_Lunar_Lander_Ascent_System["ClassOfStateOfFunctionalSystem &lt;br&gt; __Class_Of_State_Of_Lunar_Lander_Ascent_System"];
+  c93bfdba-5485-48a1-ae55-f1ac2b84ee2d(("patterns-rdl &lt;br&gt; c93bfdba-5485-48a1 &lt;br&gt; -ae55-f1ac2b84ee2d"))---&gt;|"part__of_by_class"|dfb016f9-3ca6-4806-aac2-301c5ebde0e5(("patterns-rdl &lt;br&gt; dfb016f9-3ca6-4806 &lt;br&gt; -aac2-301c5ebde0e5"));
+  c93bfdba-5485-48a1-ae55-f1ac2b84ee2d(("patterns-rdl &lt;br&gt; c93bfdba-5485-48a1 &lt;br&gt; -ae55-f1ac2b84ee2d"))---&gt;|"type"|class_of_state_of_system(["hqdm &lt;br&gt; class_of_state_of_ &lt;br&gt; system"]);
+  33d24296-5263-4e00-a2b9-6ed7186041bb(("patterns-rdl &lt;br&gt; 33d24296-5263-4e00 &lt;br&gt; -a2b9-6ed7186041bb"))---&gt;|"data_EntityName"|ClassOfStateOfFunctionalSystem__Class_Of_State_Of_Lunar_Lander_Descent_System["ClassOfStateOfFunctionalSystem &lt;br&gt; __Class_Of_State_Of_Lunar_Lander_Descent_System"];
+  33d24296-5263-4e00-a2b9-6ed7186041bb(("patterns-rdl &lt;br&gt; 33d24296-5263-4e00 &lt;br&gt; -a2b9-6ed7186041bb"))---&gt;|"part__of_by_class"|b971c536-fc63-4062-90ab-0a1eb6717137(("patterns-rdl &lt;br&gt; b971c536-fc63-4062 &lt;br&gt; -90ab-0a1eb6717137"));
+  33d24296-5263-4e00-a2b9-6ed7186041bb(("patterns-rdl &lt;br&gt; 33d24296-5263-4e00 &lt;br&gt; -a2b9-6ed7186041bb"))---&gt;|"type"|class_of_state_of_system(["hqdm &lt;br&gt; class_of_state_of_ &lt;br&gt; system"]);
+  e44175ef-26eb-4d46-9c02-3b8dd9d92f6f(("patterns-rdl &lt;br&gt; e44175ef-26eb-4d46 &lt;br&gt; -9c02-3b8dd9d92f6f"))---&gt;|"data_EntityName"|KindOfSystemComponent__Kind_of_Lunar_Lander_Ascescent_System_Component["KindOfSystemComponent &lt;br&gt; __Kind_of_Lunar_Lander_Ascescent_System_Component"];
+  e44175ef-26eb-4d46-9c02-3b8dd9d92f6f(("patterns-rdl &lt;br&gt; e44175ef-26eb-4d46 &lt;br&gt; -9c02-3b8dd9d92f6f"))---&gt;|"part__of_by_class"|e7f02ac1-d9bd-4d5a-b961-442fcfdcd93c(("patterns-rdl &lt;br&gt; e7f02ac1-d9bd-4d5a &lt;br&gt; -b961-442fcfdcd93c"));
+  e44175ef-26eb-4d46-9c02-3b8dd9d92f6f(("patterns-rdl &lt;br&gt; e44175ef-26eb-4d46 &lt;br&gt; -9c02-3b8dd9d92f6f"))---&gt;|"type"|kind_of_functional_system_component(["hqdm &lt;br&gt; kind_of_functional &lt;br&gt; _system_component"]);
+  402213b8-4fd1-44f3-a756-d55db638f6cc(("patterns-rdl &lt;br&gt; 402213b8-4fd1-44f3 &lt;br&gt; -a756-d55db638f6cc"))---&gt;|"has_superclass"|c93bfdba-5485-48a1-ae55-f1ac2b84ee2d(("patterns-rdl &lt;br&gt; c93bfdba-5485-48a1 &lt;br&gt; -ae55-f1ac2b84ee2d"));
+  402213b8-4fd1-44f3-a756-d55db638f6cc(("patterns-rdl &lt;br&gt; 402213b8-4fd1-44f3 &lt;br&gt; -a756-d55db638f6cc"))---&gt;|"data_EntityName"|ClassOfInstalledFunctionalSystemComponent__Class_of_Installed_Lunar_Lander_Ascent_System_Component["ClassOfInstalledFunctionalSystemComponent &lt;br&gt; __Class_of_Installed_Lunar_Lander_Ascent_System_Component"];
+  402213b8-4fd1-44f3-a756-d55db638f6cc(("patterns-rdl &lt;br&gt; 402213b8-4fd1-44f3 &lt;br&gt; -a756-d55db638f6cc"))---&gt;|"part__of_by_class"|e44175ef-26eb-4d46-9c02-3b8dd9d92f6f(("patterns-rdl &lt;br&gt; e44175ef-26eb-4d46 &lt;br&gt; -9c02-3b8dd9d92f6f"));
+  402213b8-4fd1-44f3-a756-d55db638f6cc(("patterns-rdl &lt;br&gt; 402213b8-4fd1-44f3 &lt;br&gt; -a756-d55db638f6cc"))---&gt;|"type"|class_of_installed_functional_system_component(["hqdm &lt;br&gt; class_of_installed &lt;br&gt; _functional_system &lt;br&gt; _component"]);
+  807072cd-3d71-461a-827e-525df9df6dfc(("patterns-rdl &lt;br&gt; 807072cd-3d71-461a &lt;br&gt; -827e-525df9df6dfc"))---&gt;|"data_EntityName"|KindOfSystemComponent__Kind_of_Lunar_Lander_Ascescent_System_Component["KindOfSystemComponent &lt;br&gt; __Kind_of_Lunar_Lander_Ascescent_System_Component"];
+  807072cd-3d71-461a-827e-525df9df6dfc(("patterns-rdl &lt;br&gt; 807072cd-3d71-461a &lt;br&gt; -827e-525df9df6dfc"))---&gt;|"part__of_by_class"|e7f02ac1-d9bd-4d5a-b961-442fcfdcd93c(("patterns-rdl &lt;br&gt; e7f02ac1-d9bd-4d5a &lt;br&gt; -b961-442fcfdcd93c"));
+  807072cd-3d71-461a-827e-525df9df6dfc(("patterns-rdl &lt;br&gt; 807072cd-3d71-461a &lt;br&gt; -827e-525df9df6dfc"))---&gt;|"type"|kind_of_functional_system_component(["hqdm &lt;br&gt; kind_of_functional &lt;br&gt; _system_component"]);
+  b416bdd0-e175-4017-b8b2-ced2400d28af(("patterns-rdl &lt;br&gt; b416bdd0-e175-4017 &lt;br&gt; -b8b2-ced2400d28af"))---&gt;|"has_superclass"|33d24296-5263-4e00-a2b9-6ed7186041bb(("patterns-rdl &lt;br&gt; 33d24296-5263-4e00 &lt;br&gt; -a2b9-6ed7186041bb"));
+  b416bdd0-e175-4017-b8b2-ced2400d28af(("patterns-rdl &lt;br&gt; b416bdd0-e175-4017 &lt;br&gt; -b8b2-ced2400d28af"))---&gt;|"data_EntityName"|ClassOfInstalledFunctionalSystemComponent__Class_of_Installed_Lunar_Lander_Descent_System_Component["ClassOfInstalledFunctionalSystemComponent &lt;br&gt; __Class_of_Installed_Lunar_Lander_Descent_System_Component"];
+  b416bdd0-e175-4017-b8b2-ced2400d28af(("patterns-rdl &lt;br&gt; b416bdd0-e175-4017 &lt;br&gt; -b8b2-ced2400d28af"))---&gt;|"part__of_by_class"|807072cd-3d71-461a-827e-525df9df6dfc(("patterns-rdl &lt;br&gt; 807072cd-3d71-461a &lt;br&gt; -827e-525df9df6dfc"));
+  b416bdd0-e175-4017-b8b2-ced2400d28af(("patterns-rdl &lt;br&gt; b416bdd0-e175-4017 &lt;br&gt; -b8b2-ced2400d28af"))---&gt;|"type"|class_of_installed_functional_system_component(["hqdm &lt;br&gt; class_of_installed &lt;br&gt; _functional_system &lt;br&gt; _component"]);
+  40a31402-139b-4d96-9ae2-8c946ef2d48d(("patterns-rdl &lt;br&gt; 40a31402-139b-4d96 &lt;br&gt; -9ae2-8c946ef2d48d"))---&gt;|"data_EntityName"|RoleOfLunarLanderAscentSystemComponent["RoleOfLunarLand &lt;br&gt; erAscentSystemComponent"];
+  40a31402-139b-4d96-9ae2-8c946ef2d48d(("patterns-rdl &lt;br&gt; 40a31402-139b-4d96 &lt;br&gt; -9ae2-8c946ef2d48d"))---&gt;|"type"|role(["hqdm &lt;br&gt; role"]);
+  d61a5efd-8c4c-479d-995b-2f9c1d8acd7f(("patterns-rdl &lt;br&gt; d61a5efd-8c4c-479d &lt;br&gt; -995b-2f9c1d8acd7f"))---&gt;|"data_EntityName"|RoleOfLunarLanderDescentSystemComponent["RoleOfLunarLand &lt;br&gt; erDescentSystemComponent"];
+  d61a5efd-8c4c-479d-995b-2f9c1d8acd7f(("patterns-rdl &lt;br&gt; d61a5efd-8c4c-479d &lt;br&gt; -995b-2f9c1d8acd7f"))---&gt;|"type"|role(["hqdm &lt;br&gt; role"]);
+  3b01c475-885f-4e5c-bdfe-fb507fe0cfa7(("patterns &lt;br&gt; 3b01c475-885f-4e5c &lt;br&gt; -bdfe-fb507fe0cfa7"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  3b01c475-885f-4e5c-bdfe-fb507fe0cfa7(("patterns &lt;br&gt; 3b01c475-885f-4e5c &lt;br&gt; -bdfe-fb507fe0cfa7"))---&gt;|"member_of"|585c2993-cb10-49de-b336-41d5da2718dd(("patterns-rdl &lt;br&gt; 585c2993-cb10-49de &lt;br&gt; -b336-41d5da2718dd"));
+  3b01c475-885f-4e5c-bdfe-fb507fe0cfa7(("patterns &lt;br&gt; 3b01c475-885f-4e5c &lt;br&gt; -bdfe-fb507fe0cfa7"))---&gt;|"data_EntityName"|1968-01-01T20:17:40["1968-01-01T20:17:40"];
+  3b01c475-885f-4e5c-bdfe-fb507fe0cfa7(("patterns &lt;br&gt; 3b01c475-885f-4e5c &lt;br&gt; -bdfe-fb507fe0cfa7"))---&gt;|"type"|point_in_time(["hqdm &lt;br&gt; point_in_time"]);
+  403994c6-2454-4df8-a6a7-1391f5ed8ede(("patterns &lt;br&gt; 403994c6-2454-4df8 &lt;br&gt; -a6a7-1391f5ed8ede"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  403994c6-2454-4df8-a6a7-1391f5ed8ede(("patterns &lt;br&gt; 403994c6-2454-4df8 &lt;br&gt; -a6a7-1391f5ed8ede"))---&gt;|"member_of"|585c2993-cb10-49de-b336-41d5da2718dd(("patterns-rdl &lt;br&gt; 585c2993-cb10-49de &lt;br&gt; -b336-41d5da2718dd"));
+  403994c6-2454-4df8-a6a7-1391f5ed8ede(("patterns &lt;br&gt; 403994c6-2454-4df8 &lt;br&gt; -a6a7-1391f5ed8ede"))---&gt;|"data_EntityName"|1968-01-14T20:32["1968-01-14T20:32"];
+  403994c6-2454-4df8-a6a7-1391f5ed8ede(("patterns &lt;br&gt; 403994c6-2454-4df8 &lt;br&gt; -a6a7-1391f5ed8ede"))---&gt;|"type"|point_in_time(["hqdm &lt;br&gt; point_in_time"]);
+  cdd05325-f963-40d8-91a8-962ecee6c388(("patterns &lt;br&gt; cdd05325-f963-40d8 &lt;br&gt; -91a8-962ecee6c388"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  cdd05325-f963-40d8-91a8-962ecee6c388(("patterns &lt;br&gt; cdd05325-f963-40d8 &lt;br&gt; -91a8-962ecee6c388"))---&gt;|"member_of"|585c2993-cb10-49de-b336-41d5da2718dd(("patterns-rdl &lt;br&gt; 585c2993-cb10-49de &lt;br&gt; -b336-41d5da2718dd"));
+  cdd05325-f963-40d8-91a8-962ecee6c388(("patterns &lt;br&gt; cdd05325-f963-40d8 &lt;br&gt; -91a8-962ecee6c388"))---&gt;|"data_EntityName"|1968-03-23T18:56["1968-03-23T18:56"];
+  cdd05325-f963-40d8-91a8-962ecee6c388(("patterns &lt;br&gt; cdd05325-f963-40d8 &lt;br&gt; -91a8-962ecee6c388"))---&gt;|"type"|point_in_time(["hqdm &lt;br&gt; point_in_time"]);
+  3a3962dd-59f5-4a60-b8c7-d57509b1314f(("patterns &lt;br&gt; 3a3962dd-59f5-4a60 &lt;br&gt; -b8c7-d57509b1314f"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  3a3962dd-59f5-4a60-b8c7-d57509b1314f(("patterns &lt;br&gt; 3a3962dd-59f5-4a60 &lt;br&gt; -b8c7-d57509b1314f"))---&gt;|"member_of"|585c2993-cb10-49de-b336-41d5da2718dd(("patterns-rdl &lt;br&gt; 585c2993-cb10-49de &lt;br&gt; -b336-41d5da2718dd"));
+  3a3962dd-59f5-4a60-b8c7-d57509b1314f(("patterns &lt;br&gt; 3a3962dd-59f5-4a60 &lt;br&gt; -b8c7-d57509b1314f"))---&gt;|"data_EntityName"|1969-07-21T17:54:01["1969-07-21T17:54:01"];
+  3a3962dd-59f5-4a60-b8c7-d57509b1314f(("patterns &lt;br&gt; 3a3962dd-59f5-4a60 &lt;br&gt; -b8c7-d57509b1314f"))---&gt;|"type"|point_in_time(["hqdm &lt;br&gt; point_in_time"]);
+  a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"))---&gt;|"member_of_kind"|e7f02ac1-d9bd-4d5a-b961-442fcfdcd93c(("patterns-rdl &lt;br&gt; e7f02ac1-d9bd-4d5a &lt;br&gt; -b961-442fcfdcd93c"));
+  a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"))---&gt;|"data_EntityName"|Example_individual_that_is_Lunar_Module_Eagle_LM-5["Example_individual &lt;br&gt; _that_is_Lunar_Module_Eagle_LM-5"];
+  a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"))---&gt;|"ending"|3a3962dd-59f5-4a60-b8c7-d57509b1314f(("patterns &lt;br&gt; 3a3962dd-59f5-4a60 &lt;br&gt; -b8c7-d57509b1314f"));
+  a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"))---&gt;|"type"|functional_system(["hqdm &lt;br&gt; functional_system"]);
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"intended_role"|40a31402-139b-4d96-9ae2-8c946ef2d48d(("patterns-rdl &lt;br&gt; 40a31402-139b-4d96 &lt;br&gt; -9ae2-8c946ef2d48d"));
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"beginning"|3b01c475-885f-4e5c-bdfe-fb507fe0cfa7(("patterns &lt;br&gt; 3b01c475-885f-4e5c &lt;br&gt; -bdfe-fb507fe0cfa7"));
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"member_of_kind"|e44175ef-26eb-4d46-9c02-3b8dd9d92f6f(("patterns-rdl &lt;br&gt; e44175ef-26eb-4d46 &lt;br&gt; -9c02-3b8dd9d92f6f"));
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"component_of"|a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"));
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"data_EntityName"|Ascent_Module_System_Component_1969-059C["Ascent_Module_System &lt;br&gt; _Component_1969-059C"];
+  21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"))---&gt;|"type"|functional_system_component(["hqdm &lt;br&gt; functional_system_ &lt;br&gt; component"]);
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"intended_role"|d61a5efd-8c4c-479d-995b-2f9c1d8acd7f(("patterns-rdl &lt;br&gt; d61a5efd-8c4c-479d &lt;br&gt; -995b-2f9c1d8acd7f"));
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"beginning"|3b01c475-885f-4e5c-bdfe-fb507fe0cfa7(("patterns &lt;br&gt; 3b01c475-885f-4e5c &lt;br&gt; -bdfe-fb507fe0cfa7"));
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"member_of_kind"|807072cd-3d71-461a-827e-525df9df6dfc(("patterns-rdl &lt;br&gt; 807072cd-3d71-461a &lt;br&gt; -827e-525df9df6dfc"));
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"component_of"|a5a6ba71-b2bb-4ed5-b079-e7cab5dac94f(("&lt;b&gt; patterns &lt;br&gt; a5a6ba71-b2bb-4ed5 &lt;br&gt; -b079-e7cab5dac94f"));
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"data_EntityName"|Descent_Module_System_Component_1969-059D["Descent_Module_System &lt;br&gt; _Component_1969-059D"];
+  d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"))---&gt;|"type"|functional_system_component(["hqdm &lt;br&gt; functional_system_ &lt;br&gt; component"]);
+  4e38d0e5-7414-405b-9f16-8b0322e1795b(("patterns &lt;br&gt; 4e38d0e5-7414-405b &lt;br&gt; -9f16-8b0322e1795b"))---&gt;|"member_of_kind"|dfb016f9-3ca6-4806-aac2-301c5ebde0e5(("patterns-rdl &lt;br&gt; dfb016f9-3ca6-4806 &lt;br&gt; -aac2-301c5ebde0e5"));
+  4e38d0e5-7414-405b-9f16-8b0322e1795b(("patterns &lt;br&gt; 4e38d0e5-7414-405b &lt;br&gt; -9f16-8b0322e1795b"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  4e38d0e5-7414-405b-9f16-8b0322e1795b(("patterns &lt;br&gt; 4e38d0e5-7414-405b &lt;br&gt; -9f16-8b0322e1795b"))---&gt;|"data_EntityName"|Ascent_Module_Functional_System_1969-059C["Ascent_Module_Functional &lt;br&gt; _System_1969-059C"];
+  4e38d0e5-7414-405b-9f16-8b0322e1795b(("patterns &lt;br&gt; 4e38d0e5-7414-405b &lt;br&gt; -9f16-8b0322e1795b"))---&gt;|"type"|functional_system(["hqdm &lt;br&gt; functional_system"]);
+  a28be144-c67c-4def-aea0-41300be57703(("patterns &lt;br&gt; a28be144-c67c-4def &lt;br&gt; -aea0-41300be57703"))---&gt;|"beginning"|cdd05325-f963-40d8-91a8-962ecee6c388(("patterns &lt;br&gt; cdd05325-f963-40d8 &lt;br&gt; -91a8-962ecee6c388"));
+  a28be144-c67c-4def-aea0-41300be57703(("patterns &lt;br&gt; a28be144-c67c-4def &lt;br&gt; -aea0-41300be57703"))---&gt;|"temporal__part_of"|4e38d0e5-7414-405b-9f16-8b0322e1795b(("patterns &lt;br&gt; 4e38d0e5-7414-405b &lt;br&gt; -9f16-8b0322e1795b"));
+  a28be144-c67c-4def-aea0-41300be57703(("patterns &lt;br&gt; a28be144-c67c-4def &lt;br&gt; -aea0-41300be57703"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  a28be144-c67c-4def-aea0-41300be57703(("patterns &lt;br&gt; a28be144-c67c-4def &lt;br&gt; -aea0-41300be57703"))---&gt;|"temporal_part_of"|21a0f52f-819b-433a-a08b-1d04c4df0bf0(("patterns &lt;br&gt; 21a0f52f-819b-433a &lt;br&gt; -a08b-1d04c4df0bf0"));
+  a28be144-c67c-4def-aea0-41300be57703(("patterns &lt;br&gt; a28be144-c67c-4def &lt;br&gt; -aea0-41300be57703"))---&gt;|"member_of"|402213b8-4fd1-44f3-a756-d55db638f6cc(("patterns-rdl &lt;br&gt; 402213b8-4fd1-44f3 &lt;br&gt; -a756-d55db638f6cc"));
+  a28be144-c67c-4def-aea0-41300be57703(("patterns &lt;br&gt; a28be144-c67c-4def &lt;br&gt; -aea0-41300be57703"))---&gt;|"data_EntityName"|Ascent_Module_Installed_As_LM-5_System_Component_1969-059C["Ascent_Module_Installed &lt;br&gt; _As_LM-5_System_Component_1969-059C"];
+  a28be144-c67c-4def-aea0-41300be57703(("patterns &lt;br&gt; a28be144-c67c-4def &lt;br&gt; -aea0-41300be57703"))---&gt;|"ending"|3a3962dd-59f5-4a60-b8c7-d57509b1314f(("patterns &lt;br&gt; 3a3962dd-59f5-4a60 &lt;br&gt; -b8c7-d57509b1314f"));
+  a28be144-c67c-4def-aea0-41300be57703(("patterns &lt;br&gt; a28be144-c67c-4def &lt;br&gt; -aea0-41300be57703"))---&gt;|"type"|installed_functional_system_component(["hqdm &lt;br&gt; installed_function &lt;br&gt; al_system_componen &lt;br&gt; t"]);
+  786200d8-da22-4963-a1f3-f5e82d9655f1(("patterns-rdl &lt;br&gt; 786200d8-da22-4963 &lt;br&gt; -a1f3-f5e82d9655f1"))---&gt;|"member_of_kind"|b971c536-fc63-4062-90ab-0a1eb6717137(("patterns-rdl &lt;br&gt; b971c536-fc63-4062 &lt;br&gt; -90ab-0a1eb6717137"));
+  786200d8-da22-4963-a1f3-f5e82d9655f1(("patterns-rdl &lt;br&gt; 786200d8-da22-4963 &lt;br&gt; -a1f3-f5e82d9655f1"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  786200d8-da22-4963-a1f3-f5e82d9655f1(("patterns-rdl &lt;br&gt; 786200d8-da22-4963 &lt;br&gt; -a1f3-f5e82d9655f1"))---&gt;|"data_EntityName"|Descent_Module_Functional_System_1969-059D["Descent_Module_Functional &lt;br&gt; _System_1969-059D"];
+  786200d8-da22-4963-a1f3-f5e82d9655f1(("patterns-rdl &lt;br&gt; 786200d8-da22-4963 &lt;br&gt; -a1f3-f5e82d9655f1"))---&gt;|"type"|functional_system(["hqdm &lt;br&gt; functional_system"]);
+  91432187-235b-4167-9e5f-1842ea8c9a59(("patterns &lt;br&gt; 91432187-235b-4167 &lt;br&gt; -9e5f-1842ea8c9a59"))---&gt;|"beginning"|403994c6-2454-4df8-a6a7-1391f5ed8ede(("patterns &lt;br&gt; 403994c6-2454-4df8 &lt;br&gt; -a6a7-1391f5ed8ede"));
+  91432187-235b-4167-9e5f-1842ea8c9a59(("patterns &lt;br&gt; 91432187-235b-4167 &lt;br&gt; -9e5f-1842ea8c9a59"))---&gt;|"temporal__part_of"|786200d8-da22-4963-a1f3-f5e82d9655f1(("patterns-rdl &lt;br&gt; 786200d8-da22-4963 &lt;br&gt; -a1f3-f5e82d9655f1"));
+  91432187-235b-4167-9e5f-1842ea8c9a59(("patterns &lt;br&gt; 91432187-235b-4167 &lt;br&gt; -9e5f-1842ea8c9a59"))---&gt;|"part_of_possible_world"|bb4dcf61-3ea6-48fa-820e-4eb739ae6671(("patterns &lt;br&gt; bb4dcf61-3ea6-48fa &lt;br&gt; -820e-4eb739ae6671"));
+  91432187-235b-4167-9e5f-1842ea8c9a59(("patterns &lt;br&gt; 91432187-235b-4167 &lt;br&gt; -9e5f-1842ea8c9a59"))---&gt;|"temporal_part_of"|d68578cb-a88b-4c26-b48b-7ffe725e7bb4(("patterns &lt;br&gt; d68578cb-a88b-4c26 &lt;br&gt; -b48b-7ffe725e7bb4"));
+  91432187-235b-4167-9e5f-1842ea8c9a59(("patterns &lt;br&gt; 91432187-235b-4167 &lt;br&gt; -9e5f-1842ea8c9a59"))---&gt;|"member_of"|b416bdd0-e175-4017-b8b2-ced2400d28af(("patterns-rdl &lt;br&gt; b416bdd0-e175-4017 &lt;br&gt; -b8b2-ced2400d28af"));
+  91432187-235b-4167-9e5f-1842ea8c9a59(("patterns &lt;br&gt; 91432187-235b-4167 &lt;br&gt; -9e5f-1842ea8c9a59"))---&gt;|"data_EntityName"|Descent_Module_Installed_As_LM-5_System_Component_1969-059D["Descent_Module_Installed &lt;br&gt; _As_LM-5_System_Component_1969-059D"];
+  91432187-235b-4167-9e5f-1842ea8c9a59(("patterns &lt;br&gt; 91432187-235b-4167 &lt;br&gt; -9e5f-1842ea8c9a59"))---&gt;|"ending"|3a3962dd-59f5-4a60-b8c7-d57509b1314f(("patterns &lt;br&gt; 3a3962dd-59f5-4a60 &lt;br&gt; -b8c7-d57509b1314f"));
+  91432187-235b-4167-9e5f-1842ea8c9a59(("patterns &lt;br&gt; 91432187-235b-4167 &lt;br&gt; -9e5f-1842ea8c9a59"))---&gt;|"type"|installed_functional_system_component(["hqdm &lt;br&gt; installed_function &lt;br&gt; al_system_componen &lt;br&gt; t"]);</code></pre>
+</details>
+<details class="question">
+<summary>My <em>system</em> has lots of parts.  Do I need to model them all to use this model pattern?</summary>
+<p>Great question!  </p>
+<p>Most systems have more parts than those who use them realise.  Even the designers, fabricators, maintainers and operators of systems rarely need to know about all of the parts involved.  For large systems, like energy and transport infrastructure or computer-based networks and the communications infrastructure that they interconnect using, there are so many component parts it can be very complex to keep track of the composition of the <em>system</em> let alone during operation.  Once operating the functioning of the <em>system</em> may depend on the system design decisions many years prior to separate functions with clear interfaces and roles.  This can work well until there is a need to change the system or connect it with other systems.  After that there is a costly task to update design material, often requiring retrospective analysis of design files and surveying the actual system-components to establish their state.  Paving the way for making this a process that is more efficiently done through integrated information can be done using modelling patterns like <code>system</code> and <code>system_component</code>.</p>
+<p>The good thing about the <code>system</code> and <code>system_component</code> model pattern in HQDM is that it can be applied in an additive way.  This still requires objective analysis of the physical (or intended-to-be physical) <em>system</em> being represented.  This HQDM model pattern helps this objective analysis and do it in a way that allows the modelling to be done within the resources available, and return to it if the resources and need require it. As this worked example is carried it we shall illustrate how this can be done and why there will also be physical things involved that we can't reasonably capture (and, likely, don't need to).</p>
+</details>
+<p>The LM-5 <em>system</em> can then be identified by the <code>system</code> object for it, the <code>system_component</code> parts and any <em>installed</em> states that are <em>temporal_parts</em> of these <em>component</em> states.</p>
+<p><a class="glightbox" href="../../extras/source-images/LMSystem4.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="An association between *Eagle* and its crew during descent" src="../../extras/source-images/LMSystem4.svg" /></a></p>
+<p>The next diagram shows the <code>system</code> and <code>system_component</code> parts without the <em>installed</em> states, illustrating the pattern for the LM-5 <em>system</em> itself.</p>
+<p><a class="glightbox" href="../../extras/source-images/LMSystem5.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="An association between *Eagle* and its crew during descent" src="../../extras/source-images/LMSystem5.svg" /></a></p>
+<p>All we need to do to refer to the LM-5 <em>system</em> in data is to use the identity (<code>uuid()</code>) of the LM-5 <code>system</code> object.</p>
+<p><a class="glightbox" href="../../extras/source-images/LMSystem6.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="An association between *Eagle* and its crew during descent" src="../../extras/source-images/LMSystem6.svg" /></a></p>
+<details class="question">
+<summary>What if I find that I have missed a component part and want to add it?</summary>
+<p>This is likely to be a common experience.  Luckily, this readily addressable because modelling a <em>system</em> is about representing it as it is (the actual system or, if we haven't yet made it, the intended / possible <em>system</em>).</p>
+<p>We can add component parts arbitrarily.  This can be useful in certain circumstances.  However, often we may know the likely / intended / possible composition of a system that is being modelled.  Systems engineering is a good example activity that creates representations of the possible future system before it is created.  This can be done with the HQDM model framework by creating classes (generally <em>kinds</em>) that the eventual <em>system</em> and its <em>component parts</em> are <em>members of</em>.  If we know that an actual <code>functional_system</code> is (or will be) composed of certain <code>functional_system_component</code> parts the <em>system</em> will be a <code>member_of_kind</code> of a <code>kind_of_functional_system</code> and will consist of the <em>kind</em> of component parts that are related using the <code>has_component_by_class</code> relation (related to the <code>kind_of_functional_system_component</code> entity type).  In principle, we can create all of the HQDM <em>classes</em> that are needed to compose a certain system composition.  This can be very useful if we need to refer to the system, its parts, or the <em>classes</em> to compose <em>requirements specifications</em> for it.  </p>
+<p>For some systems there will only ever be one of them (e.g. a particular railway, airport or computer network).  In other situations there may be common component parts used across many different systems.  For products like MRI scanners, computers, many engineering tools, mobile phones, etc they are systems in their own right (with many component parts) but many instances of each of those systems can be made.  The HQDM <code>system</code> and <code>system_component</code> model pattern can accommodate any of them throughout the lifecycle of each.</p>
+</details>
+<p>Of course, each of the <code>system_component</code> parts of LM-5 are a <code>system</code> in their own right.  This is illustrated for the Ascent Module below.</p>
+<p><a class="glightbox" href="../../extras/source-images/LMSystem8.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="An association between *Eagle* and its crew during descent" src="../../extras/source-images/LMSystem8.svg" /></a></p>
+<p>Each of the installed parts will have had an existence prior to being <em>installed</em>.  This is shown below.  As before, each of them could be a <code>system</code> in their own right, an so on.  We can stop where we run out of a requirement to have information about each part.</p>
+<details class="tip">
+<summary>Tip</summary>
+<p>It can be better to analyse the system to one level of detail beyond your current need.  This can pave the way to modelling it in more detail in the future and is a good test of the objectivity being applied to the analysis of the <em>system</em> to meet your current need.</p>
+</details>
+<p><a class="glightbox" href="../../extras/source-images/LMSystem9.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="An association between *Eagle* and its crew during descent" src="../../extras/source-images/LMSystem9.svg" /></a></p>
+<p>We can now proceed to create HQDM data objects that implement these model patterns (TBC).  If done diligently, this <code>system</code> and <code>system_component</code> pattern can be used for any <em>system</em>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Critical Insight Security Ltd
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ClimbingAl/HqdmPatterns" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
